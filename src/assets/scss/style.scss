@@ -1,0 +1,59 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor/reset";
+
+/* Blocks */
+
+@import "blocks/journal";
+@import "blocks/main-lk";
+@import "blocks/footer";
+@import "blocks/header";
+@import "blocks/main";
+
+
+html {
+  font-family: "Segoe";
+  color: $black;
+  font-size: calc(100vw / 1920 * 10);
+  height: 100%;
+  color: $black;
+  @include breakpoint($xxl-bp) {
+    //font-size: calc(100vw / 1440 * 10);
+  }
+  @include breakpoint($sm-bp) {
+    //font-size: 4.2px;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+
+.wrapper {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.visually-hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-left: -1px;
+  margin-top: -1px;
+  z-index: -2;
+}
+
+
