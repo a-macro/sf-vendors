@@ -8,16 +8,56 @@ title: ЛК Сертификация
 </div>
 
 <section class="lk__inner">
-    <div class="lk__aside lk__aside--panel">
-
+    <div class="lka-panel">
+        <div class="lka-panel__inner">
+            <h3 class="lka-panel__heading">Панель управления</h3>
+            <a class="lka-panel__report" href="#">
+                <img class="lka-panel__report-img" src="assets/images/earth-ball.png" alt="">
+                <div class="lka-panel__report-content">
+                    <p class="lka-panel__report-heading">Отчеты</p>
+                    <p class="lka-panel__report-subheading">Отчет по выданным сертификатам</p>
+                </div>
+            </a>
+        </div>
     </div>
     <div class="lk__main lk__sertif lk-table">
         <div class="lk-table__rows-count">
             <p>Показывать строк</p>
+            <div class="select lk-table__rows-select">
+                <input class="select-value" type="text" placeholder="5">
+                <button class="select-btn" type="button">
+                    <span class="select-btn__value"></span>
+                    <span class="select-btn__icon">
+                        <svg>
+                            <use href="#select-arrow"></use>
+                        </svg>
+                    </span>
+                </button>
+                <div class="select-container">
+                    <button class="select-item" type="button" data-value="1">
+                        <svg>
+                            <use href="#check-icon"></use>
+                        </svg>
+                        5
+                    </button>
+                    <button class="select-item" type="button" data-value="2">
+                        <svg>
+                            <use href="#check-icon"></use>
+                        </svg>
+                        10
+                    </button>
+                    <button class="select-item" type="button" data-value="3">
+                        <svg>
+                            <use href="#check-icon"></use>
+                        </svg>
+                        15
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="lk__main_wrapper">
-            <div class="lk__sertif_inner lk-table_inner">
-                <div class="head lk__sertif_row">
+            <div class="lk__table_inner lk-table_inner">
+                <div class="head lk__table_row">
                     <div>
                         <p>№</p>
                     </div>
@@ -73,7 +113,7 @@ title: ЛК Сертификация
                         </svg>
                     </div>
                 </div>
-                <div class="lk__sertif_row">
+                <div class="lk__table_row">
                     <div>
                         <input class="circle-checkbox" type="checkbox" id="lk-sert-1">
                         <label for="lk-sert-1">1</label>
@@ -97,7 +137,7 @@ title: ЛК Сертификация
                         <p>27.12.2023</p>
                     </div>
                 </div>
-                <div class="lk__sertif_row">
+                <div class="lk__table_row">
                     <div>
                         <input class="circle-checkbox" type="checkbox" id="lk-sert-2" checked>
                         <label for="lk-sert-2">2</label>

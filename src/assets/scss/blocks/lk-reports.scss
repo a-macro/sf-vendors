@@ -1,0 +1,84 @@
+.lka-reports {
+  width: 100%;
+  max-width: 41.2rem;
+
+  h1 {
+    margin-bottom: 2.4rem;
+    margin-left: 3rem;
+  }
+
+  .lka-reports__inner {
+    padding: 3.5rem 3rem;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    background: white;
+    border: 1px solid rgba(224, 224, 224, 0.43);
+    border-radius: 0px 1.5rem 1.5rem 0px;
+  }
+
+  .lka-reports__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .lka-reports__item + .lka-reports__item {
+    margin-top: 1.5rem;
+  }
+}
+
+.lk__report {
+  .lk__report-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .lk__report-title {
+    font-weight: 600;
+    font-size: 2.8rem;
+
+    margin-bottom: 2.4rem;
+  }
+  .lk__table_row {
+    & > div:nth-child(1) {
+      width: 10%;
+
+      p {
+        margin: 0 auto;
+      }
+    }
+    & > div:nth-child(2) {
+      width: 65%;
+    }
+    & > div:nth-child(3) {
+      width: 15%;
+      p {
+        margin: 0 auto;
+      }
+    }
+    & > div:nth-child(4) {
+      width: 15%;
+      p {
+        margin: 0 auto;
+      }
+    }
+    & > div:nth-child(5) {
+      width: 15%;
+      p {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .paper-download-icon {
+    width: 100%;
+    max-width: 1.7rem;
+    height: 2rem;
+
+    fill: white;
+
+    margin-right: 1rem;
+  }
+}

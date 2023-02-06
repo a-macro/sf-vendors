@@ -27,7 +27,7 @@
     }
   }
 
-  .lk__sertif_inner {
+  .lk__table_inner {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -50,9 +50,37 @@
   .btn-red {
     padding: 0 2.5rem;
   }
+
+  .lk__table_row {
+    & > div:nth-child(1) {
+      width: 5%;
+
+      p {
+        margin: 0 auto;
+      }
+    }
+    & > div:nth-child(2) {
+      width: 24%;
+    }
+    & > div:nth-child(3) {
+      width: 26%;
+    }
+    & > div:nth-child(4) {
+      width: 10%;
+    }
+    & > div:nth-child(5) {
+      width: 24%;
+    }
+    & > div:nth-child(6) {
+      width: 9%;
+    }
+    & > div:nth-child(7) {
+      width: 10%;
+    }
+  }
 }
 
-.lk__sertif_row {
+.lk__table_row {
   display: flex;
   gap: 5rem;
 
@@ -81,41 +109,17 @@
 
     font-weight: 600;
   }
-
-  p {
-  }
-
-  & > div:nth-child(1) {
-    width: 5%;
-
-    p {
-      margin: 0 auto;
-    }
-  }
-  & > div:nth-child(2) {
-    width: 24%;
-  }
-  & > div:nth-child(3) {
-    width: 26%;
-  }
-  & > div:nth-child(4) {
-    width: 10%;
-  }
-  & > div:nth-child(5) {
-    width: 24%;
-  }
-  & > div:nth-child(6) {
-    width: 9%;
-  }
-  & > div:nth-child(7) {
-    width: 10%;
-  }
 }
 
 .lk-table__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.lk-table__footer-content {
+  display: flex;
+  gap: 4rem;
 }
 
 .lk-table__footer-btns {
@@ -129,4 +133,41 @@
   font-weight: 400;
   font-size: 1.4rem;
   color: #000000;
+}
+
+.lka-panel {
+  width: 100%;
+  max-width: 30.2rem;
+
+  padding: 2rem 2rem 2rem 3rem;
+
+  background: white;
+  border: 1px solid rgba(224, 224, 224, 0.43);
+  border-radius: 0px 1.5rem 1.5rem 0px;
+}
+.lka-panel__heading {
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  margin-bottom: 1.5rem;
+}
+.lka-panel__report {
+  display: flex;
+  gap: 1.5rem;
+
+  color: #000000;
+  text-decoration: none;
+}
+.lka-panel__report-img {
+  width: 100%;
+  max-width: 4.1rem;
+}
+.lka-panel__report-heading {
+  font-weight: 600;
+  font-size: 1.4rem;
+
+  margin-bottom: 0.5rem;
+}
+.lka-panel__report-subheading {
+  font-size: 1.2rem;
 }
