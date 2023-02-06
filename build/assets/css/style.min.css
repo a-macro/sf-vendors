@@ -440,6 +440,146 @@ a:focus {
   outline: none;
 }
 
+.select {
+  position: relative;
+}
+.select-value {
+  display: none;
+}
+.select-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  border: 0.05rem solid #BDBDBD;
+  border-top: none;
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  background-color: #fff;
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+.select-btn {
+  padding: 0;
+  margin: 0;
+  border: 0.05rem solid #BDBDBD;
+  border-radius: 0.7rem;
+  background-color: #fff;
+  width: 30rem;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: 0.3s;
+}
+.select-btn__value {
+  flex: 1;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #4F4F4F;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+}
+.select-btn__value._placeholder {
+  opacity: 0.5;
+}
+.select-btn__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0.4rem;
+  transition: 0.3s;
+}
+.select-btn__icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  fill: #333333;
+}
+.select-item {
+  width: 100%;
+  cursor: pointer;
+  padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  background-color: #fff;
+  border: none;
+  border-top: 0.05rem solid #BDBDBD;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #4F4F4F;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.select-item:first-child {
+  border-top: none;
+}
+.select-item svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  stroke: #C60B46;
+  opacity: 0;
+  transition: 0.3s;
+}
+.select-item:hover svg {
+  opacity: 0.5;
+}
+.select-item._active svg {
+  opacity: 1;
+}
+.select._active .select-btn {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.select._active .select-btn__icon {
+  transform: rotate(180deg);
+}
+.select._active .select-container {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+.checkbox__icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  border: 0.05rem solid #BDBDBD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+}
+.checkbox__icon svg {
+  stroke: #C60B46;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+}
+.checkbox__input {
+  display: none;
+}
+.checkbox._active .checkbox__icon svg {
+  opacity: 1;
+}
+
 /* Blocks */
 .bank {
   display: flex;
@@ -448,12 +588,13 @@ a:focus {
 }
 .bank-inner {
   flex: 1;
-  padding-right: 11.5rem;
+  padding-right: 10.2rem;
 }
 .bank-head {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 4rem;
 }
 .bank-head-box {
   display: flex;
@@ -462,6 +603,143 @@ a:focus {
 }
 .bank-head-btn {
   margin-left: auto;
+}
+.bank-info {
+  background-color: #fff;
+  border: 0.05rem solid #CCCCCC;
+  border-radius: 1.5rem;
+}
+.bank-info-item-inner {
+  border-top: 0.05rem solid rgb(224, 224, 224);
+  display: flex;
+  align-items: center;
+  column-gap: 4rem;
+  padding: 2rem 4rem 2rem 3rem;
+  height: 9.4rem;
+  align-items: center;
+}
+.bank-info-item-checkbox__icon {
+  background-color: #CCCCCC;
+}
+.bank-info-item__btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.92rem;
+  color: rgb(198, 11, 70);
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+.bank-info-item__btn svg {
+  width: 0.74rem;
+  height: 0.44rem;
+  object-fit: contain;
+  object-position: center center;
+  stroke: rgb(198, 11, 70);
+}
+.bank-info-item-col__number {
+  width: 4.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  margin-right: 0.4rem;
+}
+.bank-info-item-col__name {
+  width: 28.5rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+.bank-info-item-col__type {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 14rem;
+  margin-right: 2rem;
+}
+.bank-info-item-col__type svg {
+  margin-top: 0.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  object-position: center center;
+}
+.bank-info-item-col__action {
+  margin-right: 2rem;
+}
+.bank-info-item-col__edit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.bank-info-item-col__info {
+  margin-right: auto;
+}
+.bank-info-head {
+  padding: 1.8rem 4rem 1.8rem 5.9rem;
+  display: flex;
+  align-items: center;
+}
+.bank-info-head-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+}
+.bank-info-head-item__number {
+  width: 4.3rem;
+  margin-right: 1.7rem;
+}
+.bank-info-head-item__name {
+  width: 28.5rem;
+  margin-right: 4rem;
+}
+.bank-info-head-item__type {
+  width: 14rem;
+  margin-right: 6rem;
+}
+.bank-info-head-item__action {
+  width: 13rem;
+  margin-right: 6rem;
+}
+.bank-info-head-item__create {
+  width: 15.9rem;
+  margin-right: 4rem;
+}
+.bank-info-head-item__edit {
+  width: 15.9rem;
+}
+.bank-info-head-item__info {
+  width: 11rem;
+  margin-left: auto;
+}
+.bank-info-head__btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.bank-info-head__btn svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  fill: #828282;
+  transition: 0.3s;
+}
+.bank-info-head__btn:hover svg {
+  fill: #000;
 }
 
 .lk__selectors {
@@ -1997,146 +2275,6 @@ main.enter {
 }
 .categories__list li:nth-last-child(1) {
   margin-bottom: 0;
-}
-
-.select {
-  position: relative;
-}
-.select-value {
-  display: none;
-}
-.select-container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  width: 100%;
-  border: 0.05rem solid #BDBDBD;
-  border-top: none;
-  border-bottom-left-radius: 0.7rem;
-  border-bottom-right-radius: 0.7rem;
-  background-color: #fff;
-  transition: 0.3s;
-  opacity: 0;
-  pointer-events: none;
-}
-.select-btn {
-  padding: 0;
-  margin: 0;
-  border: 0.05rem solid #BDBDBD;
-  border-radius: 0.7rem;
-  background-color: #fff;
-  width: 30rem;
-  padding: 1.1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: 0.3s;
-}
-.select-btn__value {
-  flex: 1;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-  color: #4F4F4F;
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: left;
-}
-.select-btn__value._placeholder {
-  opacity: 0.5;
-}
-.select-btn__icon {
-  width: 1.6rem;
-  height: 1.6rem;
-  padding: 0.4rem;
-  transition: 0.3s;
-}
-.select-btn__icon svg {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center center;
-  fill: #333333;
-}
-.select-item {
-  width: 100%;
-  cursor: pointer;
-  padding: 1.2rem 0.5rem 1.2rem 0.5rem;
-  background-color: #fff;
-  border: none;
-  border-top: 0.05rem solid #BDBDBD;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-  color: #4F4F4F;
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.select-item:first-child {
-  border-top: none;
-}
-.select-item svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  object-fit: contain;
-  stroke: #C60B46;
-  opacity: 0;
-  transition: 0.3s;
-}
-.select-item:hover svg {
-  opacity: 0.5;
-}
-.select-item._active svg {
-  opacity: 1;
-}
-.select._active .select-btn {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.select._active .select-btn__icon {
-  transform: rotate(180deg);
-}
-.select._active .select-container {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
-  cursor: pointer;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-  font-weight: 400;
-}
-.checkbox__icon {
-  width: 1.4rem;
-  height: 1.4rem;
-  border-radius: 0.3rem;
-  background-color: #fff;
-  border: 0.05rem solid #BDBDBD;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.3rem;
-}
-.checkbox__icon svg {
-  stroke: #C60B46;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0;
-}
-.checkbox__input {
-  display: none;
-}
-.checkbox._active .checkbox__icon svg {
-  opacity: 1;
 }
 
 html {
