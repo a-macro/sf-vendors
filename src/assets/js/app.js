@@ -2,6 +2,8 @@ let openModal;
 let closeModal;
 
 document.addEventListener("DOMContentLoaded", () => {
+//= marat-js.js
+
   let height = window.innerHeight;
   let width = window.innerWidth;
   let header = document.querySelector(".header");
