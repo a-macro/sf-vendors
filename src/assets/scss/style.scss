@@ -11,6 +11,9 @@
 @import "blocks/header";
 @import "blocks/main";
 
+@import "blocks/common-styles.scss";
+@import "blocks/circle-checkbox.scss";
+@import "blocks/lk-sertificates.scss";
 
 html {
   font-family: "Segoe";
@@ -39,7 +42,6 @@ body {
   display: none;
 }
 
-
 .wrapper {
   padding-left: 8rem;
   padding-right: 8rem;
@@ -55,5 +57,3 @@ body {
   margin-top: -1px;
   z-index: -2;
 }
-
-

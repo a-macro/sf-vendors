@@ -123,6 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    //= marat-js.js
 });
 
 

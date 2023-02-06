@@ -1970,6 +1970,192 @@ main.enter {
   margin-bottom: 0;
 }
 
+.text-success {
+  color: #27ae60;
+}
+
+.text-danger {
+  color: #C60B46;
+}
+
+.hollow-btn {
+  height: 4.4rem;
+  background: #ffffff;
+  border: 0.5px solid #c60b46;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  color: #000;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.circle-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 1px !important;
+  height: 1px !important;
+}
+.circle-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-family: "Segoe";
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.125;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0e0d0d;
+}
+.circle-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 2.1rem;
+  border: 0.5px solid #bdbdbd;
+  border-radius: 0.3rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: all 0.1s linear;
+}
+.circle-checkbox.error + label::before {
+  border: 0.1rem solid #ff0000;
+}
+.circle-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.75' y='0.75' width='14.5' height='14.5' rx='3.25' fill='%23CCCCCC' stroke='%23BDBDBD' stroke-width='0.5'/%3E%3Ccircle cx='8' cy='8' r='4' fill='%23E1B0B4'/%3E%3C/svg%3E%0A");
+}
+.circle-checkbox:not(:disabled) + label::before {
+  background-color: #ccc;
+}
+.circle-checkbox:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.75' y='0.75' width='14.5' height='14.5' rx='3.25' fill='%23CCCCCC' stroke='%23BDBDBD' stroke-width='0.5'/%3E%3Ccircle cx='8' cy='8' r='4' fill='%23A7333E'/%3E%3C/svg%3E%0A");
+}
+.circle-checkbox:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+.lk-table {
+  width: 100%;
+  font-family: "Segoe";
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.125;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0e0d0d;
+}
+.lk-table .swap-icon,
+.lk-table .seacrh-icon {
+  width: 100%;
+  max-width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  fill: #828282;
+}
+.lk-table .lk-table_inner a {
+  color: #C60B46;
+  text-decoration: none;
+}
+.lk-table .lk__sertif_inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+  border-radius: 1.5rem;
+  border: 0.5px solid #cccccc;
+  padding-bottom: 4rem;
+  margin-bottom: 3rem;
+}
+
+.lk__sertif .hollow-btn {
+  padding: 0 2.8rem;
+}
+.lk__sertif .btn-red {
+  padding: 0 2.5rem;
+}
+
+.lk__sertif_row {
+  display: flex;
+  gap: 5rem;
+  width: 100%;
+  align-items: center;
+  border-bottom: 0.5px solid #cccccc;
+  padding: 1.7rem 0;
+  padding-right: 6rem;
+  padding-left: 1.7rem;
+}
+.lk__sertif_row.selected {
+  background: #e7ecee;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+.lk__sertif_row > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.lk__sertif_row.head p {
+  width: max-content;
+  font-weight: 600;
+}
+.lk__sertif_row > div:nth-child(1) {
+  width: 5%;
+}
+.lk__sertif_row > div:nth-child(1) p {
+  margin: 0 auto;
+}
+.lk__sertif_row > div:nth-child(2) {
+  width: 24%;
+}
+.lk__sertif_row > div:nth-child(3) {
+  width: 26%;
+}
+.lk__sertif_row > div:nth-child(4) {
+  width: 10%;
+}
+.lk__sertif_row > div:nth-child(5) {
+  width: 24%;
+}
+.lk__sertif_row > div:nth-child(6) {
+  width: 9%;
+}
+.lk__sertif_row > div:nth-child(7) {
+  width: 10%;
+}
+
+.lk-table__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lk-table__footer-btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.lk-table__results-count {
+  font-family: "Segoe UI";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #000000;
+}
+
 html {
   font-family: "Segoe";
   color: #0E0D0D;
