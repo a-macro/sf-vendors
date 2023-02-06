@@ -461,6 +461,33 @@ a:focus {
 }
 
 /* Blocks */
+.bank-select__value {
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: #4F4F4F;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+}
+
+.bank-select__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0.4rem;
+}
+
+.bank-select__icon svg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center center;
+    object-position: center center;
+    fill: #333333;
+}
+
 .lk__selectors {
     display: -ms-flexbox;
     display: flex;
@@ -611,6 +638,12 @@ a:focus {
 }
 
 .nav__trigger .lk__nav_item:hover::after {
+    content: "";
+    border-bottom: 1px solid #C60B46;
+    border-right: 1px solid #C60B46;
+}
+
+.nav__trigger .lk__nav_item.active::after {
     content: "";
     border-bottom: 1px solid #C60B46;
     border-right: 1px solid #C60B46;
@@ -1436,6 +1469,7 @@ a:focus {
     background: #DEE2E6;
     padding-left: 8rem;
     padding-right: 8rem;
+    padding-bottom: 3rem;
 }
 
 .footer.enter .footer__nav {
@@ -1531,6 +1565,22 @@ a:focus {
 
 .footer__support:hover {
     text-decoration: none;
+}
+
+.footer.dark {
+    background: #1E1E1E;
+}
+
+.footer.dark .footer__nav ul a {
+    color: white;
+}
+
+.footer.dark .footer__info p, .footer.dark .footer__info a {
+    color: white;
+}
+
+.footer.dark .footer__bottom p, .footer.dark .footer__bottom a {
+    color: white;
 }
 
 .header {
@@ -2283,6 +2333,54 @@ main.enter {
 
 .categories__list li:nth-last-child(1) {
     margin-bottom: 0;
+}
+
+.select {
+    position: relative;
+}
+
+.select-value {
+    display: none;
+}
+
+.select-container {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.select-btn {
+    padding: 0;
+    margin: 0;
+    border: 0.05rem solid #BDBDBD;
+    border-radius: 0.7rem;
+    background-color: #fff;
+    width: 30rem;
+    padding: 1.1rem 1.5rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.select-btn__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0.4rem;
+}
+
+.select-btn__icon svg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center center;
+    object-position: center center;
+    fill: #333333;
 }
 
 html {
