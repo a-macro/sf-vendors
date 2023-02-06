@@ -1,0 +1,26 @@
+.bank {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+
+  &-inner {
+    flex: 1;
+    padding-right: 11.5rem;
+  }
+
+  &-head {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-box {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    &-btn {
+      margin-left: auto;
+    }
+  }
+}

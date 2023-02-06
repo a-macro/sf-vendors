@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="">
+  <title></title>
+  <link rel="stylesheet" href="assets/vendor/jquery/jq-ui.min.css">
+  <link rel="stylesheet" href="assets/vendor/intlTelInput/intlTelInput.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+  <svg style="display: none;">
+  
+    <symbol id="" viewBox="0 0 24 24">
+      <g>
+  
+      </g>
+    </symbol>
+  
+    <symbol id="swap" viewBox="0 0 13 13">
+      <g>
+        <path
+          d="M9.81248 7.01836C10.5703 7.01836 11.2564 7.06142 11.6784 7.14159C11.685 7.14159 12.0712 7.22102 12.1999 7.27225C12.3857 7.35242 12.543 7.49718 12.6432 7.67831C12.7149 7.82307 12.75 7.976 12.75 8.1356C12.7434 8.30189 12.6359 8.61442 12.5854 8.73765C12.2716 9.54978 11.2417 11.102 10.6134 11.6974C10.5132 11.7984 10.3918 11.9075 10.3633 11.9364C10.2053 12.0597 10.0129 12.125 9.8059 12.125C9.61938 12.125 9.43359 12.0671 9.28364 11.9505C9.20574 11.8949 9.09204 11.7841 9.04007 11.7322L9.01227 11.7041C8.36128 11.0954 7.38259 9.57873 7.06807 8.80966C7.06136 8.80966 6.90469 8.42603 6.87299 8.19456L6.86765 8.1356V8.10665C6.86765 7.77259 7.05344 7.4608 7.35406 7.3012C7.51864 7.21434 7.99701 7.13417 8.00433 7.12674C8.43296 7.06142 9.09054 7.01836 9.81248 7.01836ZM3.19096 7.05658C3.49049 7.05658 3.73704 7.28509 3.77073 7.57984L3.77466 7.64896L3.93485 10.5107C3.93485 10.9279 3.60203 11.2656 3.19096 11.2656C2.80557 11.2656 2.48833 10.9688 2.45018 10.5879L2.44634 10.5107L2.60726 7.64896C2.60726 7.32159 2.86839 7.05658 3.19096 7.05658ZM3.19483 0.875C3.37989 0.875 3.56568 0.932902 3.71636 1.04871C3.78128 1.09557 3.87105 1.18041 3.92925 1.23746L3.98773 1.2959C4.63799 1.90536 5.61741 3.42121 5.93193 4.19027C5.93797 4.19027 6.0952 4.57451 6.127 4.80609L6.13235 4.86506V4.89401C6.13235 5.22732 5.94583 5.5391 5.64594 5.6987C5.48136 5.78629 5.00299 5.86572 4.99567 5.87315C4.56704 5.93847 3.90946 5.98153 3.18752 5.98153C2.42973 5.98153 1.74363 5.93847 1.32158 5.8583C1.31427 5.8583 0.928789 5.77887 0.800053 5.72765C0.614264 5.64822 0.457001 5.50272 0.356792 5.32159C0.28511 5.17684 0.25 5.02392 0.25 4.86506C0.256583 4.69803 0.364107 4.38625 0.413846 4.26302C0.728371 3.45016 1.75753 1.89794 2.38658 1.30333C2.48679 1.20163 2.60821 1.0925 2.63673 1.06355C2.794 0.940326 2.9871 0.875 3.19483 0.875ZM9.80919 1.73438C10.1946 1.73438 10.5112 2.03124 10.5492 2.41212L10.5531 2.48935L10.3929 5.35111C10.3929 5.67849 10.1318 5.94351 9.80919 5.94351C9.50966 5.94351 9.26311 5.715 9.22941 5.42024L9.22549 5.35111L9.06457 2.48935C9.06457 2.07215 9.39811 1.73438 9.80919 1.73438Z" />
+      </g>
+    </symbol>
+  
+    <symbol id="select-arrow" viewBox="0 0 8 5" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M7.52681 0.206682C7.46514 0.144879 7.39188 0.0958475 7.31123 0.0623932C7.23058 0.0289389 7.14413 0.0117187 7.05681 0.0117187C6.9695 0.0117187 6.88305 0.0289388 6.8024 0.0623931C6.72175 0.0958475 6.64849 0.144879 6.58681 0.206682L4.00015 2.79335L1.41348 0.206681C1.28883 0.0820295 1.11977 0.0120007 0.943482 0.0120007C0.767198 0.0120007 0.598133 0.0820295 0.473481 0.206681C0.34883 0.331333 0.278802 0.500397 0.278802 0.676681C0.278802 0.852965 0.34883 1.02203 0.473481 1.14668L3.53348 4.20668C3.59516 4.26848 3.66842 4.31752 3.74907 4.35097C3.82971 4.38442 3.91617 4.40164 4.00348 4.40164C4.09079 4.40164 4.17725 4.38442 4.2579 4.35097C4.33855 4.31752 4.41181 4.26848 4.47348 4.20668L7.53348 1.14668C7.78681 0.893348 7.78681 0.466682 7.52681 0.206682Z" />
+    </symbol>
+  
+    <symbol id="check-icon" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 2.6L3.625 5L8 1" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+  
+    <symbol id="sort-icon" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M9.81248 7.01836C10.5703 7.01836 11.2564 7.06142 11.6784 7.14159C11.685 7.14159 12.0712 7.22102 12.1999 7.27225C12.3857 7.35242 12.543 7.49718 12.6432 7.67831C12.7149 7.82307 12.75 7.976 12.75 8.1356C12.7434 8.30189 12.6359 8.61442 12.5854 8.73765C12.2716 9.54978 11.2417 11.102 10.6134 11.6974C10.5132 11.7984 10.3918 11.9075 10.3633 11.9364C10.2053 12.0597 10.0129 12.125 9.8059 12.125C9.61938 12.125 9.43359 12.0671 9.28364 11.9505C9.20574 11.8949 9.09204 11.7841 9.04007 11.7322L9.01227 11.7041C8.36128 11.0954 7.38259 9.57873 7.06807 8.80966C7.06136 8.80966 6.90469 8.42603 6.87299 8.19456L6.86765 8.1356V8.10665C6.86765 7.77259 7.05344 7.4608 7.35406 7.3012C7.51864 7.21434 7.99701 7.13417 8.00433 7.12674C8.43296 7.06142 9.09054 7.01836 9.81248 7.01836ZM3.19096 7.05658C3.49049 7.05658 3.73704 7.28509 3.77073 7.57984L3.77466 7.64896L3.93485 10.5107C3.93485 10.9279 3.60203 11.2656 3.19096 11.2656C2.80557 11.2656 2.48833 10.9688 2.45018 10.5879L2.44634 10.5107L2.60726 7.64896C2.60726 7.32159 2.86839 7.05658 3.19096 7.05658ZM3.19483 0.875C3.37989 0.875 3.56568 0.932902 3.71636 1.04871C3.78128 1.09557 3.87105 1.18041 3.92925 1.23746L3.98773 1.2959C4.63799 1.90536 5.61741 3.42121 5.93193 4.19027C5.93797 4.19027 6.0952 4.57451 6.127 4.80609L6.13235 4.86506V4.89401C6.13235 5.22732 5.94583 5.5391 5.64594 5.6987C5.48136 5.78629 5.00299 5.86572 4.99567 5.87315C4.56704 5.93847 3.90946 5.98153 3.18752 5.98153C2.42973 5.98153 1.74363 5.93847 1.32158 5.8583C1.31427 5.8583 0.928789 5.77887 0.800053 5.72765C0.614264 5.64822 0.457001 5.50272 0.356792 5.32159C0.28511 5.17684 0.25 5.02392 0.25 4.86506C0.256583 4.69803 0.364107 4.38625 0.413846 4.26302C0.728371 3.45016 1.75753 1.89794 2.38658 1.30333C2.48679 1.20163 2.60821 1.0925 2.63673 1.06355C2.794 0.940326 2.9871 0.875 3.19483 0.875ZM9.80919 1.73438C10.1946 1.73438 10.5112 2.03124 10.5492 2.41212L10.5531 2.48935L10.3929 5.35111C10.3929 5.67849 10.1318 5.94351 9.80919 5.94351C9.50966 5.94351 9.26311 5.715 9.22941 5.42024L9.22549 5.35111L9.06457 2.48935C9.06457 2.07215 9.39811 1.73438 9.80919 1.73438Z"
+        fill="#828282" />
+    </symbol>
+  
+  </svg>  <header class="header">
+      <div class="header-wrap">
+          <a href="#" class="header__logo">
+              <img src="assets/images/icons/logo.svg" alt="">
+          </a>
+          <nav class="header__nav">
+              <a class="header__item active" href="#">Главная</a>
+              <a class="header__item" href="#">Стать нашим партнером</a>
+              <a class="header__item" href="#">Вендоры</a>
+          </nav>
+      </div>
+      <div class="header-wrap">
+          <a href="#" class="header__search">
+              <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2283 2.08331C17.822 2.08331 22.372 6.63331 22.372 12.2271C22.372 14.8662 21.3592 17.2732 19.7019 19.0797L22.9631 22.334C23.2683 22.6393 23.2693 23.133 22.9641 23.4382C22.812 23.5924 22.611 23.6684 22.411 23.6684C22.212 23.6684 22.012 23.5924 21.8589 23.4403L18.5583 20.1489C16.8221 21.5394 14.6207 22.3719 12.2283 22.3719C6.63454 22.3719 2.0835 17.8208 2.0835 12.2271C2.0835 6.63331 6.63454 2.08331 12.2283 2.08331ZM12.2283 3.64581C7.496 3.64581 3.646 7.49477 3.646 12.2271C3.646 16.9594 7.496 20.8094 12.2283 20.8094C16.9595 20.8094 20.8095 16.9594 20.8095 12.2271C20.8095 7.49477 16.9595 3.64581 12.2283 3.64581Z" fill="#828282"/>
+              </svg>
+          </a>
+          <a class="header__sign-up" href="#">Зарегестрироваться</a>
+          <a class="header__sign-in" href="#">Войти</a>
+      </div>
+  </header>  <div class="menu-wrapper">      
+  
+  </div>
+  <main id="top">
+
+    <div class="lk__top">
+      <ul class="lk__nav">
+        <li>
+          <a href="#" class="lk__nav_item">Сертификация</a>
+        </li>
+        <li>
+          <a href="#" class="lk__nav_item">Настройки</a>
+        </li>
+        <li>
+          <a href="#" class="lk__nav_item">Участники</a>
+        </li>
+        <li>
+          <a href="#" class="lk__nav_item">Оценки</a>
+        </li>
+        <li>
+          <a href="#" class="lk__nav_item">Отчеты</a>
+        </li>
+        <li class="nav__trigger">
+          <a href="#" class="lk__nav_item active">Подробнее</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="title-wrap">
+      <h1 class="main-title">UGATE001.Х Администрирование межсетевых экранов UserGate 6</h1>
+    </div>
+    
+    <section class="lk__inner bank">
+      <div class="lk__aside">
+        <nav>
+          <a href="#" class="lk__aside_item active">Журнал событий</a>
+          <a href="#" class="lk__aside_item">События в реальном времени</a>
+          <a href="#" class="lk__aside_item">Отчет о деятельности</a>
+          <a href="#" class="lk__aside_item">Участие в сертификации</a>
+          <a href="#" class="lk__aside_item">Выполнение элементов сертификации</a>
+        </nav>
+      </div>
+    
+      <div class="bank-inner">
+        <div class="bank-head">
+          <h2 class="lk__subtitle">Банк вопросов</h2>
+    
+          <div class="bank-head-box">
+            <div class="select bank-head-select">
+              <input class="select-value" type="text" placeholder="Выберите категорию:">
+              <button class="select-btn" type="button">
+                <span class="select-btn__value"></span>
+                <span class="select-btn__icon">
+                  <svg>
+                    <use href="#select-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+              <div class="select-container">
+                <button class="select-item" type="button" data-value="1">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                  Категория 1
+                </button>
+                <button class="select-item" type="button" data-value="2">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                  Категория 2
+                </button>
+                <button class="select-item" type="button" data-value="3">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                  Категория 3
+                </button>
+              </div>
+            </div>
+    
+            <div class="select bank-head-select">
+              <input class="select-value" type="text" placeholder="Фильтр по тегам">
+              <button class="select-btn" type="button">
+                <span class="select-btn__value"></span>
+                <span class="select-btn__icon">
+                  <svg>
+                    <use href="#select-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+              <div class="select-container">
+                <button class="select-item" type="button" data-value="1">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                  Фильтр 1
+                </button>
+                <button class="select-item" type="button" data-value="2">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                  Фильтр 2
+                </button>
+                <button class="select-item" type="button" data-value="3">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                  Фильтр 3
+                </button>
+              </div>
+            </div>
+    
+            <button type="button" class="btn-red bank-head-btn">Создать новый вопрос</button>
+          </div>
+    
+          <div class="bank-head-box">
+            <label class="checkbox">
+              <div class="checkbox__icon">
+                <svg>
+                  <use href="#check-icon"></use>
+                </svg>
+              </div>
+    
+              <span class="checkbox__text">Отображать текст вопроса в списке вопросов</span>
+              
+              <input class="checkbox__input" type="checkbox" checked>
+            </label>
+    
+            <label class="checkbox">
+              <div class="checkbox__icon">
+                <svg>
+                  <use href="#check-icon"></use>
+                </svg>
+              </div>
+    
+              <span class="checkbox__text">Отображать вопросы, находящиеся в подкатегориях</span>
+              
+              <input class="checkbox__input" type="checkbox" checked>
+            </label>
+    
+            <label class="checkbox">
+              <div class="checkbox__icon">
+                <svg>
+                  <use href="#check-icon"></use>
+                </svg>
+              </div>
+    
+              <span class="checkbox__text">Отображать старые вопросы</span>
+              
+              <input class="checkbox__input" type="checkbox" checked>
+            </label>
+          </div>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="footer dark enter">
+      <div class="footer__top">
+          <div class="footer__logo">
+              <img src="assets/images/icons/logo.svg" alt="">
+          </div>
+          <nav class="footer__nav">
+          <ul>
+              <li>
+                  <a href="#" class="footer__nav_item">Программное обеспечение</a>
+              </li>
+              <li>
+                  <a href="#" class="footer__nav_item">Специальные предложения</a>
+              </li>
+          </ul>
+          <ul>
+              <li>
+                  <a href="#" class="footer__nav_item">О компании</a>
+              </li>
+              <li>
+                  <a href="#" class="footer__nav_item">Работа в Softline</a>
+              </li>
+              <li>
+                  <a href="#" class="footer__nav_item">Контакты</a>
+              </li>
+              <li>
+                  <a href="#" class="footer__nav_item">Приемная Softline</a>
+              </li>
+          </ul>
+          </nav>
+          <a href="#" class="footer__support">Техподдержка</a>
+          <div class="footer__info">
+              <p>Работаем с юридическими и физическими лицами. Оплата по счёту или картой</p>
+              <a href="mailto:edusales@softline.com">edusales@softline.com</a>
+              <a href="tel:8800505 0507">8 800 505 05 07</a>
+          </div>
+      </div>
+      <div class="footer__bottom">
+           <p class="footer__policy">© 1993—2022 Softline</p>
+           <p class="footer__about">Помимо Москвы, Центр тестирования Softline представлен в следующих городах:&nbsp;<br><br>
+              Санкт-Петербург, Екатеринбург, Красноярск, Новосибирск, Хабаровск</p>
+           <div>
+               <a href="#">Условия использования</a>
+               <a href="#">Политика конфиденциальности</a>
+           </div>
+      </div>
+   </footer>
+  <!-- JS -->
+  <script defer src="assets/vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script defer src="assets/vendor/inputmask/jquery.inputmask.min.js"></script>
+  <script defer src="assets/vendor/intlTelInput/intlTelInput.min.js"></script>
+  <script defer src="assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+  <script defer src="assets/vendor/hammer/hammer.min.js"></script>
+  <script defer src="assets/vendor/scroll-lock/scroll-lock.min.js"></script>
+  <script defer src="assets/vendor/swiper/swiper.min.js"></script>
+  <script defer src="assets/js/app.js"></script>
+
+</body>
+
+</html>
