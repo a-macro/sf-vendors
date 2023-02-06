@@ -15,12 +15,28 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var openModal;
 var closeModal;
 document.addEventListener("DOMContentLoaded", function () {
+  var lkSertifRows = document.querySelectorAll(".lk__table_row:not(.head)");
+  lkSertifRows.forEach(function (el) {
+    var ckeckbox = el.querySelector("input");
+    if (ckeckbox.checked) {
+      el.classList.add("selected");
+    } else {
+      el.classList.remove("selected");
+    }
+    ckeckbox.addEventListener("change", function () {
+      if (this.checked) {
+        el.classList.add("selected");
+      } else {
+        el.classList.remove("selected");
+      }
+    });
+  });
   var height = window.innerHeight;
   var width = window.innerWidth;
   var header = document.querySelector(".header");
-  document.documentElement.style.setProperty('--h', height + "px");
-  document.documentElement.style.setProperty('--w', width + "px");
-  document.documentElement.style.setProperty('--headerH', header.getBoundingClientRect().height + "px");
+  document.documentElement.style.setProperty("--h", height + "px");
+  document.documentElement.style.setProperty("--w", width + "px");
+  document.documentElement.style.setProperty("--headerH", header.getBoundingClientRect().height + "px");
 
   //el.style.setProperty("--r", right + "px");
   //scrollLock.enablePageScroll(openedModal); отключить
@@ -35,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   var topBtn = document.querySelectorAll(".btn-top");
-  var velocity = .1;
+  var velocity = 0.1;
   var pos = 0,
     topOffset = 0;
   var elemTop;
@@ -131,6 +147,108 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       };
     });
-  
+  }
+
+  // SELECT
+  var Select = /*#__PURE__*/function () {
+    function Select(wrapper) {
+      _classCallCheck(this, Select);
+      this.wrapper = wrapper;
+      this.input = this.wrapper.querySelector(".select-value");
+      this.btn = this.wrapper.querySelector(".select-btn");
+      this.btnValue = this.btn.querySelector(".select-btn__value");
+      this.container = this.wrapper.querySelector(".select-container");
+      this.isOpen = this.wrapper.getAttribute("data-open") !== null ? true : false;
+      if (this.wrapper && this.input && this.btn && this.btnValue && this.container) {
+        this.init();
+      }
+    }
+    _createClass(Select, [{
+      key: "init",
+      value: function init() {
+        var _this = this;
+        this.btnValue.innerText = this.input.placeholder;
+        this.btnValue.classList.add("_placeholder");
+        this.maxHeight = this.container.offsetHeight * 2 / 10 + "rem";
+        this.btn.addEventListener("click", this.handleClick.bind(this));
+        _toConsumableArray(this.container.children).forEach(function (item) {
+          item.addEventListener("click", _this.setValue.bind(_this, item));
+        });
+        this.isOpen ? this.open() : this.close();
+        this.wrapper.addEventListener("click", function (e) {
+          return e.stopPropagation();
+        });
+        document.addEventListener("click", this.close.bind(this));
+      }
+    }, {
+      key: "handleClick",
+      value: function handleClick() {
+        this.isOpen ? this.close() : this.open();
+      }
+    }, {
+      key: "open",
+      value: function open() {
+        this.wrapper.classList.add("_active");
+        this.container.style.maxHeight = this.maxHeight;
+        this.isOpen = true;
+      }
+    }, {
+      key: "close",
+      value: function close() {
+        this.wrapper.classList.remove("_active");
+        this.container.style.maxHeight = 0;
+        this.isOpen = false;
+      }
+    }, {
+      key: "setValue",
+      value: function setValue(item) {
+        var text = item.innerText;
+        var value = item.getAttribute("data-value");
+        this.input.value = value;
+        this.btnValue.innerText = text;
+        this.btnValue.classList.remove("_placeholder");
+        this.close();
+        _toConsumableArray(this.container.children).forEach(function (i) {
+          i.classList.remove("_active");
+        });
+        item.classList.add("_active");
+      }
+    }]);
+    return Select;
+  }();
+  var selects = document.querySelectorAll(".select");
+  selects.forEach(function (item) {
+    return new Select(item);
+  });
+
+  // CHECKBOX
+  var Checkbox = /*#__PURE__*/function () {
+    function Checkbox(label) {
+      _classCallCheck(this, Checkbox);
+      this.label = label;
+      this.input = label.querySelector("input");
+      if (this.label && this.input) {
+        this.init();
+      }
+    }
+    _createClass(Checkbox, [{
+      key: "init",
+      value: function init() {
+        this.label.addEventListener("click", this.handleClick.bind(this));
+        this.input.checked && this.label.classList.add("_active");
+      }
+    }, {
+      key: "handleClick",
+      value: function handleClick() {
+        if (this.input.checked) {
+          this.label.classList.add("_active");
+        } else this.label.classList.remove("_active");
+      }
+    }]);
+    return Checkbox;
+  }();
+  var checkboxItems = document.querySelectorAll(".checkbox");
+  checkboxItems.forEach(function (item) {
+    return new Checkbox(item);
   });
 });

@@ -1,4 +1,4 @@
-const lkSertifRows = document.querySelectorAll(".lk__sertif_row:not(.head)");
+const lkSertifRows = document.querySelectorAll(".lk__table_row:not(.head)");
 
 lkSertifRows.forEach((el) => {
   let ckeckbox = el.querySelector("input");
