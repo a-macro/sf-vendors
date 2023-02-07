@@ -11,6 +11,7 @@
     line-height: 1.32;
     letter-spacing: 0em;
     text-align: left;
+    min-width: max-content;
 }
 
 .wrap {
@@ -87,6 +88,15 @@
     align-items: center;
     justify-content: flex-end;
     gap: 1.5rem;
+    flex-wrap: wrap;
+
+    .select-item {
+        white-space: unset;
+
+        svg {
+            min-width: 1.5rem;
+        }
+    }
 }
 
 .selector.type {
@@ -212,7 +222,10 @@
 .search-field {
     position: relative;
 
-    span {
+    button {
+        border: unset;
+        outline: none;
+        background: unset;
         position: absolute;
         right: 1.2rem;
         top: 50%;
@@ -237,6 +250,7 @@
 
         &::placeholder {
             color: #4F4F4F;
+            opacity: .5;
         }
     }
 
