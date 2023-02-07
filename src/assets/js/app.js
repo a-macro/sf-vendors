@@ -331,7 +331,7 @@ if(changeNums && changeNums.length > 0) {
     }
 
     init() {
-      this.maxHeight = this.description.offsetHeight * 2 / 10 + "rem";
+      this.maxHeight = this.description.offsetHeight * 4 / 10 + "rem";
       this.btn.addEventListener("click", this.handleClick.bind(this));
       if (this.isActive) {
         this.open()
@@ -424,13 +424,13 @@ if(changeNums && changeNums.length > 0) {
     }
 
     open() {
-      this.wrapper.classList.add("_active");
+      this.wrapper.classList.add("_open");
       this.content.style.maxHeight = this.maxHeight;
       this.isActive = true;
     }
 
     close() {
-      this.wrapper.classList.remove("_active");
+      this.wrapper.classList.remove("_open");
       this.content.style.maxHeight = 0;
       this.isActive = false;
     }

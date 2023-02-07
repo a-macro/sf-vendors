@@ -274,7 +274,7 @@
         }
 
         &:nth-child(3) {
-          max-width: 10rem;
+          max-width: 12rem;
         }
 
         &:nth-child(5) {
@@ -291,6 +291,7 @@
         display: flex;
         align-items: flex-start;
         gap: 0.5rem;
+        width: min-content;
       }
 
       &__name {
@@ -322,6 +323,103 @@
           height: 100%;
           object-fit: contain;
           object-position: center center;
+        }
+      }
+    }
+  }
+
+  &-aside {
+    width: 38rem;
+    min-width: 38rem;
+
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background-color: #fff;
+      border-top-right-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+    }
+
+    &-item {
+      &._active {
+        .bank-aside__link {
+          color: #A7333E;
+          border: 0.05rem solid rgba(204, 204, 204, 1);
+          background-color: rgba(231, 236, 238, 1);
+          box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.15);
+
+          svg {
+            fill: #A7333E;
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:first-child {
+        .bank-aside__link {
+          border-top-right-radius: 1.5rem;
+        }
+      }
+
+      &:last-child {
+        .bank-aside__link {
+          border-bottom-right-radius: 1.5rem;
+        }
+
+        &._open {
+          .bank-aside__link {
+            border-bottom-right-radius: 0;
+          }
+        }
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      padding: 1.5rem 3rem;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      font-weight: $f-b;
+      color: #000;
+      text-decoration: none;
+      border: 0.05rem solid transparent;
+      background-color: transparent;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: .3s;
+
+
+      &.bank-aside__link_icon {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          margin-top: -.3rem;
+          right: 3rem;
+          width: 0.6rem;
+          height: 0.6rem;
+          display: block;
+          border-top: 2px solid $red;
+          border-right: 2px solid $red;
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: .3s;
+        }
+      }
+
+      &:hover {
+        color: #A7333E;
+
+        &::after {
+          opacity: 0.5;
         }
       }
     }
