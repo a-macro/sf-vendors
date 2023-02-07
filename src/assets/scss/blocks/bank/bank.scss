@@ -5,6 +5,10 @@
   align-items: flex-start;
   gap: 4rem;
 
+  &-wrapper {
+    background-color: #F3F2F0;
+  }
+
   &-inner {
     flex: 1;
     padding-right: 10.2rem;
