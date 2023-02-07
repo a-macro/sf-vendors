@@ -63,8 +63,13 @@ body {
   z-index: -2;
 }
 
-
 .outer {
   padding-left: 19.7rem;
   padding-right: 19.7rem;
+}
+
+button,
+input,
+select {
+  font-family: "Segoe";
 }
