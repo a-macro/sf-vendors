@@ -288,5 +288,51 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const bankInfoItems = document.querySelectorAll(".bank-info-item");
-  bankInfoItems.forEach(item => new BankInfoItem(item))
+  bankInfoItems.forEach(item => new BankInfoItem(item));
+
+  // DROPDOWN MENU
+  class DropdownMenu {
+    constructor(wrapper) {
+      this.wrapper = wrapper;
+      this.btn = this.wrapper.querySelector(".dropdown-menu-btn");
+      this.isActive = false;
+
+      if (this.wrapper && this.btn) {
+        this.init();
+      }
+    }
+
+    init() {
+      this.btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.handleClick.call(this);
+      });
+
+      document.addEventListener("click", this.close.bind(this))
+    }
+
+    handleClick() {
+      this.isActive ? this.close() : this.open();
+    }
+
+    open() {
+      this.wrapper.classList.add("_active");
+      this.isActive = true;
+    }
+
+    close() {
+      this.wrapper.classList.remove("_active");
+      this.isActive = false;
+    }
+  }
+
+  const dropdownMenuList = document.querySelectorAll(".dropdown-menu");
+  dropdownMenuList.forEach(item => new DropdownMenu(item));
+
+  class Dropdown {
+    constructor(item) {
+      this.wrapper = item;
+      this.btn = this.wrapper.querySelector(".");
+    }
+  }
 });
