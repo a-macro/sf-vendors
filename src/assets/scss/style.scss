@@ -74,3 +74,7 @@ input,
 select {
   font-family: "Segoe";
 }
+
+a:focus {
+  text-decoration: underline;
+}
