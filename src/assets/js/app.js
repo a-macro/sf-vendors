@@ -49,13 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
             r =
               elemTop < 0
                 ? Math.max(
-                    winYOffset - progress / velocity,
-                    winYOffset + elemTop
-                  )
+                  winYOffset - progress / velocity,
+                  winYOffset + elemTop
+                )
                 : Math.min(
-                    winYOffset + progress / velocity,
-                    winYOffset + elemTop
-                  );
+                  winYOffset + progress / velocity,
+                  winYOffset + elemTop
+                );
           window.scrollTo(0, r);
           if (r != winYOffset + elemTop) {
             requestAnimationFrame(step);
@@ -170,6 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       [...this.container.children].forEach((item) => {
         item.addEventListener("click", this.setValue.bind(this, item));
+        if (item.getAttribute("data-select") !== null) {
+          this.setValue.call(this, item);
+        }
       });
 
       this.isOpen ? this.open() : this.close();
@@ -239,4 +242,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const checkboxItems = document.querySelectorAll(".checkbox");
   checkboxItems.forEach((item) => new Checkbox(item));
+
+  class BankInfoItem {
+    constructor(item) {
+      this.item = item;
+      this.description = this.item.querySelector(".bank-item-description");
+      this.btn = this.item.querySelector(".bank-info-item-info-btn");
+      this.isActive = this.item.getAttribute("data-open") !== null ? true : false;
+
+      if (this.item && this.description && this.btn) {
+        this.init()
+      }
+    }
+
+    init() {
+      this.maxHeight = this.description.offsetHeight * 2 / 10 + "rem";
+      this.btn.addEventListener("click", this.handleClick.bind(this));
+      if (this.isActive) {
+        this.open()
+      } else this.close()
+    }
+
+    handleClick() {
+      if (this.isActive) {
+        this.close();
+      } else this.open();
+      this.isActive = !this.isActive;
+    }
+
+    open() {
+      this.item.classList.add("_active");
+      this.description.style.maxHeight = this.maxHeight;
+    }
+
+    close() {
+      this.item.classList.remove("_active");
+      this.description.style.maxHeight = 0;
+    }
+  }
+
+  const bankInfoItems = document.querySelectorAll(".bank-info-item");
+  bankInfoItems.forEach(item => new BankInfoItem(item))
 });

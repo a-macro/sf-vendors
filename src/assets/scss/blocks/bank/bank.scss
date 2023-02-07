@@ -33,6 +33,29 @@
     border-radius: 1.5rem;
 
     &-item {
+      &:last-child {
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+
+        .bank-item-description {
+          border-bottom-left-radius: 1.5rem;
+          border-bottom-right-radius: 1.5rem;
+        }
+      }
+
+      &._active {
+        .bank-info-item-info-btn {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        .bank-item-description {
+          opacity: 1;
+          padding: 2rem 3rem;
+          pointer-events: all;
+        }
+      }
 
       &-inner {
         border-top: 0.05rem solid rgba(224, 224, 224, 1);
@@ -44,13 +67,27 @@
         align-items: center;
       }
 
-      // &-container {
-
-      // }
-
       &-checkbox {
         &__icon {
           background-color: #CCCCCC;
+
+          &::after {
+            content: "";
+            flex: none;
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 50%;
+            background-color: #A7333E;
+            opacity: 0;
+          }
+        }
+
+        &._active & {
+          &__icon {
+            &::after {
+              opacity: 1;
+            }
+          }
         }
       }
 
@@ -71,6 +108,7 @@
           object-fit: contain;
           object-position: center center;
           stroke: rgba(198, 11, 70, 1);
+          transition: .3s;
         }
       }
 
@@ -197,6 +235,89 @@
           svg {
             fill: #000;
           }
+        }
+      }
+    }
+  }
+
+  &-item {
+
+    &-description {
+      padding: 0rem 3rem;
+      background-color: #F3F2F0;
+      display: flex;
+      align-items: flex-start;
+      gap: 6rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: .3s;
+
+      &-select {
+        width: 12.9rem;
+
+        &__btn {
+          width: 100%;
+        }
+      }
+
+      &-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        &:nth-child(1) {
+          width: 15.9rem;
+        }
+
+        &:nth-child(3) {
+          max-width: 10rem;
+        }
+
+        &:nth-child(5) {
+          max-width: 14rem;
+        }
+
+        &:nth-child(7) {
+          max-width: 14rem;
+        }
+      }
+
+      &__head {
+        height: 3.6rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      &__name {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        font-weight: $f-sb;
+      }
+
+      &__text {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+
+        &_red {
+          color: #A7333E;
+        }
+      }
+
+      &__info-btn {
+        margin-top: 0.4rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        padding: 0;
+        border: none;
+        flex: none;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center center;
         }
       }
     }
