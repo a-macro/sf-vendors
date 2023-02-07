@@ -7,12 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let height = window.innerHeight;
   let width = window.innerWidth;
   let header = document.querySelector(".header");
-  document.documentElement.style.setProperty("--h", height + "px");
-  document.documentElement.style.setProperty("--w", width + "px");
-  document.documentElement.style.setProperty(
-    "--headerH",
-    header.getBoundingClientRect().height + "px"
-  );
+  document.documentElement.style.setProperty('--h', height + "px");
+  document.documentElement.style.setProperty('--w', width + "px");
+  document.documentElement.style.setProperty('--headerH', header.getBoundingClientRect().height + "px");
 
   let categories = document.querySelectorAll(".categories__block");
   if (categories.length > 0) {
@@ -24,20 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   let topBtn = document.querySelectorAll(".btn-top");
-  let velocity = 0.1;
+  let velocity = .1;
   let pos = 0,
     topOffset = 0;
   let elemTop;
   let start;
   if (topBtn.length > 0) {
-    topBtn.forEach((btn) => {
+    topBtn.forEach(btn => {
       btn.onclick = (e) => {
         e.preventDefault();
         let winYOffset = window.pageYOffset,
           hash = "#top";
-        (elemTop =
-          document.querySelector(hash).getBoundingClientRect().top - topOffset),
-          (start = null);
+        elemTop = document.querySelector(hash).getBoundingClientRect().top - topOffset,
+          start = null;
         requestAnimationFrame(step);
         function step(time) {
           if (start === null) start = time;
@@ -45,25 +41,25 @@ document.addEventListener("DOMContentLoaded", () => {
             r =
               elemTop < 0
                 ? Math.max(
-                    winYOffset - progress / velocity,
-                    winYOffset + elemTop
-                  )
+                  winYOffset - progress / velocity,
+                  winYOffset + elemTop
+                )
                 : Math.min(
-                    winYOffset + progress / velocity,
-                    winYOffset + elemTop
-                  );
+                  winYOffset + progress / velocity,
+                  winYOffset + elemTop
+                );
           window.scrollTo(0, r);
           if (r != winYOffset + elemTop) {
-            requestAnimationFrame(step);
+            requestAnimationFrame(step)
           } else return;
         }
-      };
+      }
     });
   }
 
   let selectorTitle = document.querySelectorAll(".selector__title");
   if (selectorTitle.length > 0) {
-    selectorTitle.forEach((title) => {
+    selectorTitle.forEach(title => {
       title.onclick = (e) => {
         e.preventDefault();
         title.parentNode.classList.toggle("active");
@@ -73,13 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           panel.style.maxHeight = panel.scrollHeight + "px";
         }
-      };
+      }
     });
   }
 
   let selectorItems = document.querySelectorAll(".selector__item");
   if (selectorItems.length > 0) {
-    selectorItems.forEach((item) => {
+    selectorItems.forEach(item => {
       let parent = item.closest(".selector");
       let block = item.parentNode;
       let title = parent.querySelector(".selector__title span");
@@ -98,13 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
           block.style.maxHeight = null;
           parent.classList.remove("active");
         }
-      };
+      }
     });
   }
 
   let asideItems = document.querySelectorAll(".lk__aside_item");
   if (asideItems.length > 0) {
-    asideItems.forEach((item) => {
+    asideItems.forEach(item => {
       item.onclick = (e) => {
         e.preventDefault();
         if (!item.classList.contains("active")) {
@@ -114,14 +110,14 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           item.classList.add("active");
         }
-      };
+      }
     });
   }
 
   let introBlocks = document.querySelectorAll(".intro__changeable_block");
-  if(introBlocks.length > 0) {
-      let parent = document.querySelector(".intro__changeable_blocks");
-      parent.setAttribute("data-num", introBlocks.length);
+  if (introBlocks.length > 0) {
+    let parent = document.querySelector(".intro__changeable_blocks");
+    parent.setAttribute("data-num", introBlocks.length);
   }
 
   let sphereCont = document.querySelectorAll(".spheres__container");
@@ -183,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
           let curSlide = ++sliderSw.realIndex;
           pag.innerHTML = curSlide + "/" + slides;
         });
-      });
+    });
   }
 
   let observerV = new IntersectionObserver(function (entries) {
@@ -229,16 +225,10 @@ if(changeNums && changeNums.length > 0) {
       this.btn = this.wrapper.querySelector(".select-btn");
       this.btnValue = this.btn.querySelector(".select-btn__value");
       this.container = this.wrapper.querySelector(".select-container");
-      this.isOpen =
-        this.wrapper.getAttribute("data-open") !== null ? true : false;
+      this.maxHeight = this.container.getAttribute("data-max-height");
+      this.isOpen = this.wrapper.getAttribute("data-open") !== null ? true : false;
 
-      if (
-        this.wrapper &&
-        this.input &&
-        this.btn &&
-        this.btnValue &&
-        this.container
-      ) {
+      if (this.wrapper && this.input && this.btn && this.btnValue && this.container) {
         this.init();
       }
     }
@@ -247,16 +237,22 @@ if(changeNums && changeNums.length > 0) {
       this.btnValue.innerText = this.input.placeholder;
       this.btnValue.classList.add("_placeholder");
 
-      this.maxHeight = (this.container.offsetHeight * 2) / 10 + "rem";
+      if (this.maxHeight === null) {
+        this.maxHeight = (this.container.offsetHeight * 2) / 10 + "rem";
+      }
+
       this.btn.addEventListener("click", this.handleClick.bind(this));
 
-      [...this.container.children].forEach((item) => {
+      [...this.container.children].forEach(item => {
         item.addEventListener("click", this.setValue.bind(this, item));
+        if (item.getAttribute("data-select") !== null) {
+          this.setValue.call(this, item);
+        }
       });
 
       this.isOpen ? this.open() : this.close();
 
-      this.wrapper.addEventListener("click", (e) => e.stopPropagation());
+      this.wrapper.addEventListener("click", (e) => e.stopPropagation())
       document.addEventListener("click", this.close.bind(this));
     }
 
@@ -284,9 +280,9 @@ if(changeNums && changeNums.length > 0) {
       this.btnValue.classList.remove("_placeholder");
       this.close();
 
-      [...this.container.children].forEach((i) => {
+      [...this.container.children].forEach(i => {
         i.classList.remove("_active");
-      });
+      })
 
       item.classList.add("_active");
     }
@@ -294,9 +290,9 @@ if(changeNums && changeNums.length > 0) {
 
   const selects = document.querySelectorAll(".select");
 
-  selects.forEach((item) => new Select(item));
+  selects.forEach(item => new Select(item))
 
-  // CHECKBOX
+  // CHECKBOX 
   class Checkbox {
     constructor(label) {
       this.label = label;
@@ -321,4 +317,94 @@ if(changeNums && changeNums.length > 0) {
 
   const checkboxItems = document.querySelectorAll(".checkbox");
   checkboxItems.forEach((item) => new Checkbox(item));
+
+  class BankInfoItem {
+    constructor(item) {
+      this.item = item;
+      this.description = this.item.querySelector(".bank-item-description");
+      this.btn = this.item.querySelector(".bank-info-item-info-btn");
+      this.isActive = this.item.getAttribute("data-open") !== null ? true : false;
+
+      if (this.item && this.description && this.btn) {
+        this.init()
+      }
+    }
+
+    init() {
+      this.maxHeight = this.description.offsetHeight * 2 / 10 + "rem";
+      this.btn.addEventListener("click", this.handleClick.bind(this));
+      if (this.isActive) {
+        this.open()
+      } else this.close()
+    }
+
+    handleClick() {
+      if (this.isActive) {
+        this.close();
+      } else this.open();
+      this.isActive = !this.isActive;
+    }
+
+    open() {
+      this.item.classList.add("_active");
+      this.description.style.maxHeight = this.maxHeight;
+    }
+
+    close() {
+      this.item.classList.remove("_active");
+      this.description.style.maxHeight = 0;
+    }
+  }
+
+  const bankInfoItems = document.querySelectorAll(".bank-info-item");
+  bankInfoItems.forEach(item => new BankInfoItem(item));
+
+  // DROPDOWN MENU
+  class DropdownMenu {
+    constructor(wrapper) {
+      this.wrapper = wrapper;
+      this.btn = this.wrapper.querySelector(".dropdown-menu-btn");
+      this.isActive = false;
+
+      if (this.wrapper && this.btn) {
+        this.init();
+      }
+    }
+
+    init() {
+      this.btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.handleClick.call(this);
+      });
+
+      document.addEventListener("click", this.close.bind(this))
+    }
+
+    handleClick() {
+      this.isActive ? this.close() : this.open();
+    }
+
+    open() {
+      this.wrapper.classList.add("_active");
+      this.isActive = true;
+    }
+
+    close() {
+      this.wrapper.classList.remove("_active");
+      this.isActive = false;
+    }
+  }
+
+  const dropdownMenuList = document.querySelectorAll(".dropdown-menu");
+  dropdownMenuList.forEach(item => new DropdownMenu(item));
+
+  class Dropdown {
+    constructor(item) {
+      this.wrapper = item;
+      this.btn = this.wrapper.querySelector(".");
+    }
+  }
 });
+
+
+

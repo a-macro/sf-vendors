@@ -1,3 +1,8 @@
+---
+layout: entered
+title: Банк вопросов
+---
+
 <div class="lk__top">
   <ul class="lk__nav">
     <li>
@@ -26,13 +31,28 @@
 </div>
 
 <section class="lk__inner bank">
-  <div class="lk__aside">
+  <div class="lk__aside aside">
     <nav>
-      <a href="#" class="lk__aside_item active">Журнал событий</a>
-      <a href="#" class="lk__aside_item">События в реальном времени</a>
-      <a href="#" class="lk__aside_item">Отчет о деятельности</a>
-      <a href="#" class="lk__aside_item">Участие в сертификации</a>
-      <a href="#" class="lk__aside_item">Выполнение элементов сертификации</a>
+      <div class="dropdown">
+        <button class="lk__aside_item hide-after dropdown-btn active" type="button">
+          Банк вопросов
+          <svg>
+            <use href="#select-arrow"></use>
+          </svg>
+        </button>
+
+        <div class="dropdown-content">
+          <a href="#" class="dropdown-content__link">Вопросы</a>
+          <a href="#" class="dropdown-content__link">Категории</a>
+          <a href="#" class="dropdown-content__link">Импорт</a>
+          <a href="#" class="dropdown-content__link">Экспорт</a>
+        </div>
+      </div>
+      <a href="#" class="lk__aside_item">Банк контента</a>
+      <a href="#" class="lk__aside_item">Завершение сертификации</a>
+      <a href="#" class="lk__aside_item">Компетентности</a>
+      <a href="#" class="lk__aside_item">Фильтры</a>
+      <a href="#" class="lk__aside_item">Повторное использование сертификации</a>
     </nav>
   </div>
 
@@ -167,7 +187,7 @@
           </button>
           <button class="bank-info-head__btn" type="button">
             <svg>
-              <use href="#search-icon"></use>
+              <use href="#search"></use>
             </svg>
           </button>
         </div>
@@ -209,14 +229,9 @@
             <div class="bank-info-item-col__number">
               <label class="checkbox bank-info-item-checkbox">
                 <div class="checkbox__icon bank-info-item-checkbox__icon">
-                  <svg>
-                    <use href="#check-icon"></use>
-                  </svg>
                 </div>
-
-                <input class="checkbox__input" type="checkbox" checked>
+                <input class="checkbox__input" type="checkbox">
               </label>
-
               1
             </div>
 
@@ -233,13 +248,66 @@
             </div>
 
             <div class="bank-info-item-col__action">
-              <button class="bank-info-item__btn bank-info-item-edit-btn">
-                Редактировать
+              <div class="dropdown-menu">
+                <button class="dropdown-menu-btn bank-info-item__btn bank-info-item-edit-btn">
+                  Редактировать
 
-                <svg>
-                  <use href="#select-arrow"></use>
-                </svg>
-              </button>
+                  <svg>
+                    <use href="#select-arrow"></use>
+                  </svg>
+                </button>
+
+                <div class="dropdown-menu-content">
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#edit-icon"></use>
+                    </svg>
+                    Редактировать вопрос
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#copy-icon"></use>
+                    </svg>
+                    Дублировать
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#mark-icon"></use>
+                    </svg>
+                    Управление тегами
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#view-icon"></use>
+                    </svg>
+                    Предварительный просмотр
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#history-icon"></use>
+                    </svg>
+                    История
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#delete-icon"></use>
+                    </svg>
+                    Удалить
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#export-icon"></use>
+                    </svg>
+                    Экспортировать в Moodle XML
+                  </button>
+                </div>
+              </div>
             </div>
 
             <div class="bank-info-item-col__edit">
@@ -263,8 +331,1211 @@
             </div>
           </div>
 
-          <div class="bank-info-item-container">
-            
+          <div class="bank-item-description">
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Статус
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <div class="select bank-item-description-select">
+                  <input class="select-value" type="text">
+                  <button class="select-btn bank-item-description-select__btn" type="button">
+                    <span class="select-btn__value"></span>
+                    <span class="select-btn__icon">
+                      <svg>
+                        <use href="#select-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="select-container bank-item-description-select__container">
+                    <button class="select-item" type="button" data-value="1" data-select>
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Готов
+                    </button>
+                    <button class="select-item" type="button" data-value="2">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 3
+                    </button>
+                    <button class="select-item" type="button" data-value="3">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 4
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Версия
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  V1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Комментарии
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Требуется
+                  проверка
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Эффективность дискриминации
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Н/Д
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Использование
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Последнее изпользование
+                </span>
+
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Никогда
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="bank-info-item">
+          <div class="bank-info-item-inner">
+            <div class="bank-info-item-col__number">
+              <label class="checkbox bank-info-item-checkbox">
+                <div class="checkbox__icon bank-info-item-checkbox__icon">
+                </div>
+                <input class="checkbox__input" type="checkbox">
+              </label>
+              1
+            </div>
+
+            <div class="bank-info-item-col__name">
+              Соотнесите этап операции управления межсетевыми экранами UserGate с использованием UserGate...
+            </div>
+
+            <div class="bank-info-item-col__type">
+              <svg>
+                <use href="#list-icon"></use>
+              </svg>
+
+              Множественный выбор
+            </div>
+
+            <div class="bank-info-item-col__action">
+              <div class="dropdown-menu">
+                <button class="dropdown-menu-btn bank-info-item__btn bank-info-item-edit-btn">
+                  Редактировать
+
+                  <svg>
+                    <use href="#select-arrow"></use>
+                  </svg>
+                </button>
+
+                <div class="dropdown-menu-content">
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#edit-icon"></use>
+                    </svg>
+                    Редактировать вопрос
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#copy-icon"></use>
+                    </svg>
+                    Дублировать
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#mark-icon"></use>
+                    </svg>
+                    Управление тегами
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#view-icon"></use>
+                    </svg>
+                    Предварительный просмотр
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#history-icon"></use>
+                    </svg>
+                    История
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#delete-icon"></use>
+                    </svg>
+                    Удалить
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#export-icon"></use>
+                    </svg>
+                    Экспортировать в Moodle XML
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bank-info-item-col__edit">
+              <span>9 августа 2022, 08:47</span>
+              <span>Администратор системы</span>
+            </div>
+
+            <div class="bank-info-item-col__edit">
+              <span>9 августа 2022, 08:47</span>
+              <span>Администратор системы</span>
+            </div>
+
+            <div class="bank-info-item-col__info">
+              <button class="bank-info-item__btn bank-info-item-info-btn">
+                Подробнее
+
+                <svg>
+                  <use href="#select-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="bank-item-description">
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Статус
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <div class="select bank-item-description-select">
+                  <input class="select-value" type="text">
+                  <button class="select-btn bank-item-description-select__btn" type="button">
+                    <span class="select-btn__value"></span>
+                    <span class="select-btn__icon">
+                      <svg>
+                        <use href="#select-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="select-container bank-item-description-select__container">
+                    <button class="select-item" type="button" data-value="1" data-select>
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Готов
+                    </button>
+                    <button class="select-item" type="button" data-value="2">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 3
+                    </button>
+                    <button class="select-item" type="button" data-value="3">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 4
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Версия
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  V1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Комментарии
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Требуется
+                  проверка
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Эффективность дискриминации
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Н/Д
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Использование
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Последнее изпользование
+                </span>
+
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Никогда
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="bank-info-item">
+          <div class="bank-info-item-inner">
+            <div class="bank-info-item-col__number">
+              <label class="checkbox bank-info-item-checkbox">
+                <div class="checkbox__icon bank-info-item-checkbox__icon">
+                </div>
+                <input class="checkbox__input" type="checkbox">
+              </label>
+              1
+            </div>
+
+            <div class="bank-info-item-col__name">
+              Соотнесите этап операции управления межсетевыми экранами UserGate с использованием UserGate...
+            </div>
+
+            <div class="bank-info-item-col__type">
+              <svg>
+                <use href="#list-icon"></use>
+              </svg>
+
+              Множественный выбор
+            </div>
+
+            <div class="bank-info-item-col__action">
+              <div class="dropdown-menu">
+                <button class="dropdown-menu-btn bank-info-item__btn bank-info-item-edit-btn">
+                  Редактировать
+
+                  <svg>
+                    <use href="#select-arrow"></use>
+                  </svg>
+                </button>
+
+                <div class="dropdown-menu-content">
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#edit-icon"></use>
+                    </svg>
+                    Редактировать вопрос
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#copy-icon"></use>
+                    </svg>
+                    Дублировать
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#mark-icon"></use>
+                    </svg>
+                    Управление тегами
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#view-icon"></use>
+                    </svg>
+                    Предварительный просмотр
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#history-icon"></use>
+                    </svg>
+                    История
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#delete-icon"></use>
+                    </svg>
+                    Удалить
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#export-icon"></use>
+                    </svg>
+                    Экспортировать в Moodle XML
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bank-info-item-col__edit">
+              <span>9 августа 2022, 08:47</span>
+              <span>Администратор системы</span>
+            </div>
+
+            <div class="bank-info-item-col__edit">
+              <span>9 августа 2022, 08:47</span>
+              <span>Администратор системы</span>
+            </div>
+
+            <div class="bank-info-item-col__info">
+              <button class="bank-info-item__btn bank-info-item-info-btn">
+                Подробнее
+
+                <svg>
+                  <use href="#select-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="bank-item-description">
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Статус
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <div class="select bank-item-description-select">
+                  <input class="select-value" type="text">
+                  <button class="select-btn bank-item-description-select__btn" type="button">
+                    <span class="select-btn__value"></span>
+                    <span class="select-btn__icon">
+                      <svg>
+                        <use href="#select-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="select-container bank-item-description-select__container">
+                    <button class="select-item" type="button" data-value="1" data-select>
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Готов
+                    </button>
+                    <button class="select-item" type="button" data-value="2">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 3
+                    </button>
+                    <button class="select-item" type="button" data-value="3">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 4
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Версия
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  V1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Комментарии
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Требуется
+                  проверка
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Эффективность дискриминации
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Н/Д
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Использование
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Последнее изпользование
+                </span>
+
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Никогда
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="bank-info-item">
+          <div class="bank-info-item-inner">
+            <div class="bank-info-item-col__number">
+              <label class="checkbox bank-info-item-checkbox">
+                <div class="checkbox__icon bank-info-item-checkbox__icon">
+                </div>
+                <input class="checkbox__input" type="checkbox">
+              </label>
+              1
+            </div>
+
+            <div class="bank-info-item-col__name">
+              Соотнесите этап операции управления межсетевыми экранами UserGate с использованием UserGate...
+            </div>
+
+            <div class="bank-info-item-col__type">
+              <svg>
+                <use href="#list-icon"></use>
+              </svg>
+
+              Множественный выбор
+            </div>
+
+            <div class="bank-info-item-col__action">
+              <div class="dropdown-menu">
+                <button class="dropdown-menu-btn bank-info-item__btn bank-info-item-edit-btn">
+                  Редактировать
+
+                  <svg>
+                    <use href="#select-arrow"></use>
+                  </svg>
+                </button>
+
+                <div class="dropdown-menu-content">
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#edit-icon"></use>
+                    </svg>
+                    Редактировать вопрос
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#copy-icon"></use>
+                    </svg>
+                    Дублировать
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#mark-icon"></use>
+                    </svg>
+                    Управление тегами
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#view-icon"></use>
+                    </svg>
+                    Предварительный просмотр
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#history-icon"></use>
+                    </svg>
+                    История
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#delete-icon"></use>
+                    </svg>
+                    Удалить
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#export-icon"></use>
+                    </svg>
+                    Экспортировать в Moodle XML
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bank-info-item-col__edit">
+              <span>9 августа 2022, 08:47</span>
+              <span>Администратор системы</span>
+            </div>
+
+            <div class="bank-info-item-col__edit">
+              <span>9 августа 2022, 08:47</span>
+              <span>Администратор системы</span>
+            </div>
+
+            <div class="bank-info-item-col__info">
+              <button class="bank-info-item__btn bank-info-item-info-btn">
+                Подробнее
+
+                <svg>
+                  <use href="#select-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="bank-item-description">
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Статус
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <div class="select bank-item-description-select">
+                  <input class="select-value" type="text">
+                  <button class="select-btn bank-item-description-select__btn" type="button">
+                    <span class="select-btn__value"></span>
+                    <span class="select-btn__icon">
+                      <svg>
+                        <use href="#select-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="select-container bank-item-description-select__container">
+                    <button class="select-item" type="button" data-value="1" data-select>
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Готов
+                    </button>
+                    <button class="select-item" type="button" data-value="2">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 3
+                    </button>
+                    <button class="select-item" type="button" data-value="3">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 4
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Версия
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  V1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Комментарии
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Требуется
+                  проверка
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Эффективность дискриминации
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Н/Д
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Использование
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Последнее изпользование
+                </span>
+
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Никогда
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="bank-info-item">
+          <div class="bank-info-item-inner">
+            <div class="bank-info-item-col__number">
+              <label class="checkbox bank-info-item-checkbox">
+                <div class="checkbox__icon bank-info-item-checkbox__icon">
+                </div>
+                <input class="checkbox__input" type="checkbox">
+              </label>
+              1
+            </div>
+
+            <div class="bank-info-item-col__name">
+              Соотнесите этап операции управления межсетевыми экранами UserGate с использованием UserGate...
+            </div>
+
+            <div class="bank-info-item-col__type">
+              <svg>
+                <use href="#list-icon"></use>
+              </svg>
+
+              Множественный выбор
+            </div>
+
+            <div class="bank-info-item-col__action">
+              <div class="dropdown-menu">
+                <button class="dropdown-menu-btn bank-info-item__btn bank-info-item-edit-btn">
+                  Редактировать
+
+                  <svg>
+                    <use href="#select-arrow"></use>
+                  </svg>
+                </button>
+
+                <div class="dropdown-menu-content">
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#edit-icon"></use>
+                    </svg>
+                    Редактировать вопрос
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#copy-icon"></use>
+                    </svg>
+                    Дублировать
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#mark-icon"></use>
+                    </svg>
+                    Управление тегами
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#view-icon"></use>
+                    </svg>
+                    Предварительный просмотр
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#history-icon"></use>
+                    </svg>
+                    История
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#delete-icon"></use>
+                    </svg>
+                    Удалить
+                  </button>
+
+                  <button class="dropdown-menu-content__btn" type="button">
+                    <svg>
+                      <use href="#export-icon"></use>
+                    </svg>
+                    Экспортировать в Moodle XML
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bank-info-item-col__edit">
+              <span>9 августа 2022, 08:47</span>
+              <span>Администратор системы</span>
+            </div>
+
+            <div class="bank-info-item-col__edit">
+              <span>9 августа 2022, 08:47</span>
+              <span>Администратор системы</span>
+            </div>
+
+            <div class="bank-info-item-col__info">
+              <button class="bank-info-item__btn bank-info-item-info-btn">
+                Подробнее
+
+                <svg>
+                  <use href="#select-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="bank-item-description">
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Статус
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <div class="select bank-item-description-select">
+                  <input class="select-value" type="text">
+                  <button class="select-btn bank-item-description-select__btn" type="button">
+                    <span class="select-btn__value"></span>
+                    <span class="select-btn__icon">
+                      <svg>
+                        <use href="#select-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="select-container bank-item-description-select__container">
+                    <button class="select-item" type="button" data-value="1" data-select>
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Готов
+                    </button>
+                    <button class="select-item" type="button" data-value="2">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 3
+                    </button>
+                    <button class="select-item" type="button" data-value="3">
+                      <svg>
+                        <use href="#check-icon"></use>
+                      </svg>
+                      Статус 4
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Версия
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  V1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Комментарии
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Требуется
+                  проверка
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  —
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Эффективность дискриминации
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Н/Д
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Использование
+                </span>
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text bank-item-description__text_red">
+                  1
+                </span>
+              </div>
+            </div>
+
+            <div class="bank-item-description-box">
+              <div class="bank-item-description__head">
+                <span class="bank-item-description__name">
+                  Последнее изпользование
+                </span>
+
+                <span class="tooltip tlp-info tlp-left"
+                  data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                  <button class="bank-item-description__info-btn">
+                    <svg>
+                      <use href="#info-icon"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <div class="bank-item-description__inner">
+                <span class="bank-item-description__text">
+                  Никогда
+                </span>
+              </div>
+            </div>
           </div>
         </li>
       </ul>
