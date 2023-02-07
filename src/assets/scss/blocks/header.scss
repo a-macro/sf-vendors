@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: white;
 
     .header-wrap {
         &:nth-child(1) {
@@ -46,6 +47,10 @@
     text-decoration: none;
     margin-left: 7.3rem;
     transition: color .3s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     &:nth-child(1) {
         margin-left: 0;
     }
@@ -55,8 +60,34 @@
     }
 }
 
+.header__item.trigger {
+
+    &::after {
+        content: "";
+        margin-left: 1.1rem;
+        margin-top: -.2rem;
+        display: block;
+        width: .5rem;
+        height: .5rem;
+        border-right: 1px solid $black;
+        border-bottom: 1px solid $black;
+        transform: rotate(45deg);
+    }
+    &:hover {
+        &::after {
+            border-right: 1px solid $red;
+            border-bottom: 1px solid $red;
+        }    
+    }
+}
+
 .header__item.active {
     color: $red;
+
+    &::after {
+        border-right: 1px solid $red;
+        border-bottom: 1px solid $red;
+    }
 
     svg {
         path {
@@ -81,8 +112,8 @@
     text-align: left;
     color: $black;    
     text-decoration: none;
-    padding: 0 1rem;
-    border-left: 1px solid $black;
+    padding: 0 2rem;
+    border-left: 1px solid #D6D6D6;
 }
 
 .header__sign-in {
@@ -94,6 +125,7 @@
 }
 
 .header__search {
+
     &:hover {
         path {
             fill: $red;
@@ -102,7 +134,8 @@
 
     svg {
         margin-right: 2rem;
-        width: 2.5rem;   
+        width: 2.4rem;   
+        display: block;
         path {
             transition: fill .3s;
         }
@@ -214,4 +247,28 @@
     left: 0;
     top: 0;
     background: white;
+}
+
+.header-bordered {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    box-shadow: 0px 2px 4px 0px #5C5C5C33;
+
+    .header__sign-up {
+        padding-right: 0;
+        color: $red;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .header__sign-in {
+        color: $red;
+        padding-right: 2rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

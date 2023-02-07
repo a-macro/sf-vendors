@@ -9,11 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.documentElement.style.setProperty('--h', height + "px");
   document.documentElement.style.setProperty('--w', width + "px");
   document.documentElement.style.setProperty('--headerH', header.getBoundingClientRect().height + "px");
-
-  //el.style.setProperty("--r", right + "px");
-  //scrollLock.enablePageScroll(openedModal); отключить
-  //scrollLock.disablePageScroll(mobMenu);
-
   var categories = document.querySelectorAll(".categories__block");
   if (categories.length > 0) {
     for (var i = 0; i < categories.length; i++) {
@@ -48,24 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     });
   }
-
-  /*let showMore = document.querySelectorAll(".show-more");
-  if(showMore.length > 0) {
-      showMore.forEach(btn => {
-          let parent = btn.closest("div");
-          btn.onclick = (e) => {
-              e.preventDefault();
-              let hidden = parent.querySelectorAll(".hide");
-              if(hidden.length > 0) {
-                  hidden.forEach(elem => {
-                      elem.classList.remove("hide");
-                  });
-              }
-              btn.style.display = "none";
-          }
-      });
-  }*/
-
   var selectorTitle = document.querySelectorAll(".selector__title");
   if (selectorTitle.length > 0) {
     selectorTitle.forEach(function (title) {
@@ -118,6 +95,29 @@ document.addEventListener("DOMContentLoaded", function () {
           item.classList.add("active");
         }
       };
+    });
+  }
+  var introBlocks = document.querySelectorAll(".intro__changeable_block");
+  if (introBlocks.length > 0) {
+    var parent = document.querySelector(".intro__changeable_blocks");
+    parent.setAttribute("data-num", introBlocks.length);
+  }
+  var sphereCont = document.querySelectorAll(".spheres__container");
+  if (sphereCont.length > 0) {
+    sphereCont.forEach(function (slider) {
+      var prev = slider.querySelector(".swiper-button-prev");
+      var next = slider.querySelector(".swiper-button-next");
+      new Swiper(slider, {
+        navigation: {
+          nextEl: next,
+          prevEl: prev
+        },
+        slidesPerView: 3,
+        watchOverflow: true,
+        spaceBetween: 40,
+        freeMode: "false",
+        loop: true
+      });
     });
   }
 });
