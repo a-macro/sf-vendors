@@ -3,6 +3,8 @@
 @import "fonts";
 @import "vendor/reset";
 
+@import "./general.scss";
+
 /* Blocks */
 @import "blocks/common-styles.scss";
 @import "blocks/circle-checkbox.scss";
