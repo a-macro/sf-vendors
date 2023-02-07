@@ -241,12 +241,7 @@
       width: 1.2rem;
       height: 0.7rem;
       fill: #333333;
-    }
-
-    &.active {
-      svg {
-        fill: #C60B46;
-      }
+      transition: .3s;
     }
   }
 
@@ -271,6 +266,12 @@
       &:hover {
         opacity: 0.5;
       }
+    }
+  }
+
+  &._open {
+    svg {
+      transform: rotate(180deg);
     }
   }
 }
