@@ -41,6 +41,11 @@
       width: 20.1rem;
     }
   }
+  &--idnum {
+    .custom-input {
+      width: 14.3rem;
+    }
+  }
   &--visibility {
     .select {
       width: 14.3rem;
@@ -63,7 +68,10 @@
 .lkset-item__tooltips {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
+
+  width: 4rem;
 }
 
 .lkset-item__content {
