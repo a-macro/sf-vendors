@@ -119,29 +119,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   let introBlocks = document.querySelectorAll(".intro__changeable_block");
-  if(introBlocks.length > 0) {
-      let parent = document.querySelector(".intro__changeable_blocks");
-      parent.setAttribute("data-num", introBlocks.length);
+  if (introBlocks.length > 0) {
+    let parent = document.querySelector(".intro__changeable_blocks");
+    parent.setAttribute("data-num", introBlocks.length);
   }
 
   let sphereCont = document.querySelectorAll(".spheres__container");
-  if(sphereCont.length > 0) {
-      sphereCont.forEach(slider => {
-          let prev = slider.querySelector(".swiper-button-prev");
-          let next = slider.querySelector(".swiper-button-next");
-          new Swiper(slider, {
-              navigation: {
-                  nextEl: next,
-                  prevEl: prev
-              },
-              slidesPerView: 3,
-              watchOverflow: true,
-              spaceBetween: 40,
-              freeMode: "false",
-              loop: true,
-          });
-  
+  if (sphereCont.length > 0) {
+    sphereCont.forEach(slider => {
+      let prev = slider.querySelector(".swiper-button-prev");
+      let next = slider.querySelector(".swiper-button-next");
+      new Swiper(slider, {
+        navigation: {
+          nextEl: next,
+          prevEl: prev
+        },
+        slidesPerView: 3,
+        watchOverflow: true,
+        spaceBetween: 40,
+        freeMode: "false",
+        loop: true,
       });
+
+    });
   }
 
 
@@ -153,6 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.btn = this.wrapper.querySelector(".select-btn");
       this.btnValue = this.btn.querySelector(".select-btn__value");
       this.container = this.wrapper.querySelector(".select-container");
+      this.maxHeight = this.container.getAttribute("data-max-height");
       this.isOpen =
         this.wrapper.getAttribute("data-open") !== null ? true : false;
 
@@ -171,7 +172,10 @@ document.addEventListener("DOMContentLoaded", () => {
       this.btnValue.innerText = this.input.placeholder;
       this.btnValue.classList.add("_placeholder");
 
-      this.maxHeight = (this.container.offsetHeight * 2) / 10 + "rem";
+      if (this.maxHeight === null) {
+        this.maxHeight = (this.container.offsetHeight * 2) / 10 + "rem";
+      }
+
       this.btn.addEventListener("click", this.handleClick.bind(this));
 
       [...this.container.children].forEach((item) => {
