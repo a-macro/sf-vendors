@@ -3,8 +3,43 @@ layout: entered
 title: ЛК Сертификация
 ---
 
-<div class="title-wrap">
+<div class="title-wrap title-wrap--sertif">
     <h1 class="main-title">Личный кабинет</h1>
+</div>
+
+<div class="lk-table__rows-count lk-table__rows-count--top">
+    <p>Показывать строк</p>
+    <div class="select lk-table__rows-select">
+        <input class="select-value" type="text" placeholder="5">
+        <button class="select-btn" type="button">
+            <span class="select-btn__value"></span>
+            <span class="select-btn__icon">
+                <svg>
+                    <use href="#double-chevron"></use>
+                </svg>
+            </span>
+        </button>
+        <div class="select-container">
+            <button class="select-item" type="button" data-value="1">
+                <svg>
+                    <use href="#check-icon"></use>
+                </svg>
+                5
+            </button>
+            <button class="select-item" type="button" data-value="2" data-select>
+                <svg>
+                    <use href="#check-icon"></use>
+                </svg>
+                10
+            </button>
+            <button class="select-item" type="button" data-value="3">
+                <svg>
+                    <use href="#check-icon"></use>
+                </svg>
+                15
+            </button>
+        </div>
+    </div>
 </div>
 
 <section class="lk__inner">
@@ -21,40 +56,7 @@ title: ЛК Сертификация
         </div>
     </div>
     <div class="lk__main lk__sertif lk-table">
-        <div class="lk-table__rows-count">
-            <p>Показывать строк</p>
-            <div class="select lk-table__rows-select">
-                <input class="select-value" type="text" placeholder="5">
-                <button class="select-btn" type="button">
-                    <span class="select-btn__value"></span>
-                    <span class="select-btn__icon">
-                        <svg>
-                            <use href="#select-arrow"></use>
-                        </svg>
-                    </span>
-                </button>
-                <div class="select-container">
-                    <button class="select-item" type="button" data-value="1">
-                        <svg>
-                            <use href="#check-icon"></use>
-                        </svg>
-                        5
-                    </button>
-                    <button class="select-item" type="button" data-value="2">
-                        <svg>
-                            <use href="#check-icon"></use>
-                        </svg>
-                        10
-                    </button>
-                    <button class="select-item" type="button" data-value="3">
-                        <svg>
-                            <use href="#check-icon"></use>
-                        </svg>
-                        15
-                    </button>
-                </div>
-            </div>
-        </div>
+
         <div class="lk__main_wrapper">
             <div class="lk__table_inner lk-table_inner">
                 <div class="head lk__table_row">
