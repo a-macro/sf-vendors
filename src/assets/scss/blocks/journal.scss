@@ -204,6 +204,12 @@
       opacity: .4;
     }
   }
+
+  &.hide-after {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .lk__aside_item.active {

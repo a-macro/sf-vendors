@@ -2,7 +2,7 @@ let openModal;
 let closeModal;
 
 document.addEventListener("DOMContentLoaded", () => {
-//= marat-js.js
+  //= marat-js.js
 
   let height = window.innerHeight;
   let width = window.innerWidth;
@@ -115,29 +115,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   let introBlocks = document.querySelectorAll(".intro__changeable_block");
-  if(introBlocks.length > 0) {
-      let parent = document.querySelector(".intro__changeable_blocks");
-      parent.setAttribute("data-num", introBlocks.length);
+  if (introBlocks.length > 0) {
+    let parent = document.querySelector(".intro__changeable_blocks");
+    parent.setAttribute("data-num", introBlocks.length);
   }
 
   let sphereCont = document.querySelectorAll(".spheres__container");
-  if(sphereCont.length > 0) {
-      sphereCont.forEach(slider => {
-          let prev = slider.querySelector(".swiper-button-prev");
-          let next = slider.querySelector(".swiper-button-next");
-          new Swiper(slider, {
-              navigation: {
-                  nextEl: next,
-                  prevEl: prev
-              },
-              slidesPerView: 3,
-              watchOverflow: true,
-              spaceBetween: 40,
-              freeMode: "false",
-              loop: true,
-          });
-  
+  if (sphereCont.length > 0) {
+    sphereCont.forEach(slider => {
+      let prev = slider.querySelector(".swiper-button-prev");
+      let next = slider.querySelector(".swiper-button-next");
+      new Swiper(slider, {
+        navigation: {
+          nextEl: next,
+          prevEl: prev
+        },
+        slidesPerView: 3,
+        watchOverflow: true,
+        spaceBetween: 40,
+        freeMode: "false",
+        loop: true,
       });
+
+    });
   }
 
 
@@ -149,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.btn = this.wrapper.querySelector(".select-btn");
       this.btnValue = this.btn.querySelector(".select-btn__value");
       this.container = this.wrapper.querySelector(".select-container");
+      this.maxHeight = this.container.getAttribute("data-max-height");
       this.isOpen = this.wrapper.getAttribute("data-open") !== null ? true : false;
 
       if (this.wrapper && this.input && this.btn && this.btnValue && this.container) {
@@ -160,7 +161,10 @@ document.addEventListener("DOMContentLoaded", () => {
       this.btnValue.innerText = this.input.placeholder;
       this.btnValue.classList.add("_placeholder");
 
-      this.maxHeight = this.container.offsetHeight * 2 / 10 + "rem";
+      if (this.maxHeight === null) {
+        this.maxHeight = (this.container.offsetHeight * 2) / 10 + "rem";
+      }
+
       this.btn.addEventListener("click", this.handleClick.bind(this));
 
       [...this.container.children].forEach(item => {
@@ -168,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (item.getAttribute("data-select") !== null) {
           this.setValue.call(this, item);
         }
-       });
+      });
 
       this.isOpen ? this.open() : this.close();
 
@@ -277,7 +281,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const bankInfoItems = document.querySelectorAll(".bank-info-item");
-  bankInfoItems.forEach(item => new BankInfoItem(item))
+  bankInfoItems.forEach(item => new BankInfoItem(item));
+
+  // DROPDOWN MENU
+  class DropdownMenu {
+    constructor(wrapper) {
+      this.wrapper = wrapper;
+      this.btn = this.wrapper.querySelector(".dropdown-menu-btn");
+      this.isActive = false;
+
+      if (this.wrapper && this.btn) {
+        this.init();
+      }
+    }
+
+    init() {
+      this.btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.handleClick.call(this);
+      });
+
+      document.addEventListener("click", this.close.bind(this))
+    }
+
+    handleClick() {
+      this.isActive ? this.close() : this.open();
+    }
+
+    open() {
+      this.wrapper.classList.add("_active");
+      this.isActive = true;
+    }
+
+    close() {
+      this.wrapper.classList.remove("_active");
+      this.isActive = false;
+    }
+  }
+
+  const dropdownMenuList = document.querySelectorAll(".dropdown-menu");
+  dropdownMenuList.forEach(item => new DropdownMenu(item));
+
+  class Dropdown {
+    constructor(item) {
+      this.wrapper = item;
+      this.btn = this.wrapper.querySelector(".");
+    }
+  }
 });
 
 
