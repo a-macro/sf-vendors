@@ -325,9 +325,44 @@ document.addEventListener("DOMContentLoaded", () => {
   class Dropdown {
     constructor(item) {
       this.wrapper = item;
-      this.btn = this.wrapper.querySelector(".");
+      this.btn = this.wrapper.querySelector(".dropdown-btn");
+      this.content = this.wrapper.querySelector(".dropdown-content");
+      this.isActive = this.wrapper.getAttribute("data-active") === null ? false : true;
+
+      if (this.wrapper && this.btn && this.content) {
+        this.init();
+      }
+    }
+
+    init() {
+      this.maxHeight = this.content.offsetHeight * 2 / 10 + "rem";
+      this.btn.addEventListener("click", this.handleClick.bind(this))
+
+      if (this.isActive) {
+        this.open();
+      } else this.close();
+    }
+
+    handleClick() {
+      this.isActive ? this.close() : this.open();
+    }
+
+    open() {
+      this.wrapper.classList.add("_active");
+      this.content.style.maxHeight = this.maxHeight;
+      this.isActive = true;
+    }
+
+    close() {
+      this.wrapper.classList.remove("_active");
+      this.content.style.maxHeight = 0;
+      this.isActive = false;
     }
   }
+
+  const dropdownBtns = document.querySelectorAll(".dropdown");
+  dropdownBtns.forEach(item => new Dropdown(item));
+
 });
 
 
