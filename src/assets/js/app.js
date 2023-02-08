@@ -237,11 +237,25 @@ if(changeNums && changeNums.length > 0) {
       this.btnValue.innerText = this.input.placeholder;
       this.btnValue.classList.add("_placeholder");
 
+      this.btnInfo = document.createElement("span");
+      this.btnInfo.className = "select-btn__info";
+      this.btn.appendChild(this.btnInfo);
+
       if (this.maxHeight === null) {
         this.maxHeight = (this.container.offsetHeight * 2) / 10 + "rem";
       }
 
       this.btn.addEventListener("click", this.handleClick.bind(this));
+      this.btn.addEventListener("mouseenter", () => {
+        this.btnInfo.innerText && this.btnInfo.classList.add("_active");
+      });
+      this.btn.addEventListener("mouseleave", () => {
+        this.btnInfo.classList.remove("_active");
+      });
+      this.btn.addEventListener("mousemove", (e) => {
+        this.btnInfo.style.top = `${e.clientY + 1}px`;
+        this.btnInfo.style.left = `${e.clientX + 15}px`;
+      });
 
       [...this.container.children].forEach(item => {
         item.addEventListener("click", this.setValue.bind(this, item));
@@ -278,6 +292,7 @@ if(changeNums && changeNums.length > 0) {
       this.input.value = value;
       this.btnValue.innerText = text;
       this.btnValue.classList.remove("_placeholder");
+      this.btnInfo.innerText = text;
       this.close();
 
       [...this.container.children].forEach(i => {
