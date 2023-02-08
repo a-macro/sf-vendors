@@ -53,6 +53,80 @@ title: Сертификация - Тестирование
                 </button>
             </div>
         </div>
+
+        <div class="members-accordance">
+            <div class="members-accordance__header">
+                <p class="members-accordance__name">Соответствие</p>
+                <a class="members-accordance__delete">
+                    <svg class="close-square_icon">
+                        <use href="#close-square"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="members-accordance__fields">
+                <div class="select">
+                    <input class="select-value" type="text" placeholder="Найти">
+                    <button class="select-btn" type="button">
+                        <span class="select-btn__value"></span>
+                        <span class="select-btn__icon">
+                            <svg>
+                                <use href="#select-arrow"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="select-container">
+                        <button class="select-item" type="button" data-value="1" data-select>
+                            <svg>
+                                <use href="#check-icon"></use>
+                            </svg>
+                            Любое
+                        </button>
+                        <button class="select-item" type="button" data-value="2">
+                            <svg>
+                                <use href="#check-icon"></use>
+                            </svg>
+                            Не любое
+                        </button>
+                    </div>
+                </div>
+                <div class="select">
+                    <input class="select-value" type="text" placeholder="Выбрать">
+                    <button class="select-btn" type="button">
+                        <span class="select-btn__value"></span>
+                        <span class="select-btn__icon">
+                            <svg>
+                                <use href="#select-arrow"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="select-container">
+                        <button class="select-item" type="button" data-value="1">
+                            <svg>
+                                <use href="#check-icon"></use>
+                            </svg>
+                            Первый вариант
+                        </button>
+                        <button class="select-item" type="button" data-value="2">
+                            <svg>
+                                <use href="#check-icon"></use>
+                            </svg>
+                            Второй вариант
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="members-accordance__add" href="#">
+            <svg class="plus-square_icon">
+                <use href="#plus-square"></use>
+            </svg>
+        </a>
+
+        <div class="members-aside__btns">
+            <a href="#" class="btn-gray">Сбросить</a>
+            <a href="#" class="btn-red">Применить</a>
+        </div>
     </div>
     <div class="lk__main memb-enrl">
         <div class="memb-enrl__inner">
@@ -173,7 +247,8 @@ title: Сертификация - Тестирование
                     </div>
                     <div class="lk__table_row">
                         <div>
-                            <input class="table-row__select-checkbox circle-checkbox" type="checkbox" id="member-1" checked>
+                            <input class="table-row__select-checkbox circle-checkbox" type="checkbox" id="member-1"
+                                checked>
                             <label for="member-1">1</label>
                         </div>
                         <div>
@@ -271,6 +346,39 @@ title: Сертификация - Тестирование
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="lk-table__footer">
+                <div class="lk-table__footer-content">
+                    <p class="lk-table__results-count">С выбранными пользователями...</p>
+                    <div class="select select--chosen-memb">
+                        <input class="select-value" type="text" placeholder="Выберите">
+                        <button class="select-btn" type="button">
+                            <span class="select-btn__value"></span>
+                            <span class="select-btn__icon">
+                                <svg>
+                                    <use href="#select-arrow"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="select-container">
+                            <button class="select-item" type="button" data-value="1">
+                                <svg>
+                                    <use href="#check-icon"></use>
+                                </svg>
+                                Удалить
+                            </button>
+                            <button class="select-item" type="button" data-value="2">
+                                <svg>
+                                    <use href="#check-icon"></use>
+                                </svg>
+                                Похвалить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk-table__footer-btns">
+                    <a href="#" class="btn-red">Зачисление пользователей на сертификацию</a>
                 </div>
             </div>
         </div>
