@@ -1,7 +1,6 @@
 // select
 .select {
   position: relative;
-  width: 30rem;
 
   &-value {
     display: none;
@@ -324,7 +323,7 @@
   width: 100%;
   background: white;
   border-radius: 1.6rem;
-  border: .5px solid #CCCCCC;
+  border: 0.5px solid #cccccc;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -333,7 +332,7 @@
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-top: .5px solid #CCCCCC;
+    border-top: 0.5px solid #cccccc;
     display: flex;
     align-items: center;
   }
@@ -386,7 +385,7 @@
     width: 14px;
     height: 14px;
     border-radius: 100%;
-    border: .5px solid #BDBDBD;
+    border: 0.5px solid #bdbdbd;
     margin-right: 1rem;
   }
 
@@ -395,18 +394,18 @@
     width: 7px;
     height: 7px;
     border-radius: 100%;
-    background: #C60B46;
+    background: #c60b46;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, - 50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
     left: 7px;
   }
 
   &:hover {
     .checkbox__round_check::after {
-      opacity: .4;
+      opacity: 0.4;
     }
   }
 
@@ -441,14 +440,14 @@
     flex: none;
     object-fit: contain;
     fill: #000;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &:hover {
-    color: #C60B46;
+    color: #c60b46;
 
     svg {
-      fill: #C60B46;
+      fill: #c60b46;
     }
   }
 }

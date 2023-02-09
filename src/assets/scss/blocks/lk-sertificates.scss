@@ -156,6 +156,10 @@
   }
 }
 
+.lk-table__rows-select._active .select-btn__icon {
+  transform: none;
+}
+
 .lk-table__footer-content {
   display: flex;
   align-items: center;

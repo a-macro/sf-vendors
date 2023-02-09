@@ -148,7 +148,8 @@
   gap: 2rem;
 }
 
-.custom-input {
+.custom-input,
+.custom-textarea {
   font-family: "Segoe UI";
   font-weight: 400;
   font-size: 1.6rem;
@@ -161,6 +162,7 @@
   border-radius: 0.7rem;
 
   &::placeholder {
+    font-family: "Segoe UI";
     color: #4f4f4f;
   }
 }
