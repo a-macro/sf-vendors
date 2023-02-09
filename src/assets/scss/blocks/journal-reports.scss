@@ -49,6 +49,10 @@
 .lk-reports {
     width: calc(100% - 56rem);
 
+    .select {
+        width: unset;
+    }
+
     .lkset-item:nth-child(1) {
         padding-top: 2rem;
     }

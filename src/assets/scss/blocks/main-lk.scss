@@ -90,6 +90,10 @@
     gap: 1.5rem;
     flex-wrap: wrap;
 
+    .select {
+        width: unset;
+    }
+
     .select-btn {
         min-width: 12rem;
         width: unset;
