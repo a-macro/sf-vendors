@@ -55,6 +55,9 @@
     }
 
     &__icon {
+      display: flex;
+      align-items: center;
+
       width: 1.6rem;
       height: 1.6rem;
       padding: 0.4rem;
@@ -160,6 +163,10 @@
       height: 3rem;
       padding: 0;
     }
+
+    &._active .select-btn__icon {
+      transform: none;
+    }
   }
 }
 
@@ -211,7 +218,6 @@
   position: relative;
 
   &._active & {
-
     &-btn {
       svg {
         transform: rotate(180deg);
@@ -231,10 +237,10 @@
     background-color: #fff;
     padding: 1rem 0;
     border-radius: 1rem;
-    border: 0.1rem solid #CCCCCC;
+    border: 0.1rem solid #cccccc;
     opacity: 0;
     pointer-events: none;
-    transition: .3s;
+    transition: 0.3s;
 
     &__btn {
       padding: 1rem;
@@ -243,12 +249,12 @@
       gap: 1rem;
       font-size: 1.6rem;
       line-height: 1.8rem;
-      color: #4F4F4F;
+      color: #4f4f4f;
       border: none;
       background-color: #fff;
       width: 100%;
       white-space: nowrap;
-      transition: .3s;
+      transition: 0.3s;
 
       svg {
         flex: none;
@@ -256,7 +262,7 @@
         height: 1.5rem;
         object-fit: contain;
         object-position: center center;
-        transition: .3s;
+        transition: 0.3s;
       }
 
       &:hover {
@@ -279,14 +285,14 @@
       width: 1.2rem;
       height: 0.7rem;
       fill: #333333;
-      transition: .3s;
+      transition: 0.3s;
     }
   }
 
   &-content {
     display: flex;
     flex-direction: column;
-    transition: .3s;
+    transition: 0.3s;
     overflow: hidden;
 
     &__link {
@@ -295,10 +301,10 @@
       line-height: 1.9rem;
       color: #000;
       text-decoration: none;
-      transition: .3s;
+      transition: 0.3s;
 
       &._active {
-        color: #C60B46;
+        color: #c60b46;
       }
 
       &:hover {

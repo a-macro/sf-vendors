@@ -90,6 +90,11 @@
     gap: 1.5rem;
     flex-wrap: wrap;
 
+    .select-btn {
+        min-width: 12rem;
+        width: unset;
+    }
+
     .select-item {
         white-space: unset;
 
@@ -97,42 +102,26 @@
             min-width: 1.5rem;
         }
     }
-}
 
-.selector.type {
-    
-    .filter__btn {
-        min-width: 12rem;
-    }
-}
-
-.selector.show {
-    
-    .filter__btn {
-        min-width: 19.3rem;
-    }
-
-
-    .filter__item {
-        &:nth-child(1) {
-            border-bottom: .5px solid #BDBDBD;
+    .type {
+        .select-btn {
+            min-width: 13rem;
         }
-
-        &:nth-last-child(1) {
-            border-top: .5px solid #BDBDBD;
-        }
-        &:nth-last-child(2) {
-            border-top: .5px solid #BDBDBD;
+    }
+    
+    .show {
+        .select-btn {
+            min-width: 20rem;
+        }  
+    }
+    
+    .order {
+        .select-btn {
+            min-width: 37rem;
         }
     }
 }
 
-.selector.order {
-    
-    .filter__btn {
-        min-width: 35rem;
-    }
-}
 
 .filter__item {
     cursor: pointer;

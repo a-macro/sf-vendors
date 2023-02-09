@@ -1,6 +1,6 @@
 ---
 layout: entered
-title: ЛК Главная
+title: ЛК Отчеты
 ---
 
 <div class="lk__top">
@@ -31,75 +31,274 @@ title: ЛК Главная
 </div>
 
 <section class="lk__inner">
-    <div class="lk__aside">
-        <nav>
-            <a href="#" class="lk__aside_item active">Журнал событий</a>
-            <a href="#" class="lk__aside_item">События в реальном времени</a>
-            <a href="#" class="lk__aside_item">Отчет о деятельности</a>
-            <a href="#" class="lk__aside_item">Участие в сертификации</a>
-            <a href="#" class="lk__aside_item">Выполнение элементов сертификации</a>
+    <div class="bank-aside">
+        <nav class="bank-aside-nav">
+  
+          <div class="bank-aside-item _active">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Журнал событий
+            </a>
+          </div>
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              События в реальном времени
+            </a>
+          </div>
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Отчет о деятельности
+            </a>
+          </div>
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Участие в сертификации
+            </a>
+          </div>
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Фильтры
+            </a>
+          </div>
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Выполнение элементов сертификации
+            </a>
+          </div>
         </nav>
     </div>
     <div class="lk__main">
         <h2 class="lk__subtitle">Журнал событий</h2>
-        <div class="lk__selectors">
-            <div class="selector journal1">
-                <p class="selector__title filter__btn"><span>UGATE001.Х Администрирование межсетевых экранов UserGate 6</span></p>
-                <div class="selector__block filter__block">
-                    <span class="selector__item filter__item active">UGATE001.Х Администрирование межсетевых экранов UserGate 6</span>
-                    <span class="selector__item filter__item">UGATE002.Х Администрирование межсетевых экранов UserGate 6</span>
-                    <span class="selector__item filter__item">UGATE003.Х Администрирование межсетевых экранов UserGate 6</span>
+        <div class="bank-head-box lk__selectors">
+            <div class="select bank-head-select journal1">
+                <input class="select-value" type="text" placeholder="UGATE001.Х Администрирование межсетевых экранов UserGate 6">
+                <button class="select-btn" type="button">
+                    <span class="select-btn__value"></span>
+                    <span class="select-btn__icon">
+                    <svg>
+                        <use href="#select-arrow"></use>
+                    </svg>
+                    </span>
+                </button>
+                <div class="select-container">
+                    <button class="select-item" type="button" data-value="1">
+                        <svg>
+                            <use href="#check-icon"></use>
+                        </svg>
+                        UGATE001.Х Администрирование межсетевых экранов UserGate 6
+                    </button>
+                    <button class="select-item" type="button" data-value="2">
+                        <svg>
+                            <use href="#check-icon"></use>
+                        </svg>
+                        UGATE001.Х Администрирование межсетевых экранов UserGate 5
+                    </button>
+                    <button class="select-item" type="button" data-value="3">
+                        <svg>
+                            <use href="#check-icon"></use>
+                        </svg>
+                        UGATE001.Х Администрирование межсетевых экранов UserGate 4
+                    </button>
                 </div>
             </div>
-            <div class="selector journal2">
-                <p class="selector__title filter__btn"><span>Все участники</span></p>
-                <div class="selector__block filter__block">
-                    <span class="selector__item filter__item active">Все участники</span>
-                    <span class="selector__item filter__item">Все участники1</span>
-                    <span class="selector__item filter__item">Все участники2</span>
+       
+            <div class="select bank-head-select journal2">
+              <input class="select-value" type="text" placeholder="Все участники">
+              <button class="select-btn" type="button">
+                <span class="select-btn__value"></span>
+                <span class="select-btn__icon">
+                  <svg>
+                    <use href="#select-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+              <div class="select-container">
+                <button class="select-item" type="button" data-value="1">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                  Все участники
+                </button>
+                <button class="select-item" type="button" data-value="2">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                  Фильтр 2
+                </button>
+                <button class="select-item" type="button" data-value="3">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                  Фильтр 3
+                </button>
+              </div>
+            </div>
+    
+            <div class="select bank-head-select journal3">
+                <input class="select-value" type="text" placeholder="Все дни">
+                <button class="select-btn" type="button">
+                  <span class="select-btn__value"></span>
+                  <span class="select-btn__icon">
+                    <svg>
+                      <use href="#select-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="select-container">
+                  <button class="select-item" type="button" data-value="1">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Все дни
+                  </button>
+                  <button class="select-item" type="button" data-value="2">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 2
+                  </button>
+                  <button class="select-item" type="button" data-value="3">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 3
+                  </button>
                 </div>
             </div>
-            <div class="selector journal3">
-                <p class="selector__title filter__btn"><span>Все дни</span></p>
-                <div class="selector__block filter__block">
-                    <span class="selector__item filter__item active">Все дни</span>
-                    <span class="selector__item filter__item">Все дни1</span>
-                    <span class="selector__item filter__item">Все дни2</span>
+    
+            <div class="select bank-head-select journal4">
+                <input class="select-value" type="text" placeholder="Все элементы">
+                <button class="select-btn" type="button">
+                  <span class="select-btn__value"></span>
+                  <span class="select-btn__icon">
+                    <svg>
+                      <use href="#select-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="select-container">
+                  <button class="select-item" type="button" data-value="1">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Все элементы
+                  </button>
+                  <button class="select-item" type="button" data-value="2">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 2
+                  </button>
+                  <button class="select-item" type="button" data-value="3">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 3
+                  </button>
                 </div>
             </div>
-            <div class="selector journal4">
-                <p class="selector__title filter__btn"><span>Все элементы</span></p>
-                <div class="selector__block filter__block">
-                    <span class="selector__item filter__item active">Все элементы</span>
-                    <span class="selector__item filter__item">Все элементы1</span>
-                    <span class="selector__item filter__item">Все элементы2</span>
+
+            <div class="select bank-head-select journal5">
+                <input class="select-value" type="text" placeholder="Все действия">
+                <button class="select-btn" type="button">
+                  <span class="select-btn__value"></span>
+                  <span class="select-btn__icon">
+                    <svg>
+                      <use href="#select-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="select-container">
+                  <button class="select-item" type="button" data-value="1">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Все действия
+                  </button>
+                  <button class="select-item" type="button" data-value="2">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 2
+                  </button>
+                  <button class="select-item" type="button" data-value="3">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 3
+                  </button>
                 </div>
             </div>
-            <div class="selector journal5">
-                <p class="selector__title filter__btn"><span>Все действия</span></p>
-                <div class="selector__block filter__block">
-                    <span class="selector__item filter__item active">Все действия</span>
-                    <span class="selector__item filter__item">Все действия1</span>
-                    <span class="selector__item filter__item">Все действия2</span>
+
+            <div class="select bank-head-select journal6">
+                <input class="select-value" type="text" placeholder="Все источники">
+                <button class="select-btn" type="button">
+                  <span class="select-btn__value"></span>
+                  <span class="select-btn__icon">
+                    <svg>
+                      <use href="#select-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="select-container">
+                  <button class="select-item" type="button" data-value="1">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Все источники
+                  </button>
+                  <button class="select-item" type="button" data-value="2">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 2
+                  </button>
+                  <button class="select-item" type="button" data-value="3">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 3
+                  </button>
                 </div>
             </div>
-            <div class="selector journal5">
-                <p class="selector__title filter__btn"><span>Все источники</span></p>
-                <div class="selector__block filter__block">
-                    <span class="selector__item filter__item active">Все источники</span>
-                    <span class="selector__item filter__item">Все источники1</span>
-                    <span class="selector__item filter__item">Все источники2</span>
+
+            <div class="select bank-head-select journal7">
+                <input class="select-value" type="text" placeholder="Все источники">
+                <button class="select-btn" type="button">
+                  <span class="select-btn__value"></span>
+                  <span class="select-btn__icon">
+                    <svg>
+                      <use href="#select-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="select-container">
+                  <button class="select-item" type="button" data-value="1">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Все события
+                  </button>
+                  <button class="select-item" type="button" data-value="2">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 2
+                  </button>
+                  <button class="select-item" type="button" data-value="3">
+                    <svg>
+                      <use href="#check-icon"></use>
+                    </svg>
+                    Фильтр 3
+                  </button>
                 </div>
             </div>
-            <div class="selector journal6">
-                <p class="selector__title filter__btn"><span>Все события</span></p>
-                <div class="selector__block filter__block">
-                    <span class="selector__item filter__item active">Все события</span>
-                    <span class="selector__item filter__item">Все события1</span>
-                    <span class="selector__item filter__item">Все события2</span>
-                </div>
-            </div>
-            <a href="#" class="info-circle">?</a>
+
+            <span class="tooltip tlp-info tlp-right" data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                <svg>
+                    <use href="#info-icon"></use>
+                </svg>
+            </span>
+
             <div class="get-events-wrap">
                 <a href="#" class="btn-red get-events">Получить события журналов</a>
             </div>
@@ -221,11 +420,30 @@ title: ЛК Главная
             </div>
             <div class="lk__download">
                 <p class="lk__download_text">Скачать табличные данные как</p>
-                <div class="selector download">
-                    <p class="selector__title filter__btn"><span>Microsoft Excel (.xlsx)</span></p>
-                    <div class="selector__block filter__block">
-                        <span class="selector__item filter__item active">Microsoft Excel (.xlsx)</span>
-                        <span class="selector__item filter__item">Microsoft Excel (.pdf)</span>
+
+                <div class="select bank-head-select download">
+                    <input class="select-value" type="text" placeholder="Скачать в формате">
+                    <button class="select-btn" type="button">
+                      <span class="select-btn__value"></span>
+                      <span class="select-btn__icon">
+                        <svg>
+                          <use href="#select-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="select-container">
+                      <button class="select-item" type="button" data-value="1">
+                        <svg>
+                          <use href="#check-icon"></use>
+                        </svg>
+                        Microsoft Excel (.xlsx)
+                      </button>
+                      <button class="select-item" type="button" data-value="2">
+                        <svg>
+                          <use href="#check-icon"></use>
+                        </svg>
+                        Фильтр 2
+                      </button>
                     </div>
                 </div>
                 <a href="#" class="btn-red">Скачать</a>

@@ -1,0 +1,313 @@
+.lk__main_show-filters {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &::after {
+        content: "";
+        width: .5rem;
+        height: .5rem;
+        margin-left: 1rem;
+        display: block;
+        border-right: 2px solid $black;
+        border-bottom: 2px solid $black;
+        transform: rotate(45deg);
+        transition: transform .3s;
+        margin-top: .2rem;
+    }
+}
+
+.lk__main_show-filters.active {
+    &::after {
+        transform: rotate(-135deg);
+        margin-top: .5rem;
+    }
+}
+
+.lk-settings__wrap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+}
+
+.calendar-show {
+    overflow: visible;
+    position: relative;
+
+    .lk-settings__inner {
+        position: relative;
+        overflow: visible;    
+    }
+}
+
+.lk-reports {
+    width: calc(100% - 56rem);
+
+    .lkset-item:nth-child(1) {
+        padding-top: 2rem;
+    }
+
+    .lkset-item__title {
+        width: 13rem;
+    }
+
+    .select-btn__icon {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .select._active .select-btn__icon {
+        transform: rotate(180deg);
+    }
+
+    .select-btn__info {
+        display: none;
+    }
+}
+
+
+.lk__main {
+    flex-grow: 1;
+    padding-right: 4rem;
+    .enable-date.round {
+        cursor: pointer;
+
+        label {
+            cursor: pointer;
+        }
+
+        .circle-checkbox:not(:disabled) + label::before {
+            border-radius: 100%;
+            min-width: 14px;
+            min-height: 14px;
+            width: 14px;
+            height: 14px;
+            transition: unset;
+        }
+    
+        .circle-checkbox:checked + label::before {
+            min-width: 14px;
+            min-height: 14px;
+            background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='4' fill='%23A7333E'/%3E%3C/svg%3E");
+            background-size: 8px 8px;
+            background-position: center;
+            width: 14px;
+            height: 14px;
+            box-sizing: border-box;
+        }
+
+        .circle-checkbox:not(:disabled):not(:checked) + label:hover::before {
+            background: white;
+        }
+    }
+}
+
+.lk-settings__date {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 6rem;
+}
+
+.lk-reports__table {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    background: white;
+    border-radius: 1.6rem;
+    border: .5px solid #CCCCCC;
+}
+
+.lk-reports__table_row {
+    border-top: .5px solid #CCCCCC;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &:nth-child(1) {
+        border-top: unset;
+    }
+}
+
+.lk-reports__table_cell {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: calc(100% / 3);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.125;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+}
+
+.lk-reports__table_head  {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.125;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.lk-reports__table_title {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.checkbox-grey {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .checkbox-inner {
+        width: 2.1rem;
+        min-width: 2.1rem;
+        height: 2.1rem;
+        border-radius: .4rem;
+        border: 1px solid #828282;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+
+    .checkbox-grey__text {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.125;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    input:checked ~ .checkbox-grey__text {
+        color: $red;
+    }
+    
+    input:checked ~ .checkbox-inner {
+        background: #828282;
+
+        &::before {
+            content: "";
+            display: block;
+            width: .4rem;
+            height: .8rem;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white;
+            transform: rotate(45deg);
+            margin-top: -.3rem;
+        }
+    }
+}
+
+.calendar-table {
+    display: none;
+    opacity: 0;
+    transition: opacity .4s;
+    position: absolute;
+    right: 5rem;
+    top: 2rem;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0px 4px 18px 0px #0000001F;
+    border-radius: .6rem;
+    overflow: hidden;
+    padding: 1rem;
+    @include breakpoint($sm-bp) {
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%); 
+        box-shadow: 0px 4px 18px 0px rgb(0 0 0 / 34%);  
+        border-radius: 6px;  
+        padding: 2rem;   
+    }
+
+    table {
+        border-collapse: collapse;
+    
+      }
+      td {
+        padding: 10px 15px;
+        background-color: white;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.43;
+        letter-spacing: 0em;
+        text-align: center;
+        color: $black;
+        @include breakpoint($sm-bp) {
+            font-size: 2.5rem;
+            padding: 7px 12px;
+        }
+      }
+      th {
+        padding: 5px 0;
+        background-color: white;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.43;
+        letter-spacing: 0em;
+        text-align: center;
+        color: $black;
+        @include breakpoint($sm-bp) {
+            font-size: 2.5rem;
+        }
+      }
+      th a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+      tr:nth-child(2) td {
+        padding: 10px 15px;
+        border-bottom: 1px solid  #B2ACBC;
+        @include breakpoint($sm-bp) {
+            padding: 7px 12px;
+        }
+      }
+      .next_month, 
+      .prev_month {
+        color: #bdbdbd;
+      }
+      .rect-left {
+        font-size: 2.4rem;
+        line-height: 1;
+        @include breakpoint($sm-bp) {
+            font-size: 4rem;
+        }
+      }
+      .rect-right {
+        font-size: 2.4rem;
+        line-height: 1;
+        @include breakpoint($sm-bp) {
+            font-size: 4rem;
+        }
+      }
+      .current {
+        color: $red;
+        font-weight: 600;
+      }
+}
+
+.calendar-table.show {
+    opacity: 1;
+}

@@ -7,15 +7,24 @@
   margin-top: 4rem;
   padding-right: 11.5rem;
 
-  .selector {
+  .select-btn {
     min-width: 16.6rem;
+    width: unset;
   }
 
-  .journal1 {
+  .journal1 .select-btn {
     min-width: 55rem;
   }
 
-  .journal3 {
+  .journal3 .select-btn {
+    min-width: 25.5rem;
+  }
+
+  .journal1 .select-btn {
+    min-width: 55rem;
+  }
+
+  .journal3 .select-btn {
     min-width: 25.5rem;
   }
 }
@@ -328,8 +337,11 @@
   text-align: left;
 }
 
-.selector.download {
-  min-width: 20.5rem;
+.bank-head-select.download {
+  .select-btn {
+    width: unset;
+    min-width: 20.5rem;
+  }
 }
 
 .lk__main_pagination {
@@ -416,4 +428,8 @@
   line-height: 1.33;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.lk__refresh_btn {
+  margin-top: 2rem;
 }
