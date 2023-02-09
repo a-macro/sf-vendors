@@ -72,7 +72,12 @@
 }
 
 
-.lk__main {
+.lk__inner.lk__inner--settings .lk__main.lk-reports,
+.lk__inner.lk__inner--settings .lk__main.participating {
+    margin-left: 4rem;
+}
+
+.lk__main.lk-reports {
     flex-grow: 1;
     padding-right: 4rem;
     .enable-date.round {
@@ -310,4 +315,67 @@
 
 .calendar-table.show {
     opacity: 1;
+}
+
+.participating__block {
+    display: flex;
+    align-items: center;
+  }
+  
+  .participating__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.33;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black;
+    margin-right: 1rem;
+  }
+  
+  .participating {
+    .lk__selectors {
+      padding-right: 0;
+    }
+  
+    .get-events-wrap {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+  
+  .participating__text-normal {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.33;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 2rem;
+  }
+
+.participating__table-num {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.33;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black;
+    margin-top: 4rem;
+}
+
+.participating__table-wrap {
+    .table__common {
+        margin-top: 2rem;
+    }
+
+    .btn-grey {
+        margin-top: 2rem;
+    }
+
+    .participating__block {
+        margin-top: 4rem;
+
+        .select-btn {
+            min-width: 24rem;
+        }
+    }
 }
