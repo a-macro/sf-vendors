@@ -31,7 +31,7 @@
   align-items: center;
   gap: 6rem;
 
-  & + & {
+  &+& {
     margin-top: 3rem;
   }
 
@@ -40,36 +40,44 @@
       width: 51.5rem;
     }
   }
+
   &--shortname {
     .custom-input {
       width: 20.1rem;
     }
   }
+
   &--idnum {
     .custom-input {
       width: 14.3rem;
     }
   }
+
   &--visibility {
     .select {
       width: 14.3rem;
     }
+
     .select-btn {
       width: 100%;
     }
   }
+
   &--date {
-    .select {
-    }
+    .select {}
+
     .select-btn {
       width: max-content;
     }
+
     .select-container {
       overflow: auto;
     }
+
     .select-item {
       padding: 1.1rem 1.5rem;
     }
+
     .select-btn__value {
       line-height: 1.6rem;
     }
@@ -82,21 +90,25 @@
     }
 
     .enable-date {
-      .circle-checkbox + label {
+      .circle-checkbox+label {
         font-weight: 400;
       }
-      .circle-checkbox + label::before {
+
+      .circle-checkbox+label::before {
         margin-right: 1rem;
 
         background-size: 0.8rem 0.8rem;
       }
-      .circle-checkbox:not(:disabled) + label::before {
+
+      .circle-checkbox:not(:disabled)+label::before {
         background-color: white;
       }
-      .circle-checkbox:checked + label::before {
+
+      .circle-checkbox:checked+label::before {
         background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='8' height='8' rx='2' fill='%23C60B46'/%3E%3C/svg%3E%0A");
       }
-      .circle-checkbox:not(:disabled):not(:checked) + label:hover::before {
+
+      .circle-checkbox:not(:disabled):not(:checked)+label:hover::before {
         background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='8' height='8' rx='2' fill='%23E1B0B4'/%3E%3C/svg%3E%0A");
       }
     }
@@ -136,7 +148,7 @@
     filter: brightness(0.91);
     pointer-events: none;
 
-    & + .calendar-icon {
+    &+.calendar-icon {
       opacity: 0.4;
     }
   }
@@ -160,6 +172,7 @@
   background: #ffffff;
   border: 0.5px solid #bdbdbd;
   border-radius: 0.7rem;
+  box-sizing: border-box;
 
   &::placeholder {
     font-family: "Segoe UI";
@@ -171,9 +184,11 @@
   .select {
     width: 20.1rem;
   }
+
   .select-btn {
     width: 100%;
   }
+
   .select-btn__value {
     line-height: 1;
   }
