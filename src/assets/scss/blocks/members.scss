@@ -318,3 +318,63 @@
     gap: 0;
   }
 }
+
+.enrl-self {
+  .enrl-self__title {
+    font-weight: 600;
+    font-size: 2rem;
+
+    margin-bottom: 3rem;
+  }
+
+  .lkset-item--date .select-btn {
+    width: 100%;
+  }
+
+  .lkset-item--sm {
+    .custom-input,
+    .select {
+      width: 7.5rem;
+    }
+
+    .select-btn {
+      padding-right: 1rem;
+      gap: 0.3rem;
+    }
+  }
+
+  .lkset-item--md {
+    .custom-input,
+    .select {
+      width: 14.3rem;
+    }
+  }
+
+  .lkset-item--lg {
+    .custom-input,
+    .select {
+      width: 33.5rem;
+    }
+  }
+
+  .lkset-item--textarea {
+    align-items: flex-start;
+
+    .custom-textarea {
+      width: 64rem;
+      height: 16rem;
+
+      &::placeholder {
+        color: #828282;
+      }
+    }
+  }
+
+  .lkset-item--btns {
+    padding-top: 3rem;
+  }
+
+  .lkset-item__title {
+    width: 47rem;
+  }
+}
