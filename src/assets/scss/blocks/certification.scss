@@ -1,0 +1,96 @@
+.lk__inner--certification {
+  margin-top: 4rem;
+
+  .lk__main {
+    margin-left: 8rem;
+
+    h1 {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .lk-certification__content {
+    width: 100%;
+    max-width: 73rem;
+
+    font-size: 1.8rem;
+
+    * + * {
+      margin-top: 2rem;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    a {
+      color: black;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+
+.lk__inner--certification-testing {
+  margin-top: 4rem;
+
+  .lk__main {
+    margin-left: 3.5rem;
+  }
+
+  .certif-test {
+    padding: 2rem;
+
+    background: #ffffff;
+    border: 0.5px solid #cccccc;
+    border-radius: 1.5rem;
+  }
+  .certif-test__header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    margin-bottom: 3rem;
+
+    img {
+      width: 100%;
+      max-width: 4.1rem;
+    }
+  }
+  .certif-test__name {
+    font-weight: 600;
+    font-size: 1.4rem;
+
+    margin-bottom: 0.5rem;
+  }
+  .certif-test__descr {
+    font-size: 1.2rem;
+  }
+  .certif-test__btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .certif-test__btn {
+    height: 4rem;
+    background: #e7ecee;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    color: #000;
+    border-radius: 0.7rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+    transition: 0.3s;
+
+    &:hover {
+      background: darken(#e7ecee, 10%);
+    }
+  }
+}
