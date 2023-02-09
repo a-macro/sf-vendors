@@ -1,6 +1,6 @@
 ---
 layout: entered
-title: ЛК Главная
+title: ЛК Отчеты
 ---
 
 <div class="lk__top">
@@ -31,13 +31,39 @@ title: ЛК Главная
 </div>
 
 <section class="lk__inner">
-    <div class="lk__aside">
-        <nav>
-            <a href="#" class="lk__aside_item">Журнал событий</a>
-            <a href="#" class="lk__aside_item active">События в реальном времени</a>
-            <a href="#" class="lk__aside_item">Отчет о деятельности</a>
-            <a href="#" class="lk__aside_item">Участие в сертификации</a>
-            <a href="#" class="lk__aside_item">Выполнение элементов сертификации</a>
+    <div class="bank-aside">
+        <nav class="bank-aside-nav">
+  
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Журнал событий
+            </a>
+          </div>
+          <div class="bank-aside-item _active">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              События в реальном времени
+            </a>
+          </div>
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Отчет о деятельности
+            </a>
+          </div>
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Участие в сертификации
+            </a>
+          </div>
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Фильтры
+            </a>
+          </div>
+          <div class="bank-aside-item">
+            <a href="#" class="bank-aside__link bank-aside__link_icon">
+              Выполнение элементов сертификации
+            </a>
+          </div>
         </nav>
     </div>
     <div class="lk__main">
@@ -163,11 +189,29 @@ title: ЛК Главная
             </div>
             <div class="lk__download">
                 <p class="lk__download_text">Скачать табличные данные как</p>
-                <div class="selector download">
-                    <p class="selector__title filter__btn"><span>Microsoft Excel (.xlsx)</span></p>
-                    <div class="selector__block filter__block">
-                        <span class="selector__item filter__item active">Microsoft Excel (.xlsx)</span>
-                        <span class="selector__item filter__item">Microsoft Excel (.pdf)</span>
+                <div class="select bank-head-select download">
+                    <input class="select-value" type="text" placeholder="Скачать в формате">
+                    <button class="select-btn" type="button">
+                      <span class="select-btn__value"></span>
+                      <span class="select-btn__icon">
+                        <svg>
+                          <use href="#select-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="select-container">
+                      <button class="select-item" type="button" data-value="1">
+                        <svg>
+                          <use href="#check-icon"></use>
+                        </svg>
+                        Microsoft Excel (.xlsx)
+                      </button>
+                      <button class="select-item" type="button" data-value="2">
+                        <svg>
+                          <use href="#check-icon"></use>
+                        </svg>
+                        Фильтр 2
+                      </button>
                     </div>
                 </div>
                 <a href="#" class="btn-red">Скачать</a>

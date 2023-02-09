@@ -182,6 +182,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  let filtersBtn = document.querySelector(".lk__main_show-filters");
+  if(filtersBtn) {
+    openList(filtersBtn);
+  }
+
+  function openList(btn) {
+    btn.onclick = (e) => {
+      e.preventDefault();
+      btn.classList.toggle("active");
+      let block = btn.nextElementSibling;
+      if (block.style.maxHeight) {
+        block.style.maxHeight = null;
+      } else {
+        block.style.maxHeight = block.scrollHeight + "px";
+      }
+    }
+  }
+
   let observerV = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         let el = entry.target;
@@ -214,6 +232,303 @@ if(changeNums && changeNums.length > 0) {
         observerV.observe(element);
     });
 }
+
+  let getCalendar = document.querySelectorAll(".get-calendar");
+  if(getCalendar.length > 0) {
+    let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+    let date = new Date();
+    let currentDay = date.getDate();
+    let currentMonth = date.getMonth();
+    let currentYear = date.getFullYear();
+    let userMonth = date.getMonth();
+    let year = date.getFullYear();
+    new ToCount(userMonth, year);
+
+    function ToCount(userMonth, year) {
+        this.month = userMonth;
+        this.year = year;
+        
+        let wrapper = document.createElement("div");
+    
+        var date = "";
+        date = new Date(this.year, this.month);
+        var monthName = months[userMonth];
+    
+        var prevMonth = new Date(this.year, this.month);
+        prevMonth.setDate(prevMonth.getDate() - 1);
+        var lastPrevDate = prevMonth.getDate();         //посл. день предыд. мес.
+        var lastPrevDay = weekDay(prevMonth);
+        var firtWeekDay = lastPrevDate - lastPrevDay;
+    
+    
+    
+    var table = `<table>
+            <tr>
+            <th>
+                <a class = "prev-year" title = "${monthName} прошлого года">
+                <span class = "rect-left pr-year">	&#171;</span>
+                </a>
+            </th>
+
+            <th>
+                <a class = "prev-month" title = "предыдущий месяц">
+                <span class = "rect-left pr-mon">&#8249;</span>
+                </a>
+            </th>
+    
+            <th colspan="3" class="month" data-month="${monthName}">
+                ${monthName}&nbsp;${year}
+            </th>
+    
+            <th>
+                <a class = "next-month" title = "следующий месяц">
+                <span class = "rect-right n-mon"> &#8250;</span>
+                </a>
+            </th>
+
+            <th>
+                <a class = "next-year" title = "${monthName} следующего года">
+                <span class = "rect-right n-year">&#187;</span>
+                </a>
+            </th>
+
+    
+            </tr>
+            <tr>
+            <td>пн</td>
+            <td>вт</td>
+            <td>ср</td>
+            <td>чт</td>
+            <td>пт</td>
+            <td>сб</td>
+            <td>вс</td>
+            </tr>
+            <tr>`;
+    
+    for (let i = 0; i < weekDay(date); i++) {
+        table += `<td class = 'prev_month' data-month="${date.getMonth()}" data-year="${date.getFullYear()}">` + firtWeekDay + "</td>";
+        firtWeekDay++;
+        }
+        while (date.getMonth() == this.month) {
+            if ( weekDay(date) % 7 !== 5 && weekDay(date) % 7 !== 6 ) { 
+                if(date.getDate() === currentDay && date.getMonth() === currentMonth && date.getFullYear() === currentYear) {
+                    table += `<td class = "current" data-month="${date.getMonth()}" data-year="${date.getFullYear()}">` + date.getDate() + '</td>';
+                } else {
+                    table += `<td data-month="${date.getMonth()}" data-year="${date.getFullYear()}">` + date.getDate() + '</td>';
+                }
+            } else if (weekDay(date) % 7 == 5) { 
+                if(date.getDate() === currentDay && date.getMonth() === currentMonth && date.getFullYear() === currentYear) {
+                    table += `<td class = "current weekend" data-month="${date.getMonth()}" data-year="${date.getFullYear()}">` + date.getDate() + '</td>';
+                } else {
+                    table += `<td class = "weekend" data-month="${date.getMonth()}" data-year="${date.getFullYear()}">` + date.getDate() + '</td>';
+                }
+            } else if (weekDay(date) % 7 == 6) { 
+                if(date.getDate() === currentDay && date.getMonth() === currentMonth && date.getFullYear() === currentYear) {
+                    table += `<td class = "current weekend" data-month="${date.getMonth()}" data-year="${date.getFullYear()}">` + date.getDate() + '</td></tr><tr>';
+                } else {
+                    table += `<td class = "weekend" data-month="${date.getMonth()}" data-year="${date.getFullYear()}">` + date.getDate() + '</td></tr><tr>';
+                }
+            }
+            date.setDate(date.getDate() + 1);
+        }
+    
+        var num = 1;
+        if (weekDay(date) != 0) {
+        for (let i = weekDay(date); i < 7; i++) {
+            table += `<td class = "next_month" data-month="${date.getMonth()}" data-year="${date.getFullYear()}">` + num + "</td>";
+            num++;
+        }
+        }
+    
+        table += '</tr></table>';
+        function weekDay(date) { 
+        let day = date.getDay();
+        if (day == 0) day = 7; 
+            return day - 1;
+        }
+    
+        wrapper.innerHTML = table;
+        wrapper.id = "calendar-table";
+        wrapper.className = "calendar-table";
+        let parent = document.querySelector(".lk-settings__wrap");
+        if(!parent) {
+          parent = document.querySelector(".lk__main_wrapper");
+        }
+        parent.appendChild(wrapper);
+    
+        wrapper.addEventListener("click", function(e) {
+            let node = e.target.outerHTML;
+            if( node.includes("prev-month") || node.includes("pr-mon")) {
+                previousMonth();    
+            } else if( node.includes("prev-year") || node.includes("pr-year")) {
+                previousYear();    
+            } else if( node.includes("next-month") || node.includes("n-mon")) {
+                nextMonth();    
+            } else if( node.includes("next-year") || node.includes("n-year")) {
+                nextYear();    
+            } else if(e.target.getAttribute("data-month")) {
+                let dateText = +e.target.innerText;
+                let monthNode = +e.target.getAttribute("data-month");
+                let yaerNode = +e.target.getAttribute("data-year");
+
+                if(e.target.classList.contains("prev_month")) {
+                    return;
+                }
+
+                if(currentYear > year) {
+                    return;
+                }
+
+                if(currentYear >= year && currentMonth > monthNode) {
+                    return;
+                }
+
+                if(currentYear >= year && currentMonth ===  monthNode && currentDay > +e.target.innerText) {
+                    return;
+                }
+
+
+                //dateText = dateText + " " + monthsCommon[monthNode];
+                let parent = document.querySelector(".lk-settings__wrap");
+                if(!parent) {
+                  parent = document.querySelector(".lk__main_wrapper");
+                }        
+                let clickableParent = document.querySelector(".active-calendar");
+                let parentDate = clickableParent.querySelector(".date-select");
+                let inpDate = parentDate.querySelector(".select-value");
+                let btnDate = parentDate.querySelector(".select-btn__value");
+                let parentMonth = clickableParent.querySelector(".month-select");
+                let inpMonth = parentMonth.querySelector(".select-value");
+                let btnMonth = parentMonth.querySelector(".select-btn__value");
+                let parentYear = clickableParent.querySelector(".year-select");
+                let inpYear = parentYear.querySelector(".select-value");
+                let btnYear = parentYear.querySelector(".select-btn__value");
+
+                inpDate.value = dateText;
+                btnDate.innerText = dateText;
+
+                inpMonth.value = months[monthNode];
+                btnMonth.innerText = months[monthNode];
+
+                inpYear.value = yaerNode;
+                btnYear.innerText = yaerNode;
+
+
+                let calendar = document.querySelector("#calendar-table");
+                calendar.classList.remove("show");
+                setTimeout(() => {
+                    calendar.style.display = "none";
+                    parent.classList.remove("calendar-show");
+                    clickableParent.classList.remove("active-calendar");
+                }, 200);
+            }
+        });
+    }
+
+
+    function previousMonth() {
+    
+      let tab = document.getElementsByTagName("table")[0]; 
+      let parent = tab.closest("div");
+      parent.remove();
+      tab.remove();
+      if(userMonth == 0) {
+          userMonth = 11;
+          year--;
+      } else {
+          userMonth = userMonth - 1;
+      }         
+      new ToCount(userMonth, year);
+      let calendar = document.querySelector("#calendar-table");
+      calendar.style.display = "flex";
+      setTimeout(() => {
+          calendar.classList.add("show");
+      }, 10);
+    }
+
+    function nextMonth() {
+      let tab = document.getElementsByTagName("table")[0]; 
+      let parent = tab.closest("div");
+      parent.remove();
+      tab.remove();
+      
+      if(userMonth == 11) {
+          userMonth = 0;
+          year++;
+      } else {
+          userMonth++;
+      }  
+      
+      new ToCount(userMonth, year);
+      let calendar = document.querySelector("#calendar-table");
+      calendar.style.display = "flex";
+      setTimeout(() => {
+          calendar.classList.add("show");
+      }, 10);
+    }
+
+    function previousYear() {
+      let tab = document.getElementsByTagName("table")[0]; 
+      let parent = tab.closest("div");
+      parent.remove();
+      tab.remove();
+      
+      year--;
+      new ToCount(userMonth, year);
+      let calendar = document.querySelector("#calendar-table");
+      calendar.style.display = "flex";
+      setTimeout(() => {
+          calendar.classList.add("show");
+      }, 10);
+    }
+
+    function nextYear() {
+      let tab = document.getElementsByTagName("table")[0]; 
+      let parent = tab.closest("div");
+      parent.remove();
+      tab.remove();
+      
+      year++;
+      new ToCount(userMonth, year);
+      let calendar = document.querySelector("#calendar-table");
+      calendar.style.display = "flex";
+      setTimeout(() => {
+          calendar.classList.add("show");
+      }, 10);
+    }
+    getCalendar.forEach(btn => {
+      btn.onclick = (e) => {
+        e.preventDefault();
+        let calendar = document.querySelector("#calendar-table");
+        if(!calendar.classList.contains("show")) {
+          calendar.style.display = "flex";
+          let parent = document.querySelector(".lk-settings__wrap");
+          if(!parent) {
+            parent = document.querySelector(".lk__main_wrapper");
+          }  
+          parent.classList.add("calendar-show");
+          let clickableParent = btn.closest(".lkset-item");
+          clickableParent.classList.add("active-calendar");
+          setTimeout(() => {
+              calendar.classList.add("show");
+          }, 10);
+        } else {
+          calendar.classList.remove("show");
+          let parent = document.querySelector(".lk-settings__wrap");
+          if(!parent) {
+            parent = document.querySelector(".lk__main_wrapper");
+          }  
+          let clickableParent = btn.closest(".lkset-item");
+          clickableParent.classList.remove("active-calendar");
+          setTimeout(() => {
+              calendar.style.display = "none";
+              parent.classList.remove("calendar-show");
+          }, 200);
+        }
+      }
+    });
+  }
  
 
 
