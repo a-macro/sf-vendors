@@ -405,13 +405,14 @@
   color: $black;
   background: #BDBDBD;
   border-radius: .7rem;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.5rem;
   height: 4.4rem;
   max-width: max-content;
-  margin-top: 2rem;
+  // margin-top: 2rem;
   transition: .3s;
 
   &:hover {
