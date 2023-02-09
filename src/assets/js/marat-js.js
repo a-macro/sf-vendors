@@ -4,6 +4,8 @@ if (lkTableRows.length) {
   lkTableRows.forEach((el) => {
     let ckeckbox = el.querySelector(".table-row__select-checkbox");
 
+    if (!ckeckbox) return;
+
     if (ckeckbox.checked) {
       el.classList.add("selected");
       isSelectedAllRows(el);
@@ -13,7 +15,7 @@ if (lkTableRows.length) {
     }
 
     ckeckbox.addEventListener("change", function () {
-      if (this.checked) {
+      if (ckeckbox.checked) {
         el.classList.add("selected");
         isSelectedAllRows(el);
       } else {
@@ -71,7 +73,7 @@ if (enableDateBtns.length) {
     }
 
     input.addEventListener("change", function () {
-      if (this.checked) {
+      if (input.checked) {
         label.innerText = "Включить";
         fields.classList.add("disabled");
       } else {
