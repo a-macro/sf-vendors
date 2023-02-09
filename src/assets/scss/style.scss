@@ -6,6 +6,8 @@
 @import "./general.scss";
 
 /* Blocks */
+@import "blocks/journal-reports";
+
 @import "blocks/members.scss";
 @import "blocks/certification.scss";
 @import "blocks/settings.scss";
@@ -17,6 +19,7 @@
 @import "blocks/lk-reports.scss";
 
 @import "./blocks/bank/bank.scss";
+@import "./blocks/bank/bank-edit.scss";
 
 @import "blocks/journal";
 @import "blocks/main-lk";
@@ -80,4 +83,8 @@ select {
 
 a:focus {
   text-decoration: underline;
+}
+
+.red {
+  color: $red;
 }
