@@ -46,6 +46,12 @@
         gap: 1.5rem;
       }
 
+      &__box {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
       &__info {
         width: 37.1rem;
       }
