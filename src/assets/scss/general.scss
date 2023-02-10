@@ -153,8 +153,8 @@
 
   &--double-icon {
     .select-btn {
-      height: 4rem;
-      padding: 0 1.5rem;
+      min-height: 4rem;
+      padding: 1rem 1.5rem;
     }
 
     .select-btn__icon {

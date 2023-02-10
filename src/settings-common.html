@@ -100,24 +100,35 @@ title: Настройки - Общее
                         <input class="custom-input" type="text" placeholder="UGATE001.Х">
                     </div>
                 </div>
-                <div class="lkset-item lkset-item">
+                <div class="lkset-item lkset-item--mult">
                     <p class="lkset-item__title">Категория сертификации</p>
                     <div class="lkset-item__content">
-                        <div class="lkset-item__tooltips">
-                            <span class="tooltip tlp-info tlp-left"
-                                data-tooltip="Обязательно для заполнения">
-                                <svg>
-                                    <use href="#info-circle"></use>
-                                </svg>
-                            </span>
-                            <span class="tooltip tlp-info tlp-left"
-                                data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
-                                <svg>
-                                    <use href="#info-icon"></use>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="lkset-item__choose">
+                        <div class="lkset-item__multiselect-wrapper">
+                            <div class="lkset-item__multiselect">
+                                <div class="lkset-item__tooltips">
+                                    <span class="tooltip tlp-info tlp-left" data-tooltip="Обязательно для заполнения">
+                                        <svg>
+                                            <use href="#info-circle"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip tlp-info tlp-left"
+                                        data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                        <svg>
+                                            <use href="#info-icon"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="lkset-item__multiselect-values">
+                                    <div class="lkset-item__mult-item">
+                                        <p>UserGate</p>
+                                        <button>
+                                            <svg>
+                                                <use href="#cross-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="select">
                                 <input class="select-value" type="text" placeholder="Найти">
                                 <button class="select-btn" type="button">
@@ -129,23 +140,23 @@ title: Настройки - Общее
                                     </span>
                                 </button>
                                 <div class="select-container">
-                                    <button class="select-item" type="button" data-value="1" data-select>
+                                    <button class="select-item" type="button" data-value="1">
                                         <svg>
                                             <use href="#check-icon"></use>
                                         </svg>
-                                        UserGate 1
+                                        Поле 1
                                     </button>
                                     <button class="select-item" type="button" data-value="2">
                                         <svg>
                                             <use href="#check-icon"></use>
                                         </svg>
-                                        UserGate 2
+                                        Поле 2
                                     </button>
                                     <button class="select-item" type="button" data-value="3">
                                         <svg>
                                             <use href="#check-icon"></use>
                                         </svg>
-                                        UserGate 3
+                                        Поле 3
                                     </button>
                                 </div>
                             </div>

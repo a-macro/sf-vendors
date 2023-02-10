@@ -1,0 +1,124 @@
+---
+layout: entered
+title: Участники - Группы
+---
+
+<div class="lk__top">
+    <ul class="lk__nav">
+        <li>
+            <a href="#" class="lk__nav_item">Сертификация</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item">Настройки</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item active">Участники</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item">Оценки</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item">Отчеты</a>
+        </li>
+        <li class="nav__trigger">
+            <a href="#" class="lk__nav_item">Подробнее</a>
+        </li>
+    </ul>
+</div>
+
+<section class="lk__inner lk__main_wrapper lk__inner--members">
+    <div class="members-aside">
+        <div class="select">
+            <input class="select-value" type="text" placeholder="Найти">
+            <button class="select-btn" type="button">
+                <span class="select-btn__value"></span>
+                <span class="select-btn__icon">
+                    <svg>
+                        <use href="#select-arrow"></use>
+                    </svg>
+                </span>
+            </button>
+            <div class="select-container">
+                <button class="select-item" type="button" data-value="1" data-select>
+                    <svg>
+                        <use href="#check-icon"></use>
+                    </svg>
+                    Группы
+                </button>
+                <button class="select-item" type="button" data-value="2">
+                    <svg>
+                        <use href="#check-icon"></use>
+                    </svg>
+                    Зачисленные пользователи
+                </button>
+                <button class="select-item" type="button" data-value="3">
+                    <svg>
+                        <use href="#check-icon"></use>
+                    </svg>
+                    Способы зачисления
+                </button>
+            </div>
+        </div>
+
+        <div class="members-accordance">
+            <div class="members-accordance__header">
+                <p class="members-accordance__name">Добавить способ</p>
+            </div>
+            <div class="members-accordance__fields">
+                <div class="select">
+                    <input class="select-value" type="text" placeholder="Выбирите">
+                    <button class="select-btn" type="button">
+                        <span class="select-btn__value"></span>
+                        <span class="select-btn__icon">
+                            <svg>
+                                <use href="#select-arrow"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="select-container">
+                        <button class="select-item" type="button" data-value="1">
+                            <svg>
+                                <use href="#check-icon"></use>
+                            </svg>
+                            Cамостоятельная запись
+                        </button>
+                        <button class="select-item" type="button" data-value="2">
+                            <svg>
+                                <use href="#check-icon"></use>
+                            </svg>
+                            Подтверждение записи
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lk__main memb-grp">
+        <div class="memb-grp__inner">
+            <h1 class="main-title">UGATE001.Х Администрирование межсетевых экранов UserGate 6</h1>
+            <p class="memb-grp__title">UGATE001.Х Группы</p>
+
+            <div class="memb-grp__content">
+                <div class="memb-grp__col">
+                    <p class="memb-grp__col-title">Группы</p>
+                    <div class="memb-grp__col-results"></div>
+                    <div class="memb-grp__col-links">
+                        <a class="memb-grp__col-link" href="#">Редактировать настройки группы</a>
+                        <a class="memb-grp__col-link" href="#">Удалить выбранные группы</a>
+                        <a class="memb-grp__col-link" href="#">Создать группу</a>
+                        <a class="memb-grp__col-link" href="#">Автосоздание групп</a>
+                        <a class="memb-grp__col-link" href="#">Импортировать группы</a>
+                    </div>
+                </div>
+                <div class="memb-grp__col">
+                    <p class="memb-grp__col-title">Участники выбранной группы</p>
+                    <div class="memb-grp__col-results"></div>
+                    <div class="memb-grp__col-links">
+                        <a class="memb-grp__col-link" href="#">Добавить участников</a>
+                        <a class="memb-grp__col-link" href="#">Удалить участников</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
