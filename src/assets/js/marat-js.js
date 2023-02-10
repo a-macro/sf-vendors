@@ -45,6 +45,8 @@ if (tableAllCheckbox) {
 function isSelectedAllRows(row) {
   let flag = true;
 
+  if (!row.parentElement.querySelector(".table-num_all")) return;
+
   lkTableRows.forEach((el) => {
     if (!el.querySelector(".table-row__select-checkbox").checked) {
       flag = false;
@@ -80,6 +82,27 @@ if (enableDateBtns.length) {
         label.innerText = "Выключить";
         fields.classList.remove("disabled");
       }
+    });
+  });
+}
+
+const passwordControls = document.querySelectorAll(".password-control");
+
+if (passwordControls.length) {
+  passwordControls.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      let input = el.parentElement.querySelector(".password-input");
+
+      if (input.getAttribute("type") == "password") {
+        el.classList.add("view");
+        input.setAttribute("type", "text");
+      } else {
+        el.classList.remove("view");
+        input.setAttribute("type", "password");
+      }
+      return false;
     });
   });
 }

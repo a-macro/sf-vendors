@@ -47,3 +47,27 @@
     background: darken(#bdbdbd, 10%);
   }
 }
+
+.password-control {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  &.view {
+    .view-icon {
+      display: none;
+    }
+    .hide-view-icon {
+      display: block;
+    }
+  }
+  .hide-view-icon {
+    display: none;
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+
+    fill: #000;
+  }
+}
