@@ -32,7 +32,25 @@ title: ЛК Модуль отчетов
         <div class="lk__main_wrapper">
             <div class="lk__report-heading">
                 <h2 class="lk__report-title">UserGate</h2>
-                <p class="lk__report-">Выдача сертификатов</p>
+                <div class="lk__report-dropdown dropdown-menu">
+                    <button class="dropdown-menu-btn">
+                        Выдача сертификатов
+                        <svg>
+                            <use href="#select-arrow"></use>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu-content">
+                        <button class="dropdown-menu-content__btn" type="button">
+                            Вариант 1
+                        </button>
+                        <button class="dropdown-menu-content__btn" type="button">
+                            Вариант 2
+                        </button>
+                        <a class="dropdown-menu-content__btn" href="#" type="button">
+                            Вариант 3
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="lk__table_inner lk-table_inner">
                 <div class="head lk__table_row">
@@ -41,12 +59,16 @@ title: ЛК Модуль отчетов
                     </div>
                     <div>
                         <p>Сертификация</p>
-                        <svg class="swap-icon">
-                            <use href="#swap"></use>
-                        </svg>
-                        <svg class="seacrh-icon">
-                            <use href="#search"></use>
-                        </svg>
+                        <div href="#">
+                            <svg class="swap-icon">
+                                <use href="#swap"></use>
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <svg class="seacrh-icon">
+                                <use href="#search"></use>
+                            </svg>
+                        </a>
                     </div>
                     <div>
                         <p>Сертификаты</p>
