@@ -934,3 +934,129 @@
     width: 9.6rem;
   }
 }
+
+.memb-rights {
+  .memb-rights__title {
+    font-weight: 700;
+    font-size: 2.4rem;
+
+    margin-bottom: 4rem;
+  }
+
+  .memb-rights__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+  }
+
+  .header-filter__item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .btn-gray {
+      height: 4rem;
+
+      color: white;
+
+      background: #4f4f4f;
+      box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .select {
+      width: 25rem;
+    }
+  }
+
+  .header-filter__item-title {
+    font-size: 1.8rem;
+  }
+
+  .memb-rights__table {
+    max-height: 93rem;
+    overflow: auto;
+
+    font-size: 1.6rem;
+
+    background: #ffffff;
+    border: 0.5px solid #cccccc;
+    border-radius: 1.5rem;
+  }
+  .memb-rights__table-header {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #e0e0e0;
+
+    font-weight: 600;
+  }
+
+  .memb-rights__table-row {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .memb-rights__table-row + .memb-rights__table-row {
+    // margin-top: 1rem;
+  }
+
+  .memb-rights__table-col {
+    padding: 1.5rem 2rem;
+
+    &:nth-child(1) {
+      width: 30%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      * {
+        max-width: 33.6rem;
+      }
+    }
+    &:nth-child(2) {
+      width: 15%;
+
+      text-align: center;
+
+      svg {
+        fill: #f2c94c;
+      }
+    }
+    &:nth-child(3) {
+      width: 40%;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      svg {
+        fill: #a7333e;
+        margin-left: 0.5rem;
+      }
+    }
+    &:nth-child(4) {
+      width: 15%;
+
+      text-align: center;
+
+      svg {
+        fill: #a7333e;
+      }
+    }
+  }
+  .memb-rights__table-content {
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  .table-block__title {
+    font-weight: 600;
+  }
+  .table-block__link-add {
+    color: $red;
+  }
+}
