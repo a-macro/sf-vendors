@@ -114,3 +114,120 @@
         margin-top: 0;
     }
 }
+
+.lk__main_breadcrumbs {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.31;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black;
+    display: flex;
+    align-items: center;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        &:nth-last-child(1) {
+            &::after {
+                content: none;
+            }
+        }
+
+        &::after {
+            content: "";
+            width: .55rem;
+            height: .55rem;
+            display: block;
+            border-top: 2px solid black;
+            border-right: 2px solid black;
+            transform: rotate(45deg);
+            margin-left: .6rem;
+            margin-right: 1rem;
+            margin-top: .3rem;
+        }
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    .active {
+        color: $red;
+
+        a {
+            color: $red;
+        }
+    }
+}
+
+.lk__inner.more {
+
+    .lk__main {
+        flex-grow: 1;
+        padding-right: 10rem;
+    }
+
+    .lk__main_wrapper {
+        padding-right: 0;
+    }
+
+    .lk__main_breadcrumbs {
+        margin-bottom: 3rem;
+    }
+
+    .text-normal {
+        margin-top: 0;
+    }
+
+    .table__common {
+        margin-top: 2rem;
+    }
+
+    .lk__certification-choose {
+        max-width: 109.4rem;
+    }
+
+    .table__common_row {
+        padding-left: 5rem;
+
+        .table__common_cell {
+            &:nth-child(1) {
+                width: 5.2%;
+            }
+            &:nth-child(2) {
+                width: 44%;
+            }
+            &:nth-child(3) {
+                width: 50.8%;
+            }
+        }
+    }
+
+}
+
+.table__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.lk__certification-choose_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.search__field {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}

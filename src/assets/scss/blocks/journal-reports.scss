@@ -218,10 +218,11 @@
             display: block;
             width: .4rem;
             height: .8rem;
-            border-bottom: 2px solid white;
-            border-right: 2px solid white;
+            border-bottom: .2rem solid white;
+            border-right: .2rem solid white;
             transform: rotate(45deg);
             margin-top: -.3rem;
+            margin-left: 0.1rem;
         }
     }
 }
