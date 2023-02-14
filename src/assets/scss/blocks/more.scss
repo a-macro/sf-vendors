@@ -87,3 +87,30 @@
         transform: rotate(-45deg);
     }
 }
+
+.lk__subtitle_wrap {
+    display: flex;
+    align-items: center;
+}
+
+.filter__row {
+    display: flex;
+    align-items: center;
+    margin-top: 2.4rem;
+
+    &:nth-child(1) {
+        margin-top: 3rem;
+    }
+
+    .select.bank-head-select {
+        width: 24.6rem;
+    }
+
+    .text-normal {
+        min-width: 56rem;
+        width: 56rem;
+        display: block;
+        margin-right: 6rem;
+        margin-top: 0;
+    }
+}
