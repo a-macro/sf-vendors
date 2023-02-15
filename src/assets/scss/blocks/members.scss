@@ -1060,3 +1060,148 @@
     color: $red;
   }
 }
+
+.memb-others {
+  .memb-others__table {
+    max-height: 93rem;
+    overflow: auto;
+
+    font-size: 1.6rem;
+
+    background: #ffffff;
+    border: 0.5px solid #cccccc;
+    border-radius: 1.5rem;
+  }
+  .memb-others__table-header {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #e0e0e0;
+
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+
+  .memb-others__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    margin-bottom: 4rem;
+  }
+  .memb-others__header {
+    margin-bottom: 4rem;
+  }
+  .header-filter__item {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+
+    margin-bottom: 2rem;
+
+    .select {
+      width: 25rem;
+    }
+  }
+
+  .memb-others__filter-descr {
+    font-size: 1.8rem;
+  }
+
+  .memb-others__table-row {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .memb-others__table-col {
+    padding: 1.5rem 2rem;
+
+    &:nth-child(1) {
+      width: 40%;
+
+      display: flex;
+      gap: 1.5rem;
+
+      img {
+        max-width: 4.8rem;
+      }
+
+      p {
+        max-width: 35rem;
+      }
+    }
+    &:nth-child(2) {
+      width: 30%;
+
+      text-align: center;
+    }
+    &:nth-child(3) {
+      width: 30%;
+    }
+  }
+}
+
+.memb-check_rights {
+  .memb-ckeck_rights__title {
+    font-weight: 600;
+    font-size: 2.4rem;
+
+    margin-bottom: 4rem;
+  }
+  .memb-ckeck_rights__content {
+    min-height: 31rem;
+
+    font-size: 1.6rem;
+
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+
+    background: #ffffff;
+    border: 0.5px solid #cccccc;
+    border-radius: 1.5rem;
+  }
+  .memb-ckeck_rights__group-title {
+    font-weight: 600;
+
+    margin-bottom: 2rem;
+  }
+  .memb-ckeck_rights__item {
+    display: block;
+
+    cursor: pointer;
+
+    margin-bottom: 1rem;
+
+    & + .memb-ckeck_rights__group-title {
+      margin: 2rem 0;
+    }
+
+    & input:checked ~ .memb-ckeck_rights__item-text {
+      background: #dddddd;
+    }
+  }
+  .memb-ckeck_rights__item-text {
+    color: #828282;
+
+    margin-left: 0.5rem;
+  }
+
+  .memb-ckeck_rights__search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 4rem;
+
+    input {
+      width: 25rem;
+
+      margin-right: 1.5rem;
+    }
+  }
+
+  .memb-check_rights-link {
+    width: max-content;
+  }
+}

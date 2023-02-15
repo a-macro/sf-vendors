@@ -46,6 +46,15 @@
   &:hover {
     background: darken(#bdbdbd, 10%);
   }
+
+  &.dark {
+    color: white;
+    background: #4f4f4f;
+
+    &:hover {
+      background: #8f8e8e;
+    }
+  }
 }
 
 .password-control {
@@ -63,7 +72,7 @@
   .hide-view-icon {
     display: none;
   }
-  
+
   svg {
     width: 100%;
     height: 100%;
