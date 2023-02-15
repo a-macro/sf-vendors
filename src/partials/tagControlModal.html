@@ -1,9 +1,4 @@
----
-layout: entered
-title: Банк вопросов
----
-
-<div class="regModal modal" id="tagControl">
+<div class="regModal modal opacity-0 hideafterload" id="tagControl">
   <form class="modal-block">
 
     <div class="modal__top">
@@ -52,7 +47,7 @@ title: Банк вопросов
         <div class="self-center text-16">
           Любые теги
           <div class="select mt-20">
-            <input class="select-value" type="text" placeholder="Найти">
+            <input class="select-value" type="text" placeholder="Найти:">
             <button class="select-btn" type="button">
               <span class="select-btn__value"></span>
               <span class="select-btn__icon">
@@ -62,7 +57,7 @@ title: Банк вопросов
               </span>
             </button>
             <div class="select-container">
-              <button class="select-item" type="button" data-value="1" data-select>
+              <button class="select-item" type="button" data-value="1">
                 <svg>
                   <use href="#check-icon"></use>
                 </svg>

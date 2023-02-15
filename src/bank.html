@@ -153,7 +153,7 @@ title: Банк вопросов
           </div>
         </div>
 
-        <button type="button" class="btn-red bank-head-btn">Создать новый вопрос</button>
+        <button type="button" class="btn-red bank-head-btn" data-modal="#createQuestion">Создать новый вопрос</button>
       </div>
 
       <div class="bank-head-box">
@@ -300,7 +300,7 @@ title: Банк вопросов
                     Дублировать
                   </button>
 
-                  <button class="dropdown-menu-content__btn" type="button">
+                  <button class="dropdown-menu-content__btn" type="button" data-modal="#tagControl">
                     <svg>
                       <use href="#mark-icon"></use>
                     </svg>
@@ -563,7 +563,7 @@ title: Банк вопросов
                     Дублировать
                   </button>
 
-                  <button class="dropdown-menu-content__btn" type="button">
+                  <button class="dropdown-menu-content__btn" type="button" data-modal="#tagControl">
                     <svg>
                       <use href="#mark-icon"></use>
                     </svg>
@@ -826,7 +826,7 @@ title: Банк вопросов
                     Дублировать
                   </button>
 
-                  <button class="dropdown-menu-content__btn" type="button">
+                  <button class="dropdown-menu-content__btn" type="button" data-modal="#tagControl">
                     <svg>
                       <use href="#mark-icon"></use>
                     </svg>
@@ -1089,7 +1089,7 @@ title: Банк вопросов
                     Дублировать
                   </button>
 
-                  <button class="dropdown-menu-content__btn" type="button">
+                  <button class="dropdown-menu-content__btn" type="button" data-modal="#tagControl">
                     <svg>
                       <use href="#mark-icon"></use>
                     </svg>
@@ -1352,7 +1352,7 @@ title: Банк вопросов
                     Дублировать
                   </button>
 
-                  <button class="dropdown-menu-content__btn" type="button">
+                  <button class="dropdown-menu-content__btn" type="button" data-modal="#tagControl">
                     <svg>
                       <use href="#mark-icon"></use>
                     </svg>
@@ -1586,3 +1586,8 @@ title: Банк вопросов
     <a href="#" class="dropdown-content__link">Экспорт</a>
   </div>
 </div> -->
+
+{{> tagControlModal}}
+
+
+{{> createQuestionModal}}

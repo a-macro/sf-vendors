@@ -605,7 +605,7 @@ if(changeNums && changeNums.length > 0) {
       const text = item.innerText;
       const value = item.getAttribute("data-value");
       this.input.value = value;
-      this.btnValue.innerText = text;
+      this.btnValue.innerText = text.trim();
       this.btnValue.classList.remove("_placeholder");
       this.btnInfo.innerText = text;
       this.close();
@@ -768,6 +768,94 @@ if(changeNums && changeNums.length > 0) {
 
   const dropdownBtns = document.querySelectorAll(".dropdown");
   dropdownBtns.forEach(item => new Dropdown(item));
+
+  function modalHandler() {
+    const modal = document.querySelector(`${this.dataset?.modal}`) || this
+    if (modal.dataset.modal) {
+      return
+    }
+    if (modal.classList.contains('regModal') && modal.hidden) {
+        scrollLock.disablePageScroll();
+        scrollLock.addScrollableSelector('.regModal');
+    } else {
+        scrollLock.enablePageScroll();
+    }
+    if (modal) {
+        if (modal.hidden) {
+            modal.hidden = !modal.hidden
+            modal.style.setProperty('pointer-events', 'auto')
+            setTimeout(() => {
+                modal.style.opacity = 1
+            }, 10)
+        } else {
+            modal.style.opacity = 0
+            modal.style.setProperty('pointer-events', null)
+            modal.addEventListener('transitionend', hideaftertransition)
+        }
+    }
+}
+
+function hideaftertransition () {
+    this.hidden = true
+    this.removeEventListener('transitionend', hideaftertransition)
+}
+
+const buttonsModal = document.querySelectorAll('[data-modal]')
+
+if (buttonsModal.length) {
+    buttonsModal.forEach(el => el.addEventListener('click', modalHandler))
+}
+
+const closeButton = document.querySelectorAll('.regModal .close-button')
+
+if (closeButton) {
+  closeButton.forEach(el => {
+    el.addEventListener('click', function () {
+      const modal = this.closest('.regModal')
+      if (modal) {
+        modalHandler.apply(modal)
+      }
+    })
+  })
+}
+
+const modals = document.querySelectorAll('.regModal')
+
+if (modals.length) {
+  modals.forEach(el => {
+    el.addEventListener('click', () => {
+      if (event.target.classList.contains('regModal')) {
+        modalHandler.apply(event.target)
+      }
+    })
+  })
+}
+
+const hideafterload = document.querySelectorAll('.hideafterload')
+
+if (hideafterload.length) {
+  hideafterload.forEach(el => {
+    setTimeout(el.hidden = true)
+  })
+}
+
+const modalCreate = document.querySelectorAll('.modal__create .modal__create-item')
+const modalText = document.querySelector('.modal__text')
+
+if (modalCreate.length) {
+  modalCreate.forEach(el => {
+    el.addEventListener('click', function () {
+      modalCreate.forEach(el => {
+        el.classList.remove('active')
+      })
+      this.classList.add('active')
+      const panel = this.querySelector('.modal__panel')
+      if (modalText && panel) {
+        modalText.innerHTML = panel.innerHTML
+      }
+    })
+  })
+}
 
 });
 
