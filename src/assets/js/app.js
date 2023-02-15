@@ -530,6 +530,21 @@ if(changeNums && changeNums.length > 0) {
     });
   }
  
+  let navTrigger = document.querySelectorAll(".nav__trigger");
+  if(navTrigger.length > 0) {
+    navTrigger.forEach(tigger => {
+      tigger.onclick = (e) => {
+        e.preventDefault();
+        tigger.classList.toggle("active");
+        let menu = tigger.querySelector(".nav__submenu");
+        if (menu.style.maxHeight) {
+          menu.style.maxHeight = null;
+        } else {
+          menu.style.maxHeight = menu.scrollHeight + "px";
+        }
+      }
+    });
+  }
 
 
   // SELECT
