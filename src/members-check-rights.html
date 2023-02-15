@@ -1,6 +1,6 @@
 ---
 layout: entered
-title: Участники - Потоки
+title: Участники - Другие пользователи
 ---
 
 <div class="lk__top">
@@ -22,36 +22,6 @@ title: Участники - Потоки
         </li>
         <li class="nav__trigger">
             <a href="#" class="lk__nav_item">Подробнее</a>
-            <ul class="nav__submenu">
-              <li>
-                <a href="#" class="lk__nav_subitem">Переопределения</a>
-              </li>
-              <li>
-                <a href="#" class="lk__nav_subitem">
-                  Локально назначенные роли
-                </a>
-              </li>
-              <li>
-                <a href="#" class="lk__nav_subitem">
-                  Фильтры
-                </a>
-              </li>
-              <li>
-                <a href="#" class="lk__nav_subitem">
-                  Права
-                </a>
-              </li>
-              <li>
-                <a href="#" class="lk__nav_subitem">
-                  Резервное копирование
-                </a>
-              </li>
-              <li>
-                <a href="#" class="lk__nav_subitem">
-                  Восстановить
-                </a>
-              </li>
-            </ul>
         </li>
     </ul>
 </div>
@@ -69,7 +39,7 @@ title: Участники - Потоки
                 </span>
             </button>
             <div class="select-container">
-                <button class="select-item" type="button" data-value="1" data-select>
+                <button class="select-item" type="button" data-value="1">
                     <svg>
                         <use href="#check-icon"></use>
                     </svg>
@@ -86,6 +56,30 @@ title: Участники - Потоки
                         <use href="#check-icon"></use>
                     </svg>
                     Способы зачисления
+                </button>
+                <button class="select-item" type="button" data-value="4">
+                    <svg>
+                        <use href="#check-icon"></use>
+                    </svg>
+                    Обзор
+                </button>
+                <button class="select-item" type="button" data-value="4">
+                    <svg>
+                        <use href="#check-icon"></use>
+                    </svg>
+                    Права
+                </button>
+                <button class="select-item" type="button" data-value="4">
+                    <svg>
+                        <use href="#check-icon"></use>
+                    </svg>
+                    Другие пользователи
+                </button>
+                <button class="select-item" type="button" data-value="4" data-select>
+                    <svg>
+                        <use href="#check-icon"></use>
+                    </svg>
+                    Проверить права
                 </button>
             </div>
         </div>
@@ -123,33 +117,38 @@ title: Участники - Потоки
             </div>
         </div>
     </div>
-    <div class="lk__main memb-streams">
-        <div class="memb-streams__inner">
+    <div class="lk__main memb-check_rights">
+        <div class="memb-ckeck_rights__inner">
             <h1 class="main-title">UGATE001.Х Администрирование межсетевых экранов UserGate 6</h1>
-            <p class="memb-streams__title">Потоки</p>
+            <p class="memb-ckeck_rights__title">Проверка прав</p>
+            <p class="memb-ckeck_rights__title">Выберите пользователя</p>
 
-            <div class="memb-streams__header">
-                <p class="memb-streams__row">Поток</p>
-                <p class="memb-streams__row">Группы</p>
-                <p class="memb-streams__row">Элементы сертификации</p>
-                <p class="memb-streams__row">Редактировать</p>
+            <div class="memb-ckeck_rights__content">
+                <p class="memb-ckeck_rights__group-title">Зачисленные на сертификацию пользователи (1)</p>
+                <label class="memb-ckeck_rights__item">
+                    <input class="visually-hidden" type="radio" name="check-user">
+                    <span class="memb-ckeck_rights__item-text">Вендор UG (vendorug, vendorug@example.ru)</span>
+                </label>
+                <label class="memb-ckeck_rights__item">
+                    <input class="visually-hidden" type="radio" name="check-user">
+                    <span class="memb-ckeck_rights__item-text">Вендор UG (vendorug, vendorug@example.ru)</span>
+                </label>
+                <p class="memb-ckeck_rights__group-title">Зачисленные на сертификацию пользователи (3)</p>
+                <label class="memb-ckeck_rights__item">
+                    <input class="visually-hidden" type="radio" name="check-user">
+                    <span class="memb-ckeck_rights__item-text">Вендор UG (vendorug, vendorug@example.ru)</span>
+                </label>
+                <label class="memb-ckeck_rights__item">
+                    <input class="visually-hidden" type="radio" name="check-user">
+                    <span class="memb-ckeck_rights__item-text">Вендор UG (vendorug, vendorug@example.ru)</span>
+                </label>
             </div>
-            <div class="memb-streams__inner">
-                <div class="memb-streams__content">
-                    <div class="memb-streams__item">
-                        <div class="memb-streams__row"></div>
-                        <div class="memb-streams__row"></div>
-                        <div class="memb-streams__row"></div>
-                        <div class="memb-streams__row"></div>
-                    </div>
-                </div>
-
-                <button class="btn-gray">Создать поток</button>
+            <div class="memb-ckeck_rights__search">
+                <p>Найти</p>
+                <input class="custom-input" type="text">
+                <button class="btn-gray dark">Очистить</button>
             </div>
-
-
+            <a class="memb-check_rights-link btn-red" href="#">Показать права этого пользователя</a>
         </div>
-    </div>
-    </div>
     </div>
 </section>
