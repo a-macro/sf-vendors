@@ -189,7 +189,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.3rem;
+    padding: 0.1rem;
 
     svg {
       stroke: #c60b46;
@@ -358,6 +358,19 @@
     display: flex;
     align-items: center;
   }
+  .table__common_cell--bank {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    &:nth-child(1) {
+        width: 24.4%;
+    }
+    &:nth-child(2) {
+        width: 60.5%;
+    }
+    &:nth-child(3) {
+        width: 10%;
+    }
+}
 
   .table__common_sort {
     display: block;
