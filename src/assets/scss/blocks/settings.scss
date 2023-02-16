@@ -154,6 +154,11 @@
   }
 }
 
+.lkset-item__checkbox {
+  display: flex;
+  gap: 1rem;
+}
+
 .lk-settings__btns {
   display: flex;
   align-items: center;
