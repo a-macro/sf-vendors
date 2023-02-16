@@ -1,0 +1,178 @@
+---
+layout: entered
+title: Банк вопросов
+---
+
+<div class="regModal modal" id="createQuestion">
+  <form class="modal-block">
+
+    <div class="modal__top">
+      <h2 class="lk__subtitle">Выберите тип вопроса для добавления</h2>
+      <button type="reset" class="cross close-button">
+        <svg>
+          <use href='#crossIcon'></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal__create">
+      <ul>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-1.svg" alt=""></div>
+            Множественный выбор
+          </label>
+          <div class="modal__panel">
+            Позволяет выбирать один или несколько правильных ответов из заданного списка.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-2.svg" alt=""></div>
+            Верно/Неверно
+          </label>
+          <div class="modal__panel">
+            Простая форма вопроса «Множественный выбор», предполагающая только два варианта ответа: «Верно» или «Неверно».
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-3.svg" alt=""></div>
+            На соответствие
+          </label>
+          <div class="modal__panel">
+            Ответ на каждый из нескольких вопросов должен быть выбран из списка возможных.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-4.svg" alt=""></div>
+            Короткий ответ
+          </label>
+          <div class="modal__panel">
+            Позволяет вводить в качестве ответа одно или несколько слов. Ответы оцениваются путем сравнения с разными образцами ответов, в которых могут использоваться подстановочные знаки.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-5.svg" alt=""></div>
+            Числовой ответ
+          </label>
+          <div class="modal__panel">
+            Позволяет сравнивать числовые ответы с несколькими заданными вариантами с учетом единиц измерения. Возможен и учет допустимых погрешностей.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-6.svg" alt=""></div>
+            Эссе
+          </label>
+          <div class="modal__panel">
+            Допускает в ответе загрузить файл и/или ввести текст. Ответ должен быть оценен преподавателем вручную.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-7.svg" alt=""></div>
+            Вложенные ответы (Cloze)
+          </label>
+          <div class="modal__panel">
+            Вопросы такого типа являются очень гибкими, но могут быть созданы только путем ввода текста со специальными кодами, которые создают встроенные вопросы «Множественный выбор», «Числовой ответ» и «Короткий ответ».
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-8.svg" alt=""></div>
+            Выбор пропущенных слов
+          </label>
+          <div class="modal__panel">
+            Пропущенные слова в тексте вопроса заполняются с помощью выпадающих меню.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-9.svg" alt=""></div>
+            Вычисляемый
+          </label>
+          <div class="modal__panel">
+            Вычисляемые вопросы подобны числовым вопросам, только в них используются числа, которые случайно выбираются из набора при прохождении теста.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-10.svg" alt=""></div>
+            Множественный вычисляемый
+          </label>
+          <div class="modal__panel">
+            Множественные Вычисляемые вопросы устроены так же, как вопросы типа «Множественный выбор», с тем отличием, что ответами в них служат числовые результаты формул. Значения в формулах выбираются из заранее определенного набора значений случайным образом при прохождении теста.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-11.svg" alt=""></div>
+            Перетаскивание в текст
+          </label>
+          <div class="modal__panel">
+            Пропущенные слова в тексте заполняются с помощью перетаскивания
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-12.svg" alt=""></div>
+            Перетаскивание маркеров
+          </label>
+          <div class="modal__panel">
+            Маркеры перетаскиваются на фоновое изображение. <br><br>Примечание. Этот тип вопросов недоступен для пользователей с плохим зрением.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-13.svg" alt=""></div>
+            Перетащить на изображение
+          </label>
+          <div class="modal__panel">
+            Изображение или текст необходимо перетащить в зону на фоновом изображении. <br><br>
+
+            Примечание. Этот тип вопросов недоступен для пользователей с ослабленным зрением.
+          </div>
+        </li>
+        <li class="modal__create-item">
+          <label class="form-control text-14">
+            <input type="radio" name="radio" />
+            <div class="form-control__img"><img src="./assets/images/bank/bank-9.svg" alt=""></div>
+            Простой Вычисляемый
+          </label>
+          <div class="modal__panel">
+            Более простая версия вычисляемых вопросов, которые подобны числовым вопросам, но с использованием чисел, выбираемых случайным образом из определенного набора при прохождении теста.
+          </div>
+        </li>
+      </ul>
+
+      <div class="modal__text text-14">
+        Выберите тип вопроса, чтобы увидеть его описание.
+      </div>
+    </div>
+
+    <div class="modal__bottom">
+      <button class="btn-grey close-button" type="reset">
+        Отмена
+      </button>
+      <button class="btn-red" type="submit">
+        Добавить
+      </button>
+    </div>
+  </form>
+</div>
