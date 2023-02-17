@@ -31,7 +31,10 @@
   align-items: center;
   gap: 6rem;
 
-  &+& {
+  font-size: 1.6rem;
+  color: #4f4f4f;
+
+  & + & {
     margin-top: 3rem;
   }
 
@@ -64,7 +67,8 @@
   }
 
   &--date {
-    .select {}
+    .select {
+    }
 
     .select-btn {
       width: max-content;
@@ -90,25 +94,25 @@
     }
 
     .enable-date {
-      .circle-checkbox+label {
+      .circle-checkbox + label {
         font-weight: 400;
       }
 
-      .circle-checkbox+label::before {
+      .circle-checkbox + label::before {
         margin-right: 1rem;
 
         background-size: 0.8rem 0.8rem;
       }
 
-      .circle-checkbox:not(:disabled)+label::before {
+      .circle-checkbox:not(:disabled) + label::before {
         background-color: white;
       }
 
-      .circle-checkbox:checked+label::before {
+      .circle-checkbox:checked + label::before {
         background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='8' height='8' rx='2' fill='%23C60B46'/%3E%3C/svg%3E%0A");
       }
 
-      .circle-checkbox:not(:disabled):not(:checked)+label:hover::before {
+      .circle-checkbox:not(:disabled):not(:checked) + label:hover::before {
         background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='8' height='8' rx='2' fill='%23E1B0B4'/%3E%3C/svg%3E%0A");
       }
     }
@@ -148,7 +152,7 @@
     filter: brightness(0.91);
     pointer-events: none;
 
-    &+.calendar-icon {
+    & + .calendar-icon {
       opacity: 0.4;
     }
   }
@@ -182,6 +186,10 @@
   &::placeholder {
     font-family: "Segoe UI";
     color: #4f4f4f;
+  }
+
+  &:disabled {
+    background: #e0e0e0;
   }
 }
 

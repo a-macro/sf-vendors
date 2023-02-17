@@ -1,0 +1,796 @@
+---
+layout: entered
+title: Оценки - Настройка оценок сертификации
+---
+
+<div class="lk__top">
+    <ul class="lk__nav">
+        <li>
+            <a href="#" class="lk__nav_item">Сертификация</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item">Настройки</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item">Участники</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item active">Оценки</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item">Отчеты</a>
+        </li>
+        <li class="nav__trigger">
+            <a href="#" class="lk__nav_item">Подробнее</a>
+            <ul class="nav__submenu">
+                <li>
+                    <a href="#" class="lk__nav_subitem">Переопределения</a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Локально назначенные роли
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Фильтры
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Права
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Резервное копирование
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Восстановить
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<section class="lk__inner lk__inner--grades">
+    <div class="grades-aside">
+        <nav class="bank-aside-nav">
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Отчет по оценкам
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    История оценок
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Обзорный отчет
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Одиночный вид
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Grade gradebook
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Отчет по пользователю
+                </a>
+            </div>
+            <div class="bank-aside-item dropdown _active _open" data-active>
+                <button class="bank-aside__link dropdown-btn" type="button">
+                    Serup
+                    <svg>
+                        <use href="#select-arrow"></use>
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-content__link">Настройка журнала оценок</a>
+                    <a href="#" class="dropdown-content__link _active">Настройка оценок сертификации</a>
+                    <a href="#" class="dropdown-content__link">Настройки: Отчет по оценкам</a>
+                </div>
+            </div>
+            <div class="bank-aside-item dropdown">
+                <button class="bank-aside__link dropdown-btn" type="button">
+                    Подробнее
+                    <svg>
+                        <use href="#select-arrow"></use>
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-content__link">Шкалы</a>
+                    <a href="#" class="dropdown-content__link">Буквенные оценки</a>
+                    <a href="#" class="dropdown-content__link">Импорт</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="lk__main grades-gradebook_new sett-grade-cert">
+        <h1 class="main-title">UGATE001.Х Администрирование межсетевых экранов UserGate 6</h1>
+        <div class="grades-gradebook__inner lk__main_wrapper">
+            <h2 class="grades__subtitle">Настройка оценок сертификации</h2>
+            <p class="grades__descr">Параметры настройки оценок сертификации определяют, как журнал оценок будет
+                выглядеть для всех участников сертификации.</p>
+            <div class="lk-settings__inner">
+                <div class="lk-settings__category">
+                    <p class="lk-settings__category-title">Общие настройки</p>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Рассположение итогового столбца</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left" data-tooltip="Обязательно для заполнения">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1" data-select="">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        В конце
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        В начале
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--xl">
+                        <p class="lkset-item__title">Минимальные и максимальные оценки, используемые в вычислениях</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1" data-select="">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Минимальные и максимальные оценки, заланные в настрйоках оцениваемого элемента
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Поле 2
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lk-settings__category">
+                    <p class="lk-settings__category-title">Настройки оценок элементов</p>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Формат представления оценки</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips"><span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span></div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Поле 1
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Поле 2
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--md">
+                        <p class="lkset-item__title">Знаков после запятой</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        1
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        2
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk-settings__category">
+                    <p class="lk-settings__category-title">Обзорный отчет</p>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать рейтинг</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Скрывать итоги, если они зависят от скрытых элементов</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk-settings__category">
+                    <p class="lk-settings__category-title">Обзорный отчет</p>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать рейтинг</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать проценты</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать оценки</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips"></div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать отзыв</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips"></div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать вес каждой оценки</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips"></div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать среднее</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать буквенные оценки</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать вклад в итоговую оценку</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Отображать диапазон</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips"></div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--md">
+                        <p class="lkset-item__title">Десятичных знаков для диапазона</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips"></div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        0
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        1
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Показ скрытых элементов</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Только скрытые до
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Только скрытые после
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--lg">
+                        <p class="lkset-item__title">Скрывать итоги, если они зависят от скрытых элементов</p>
+                        <div class="lkset-item__content">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <input class="select-value" type="text" placeholder="Значение">
+                                <button class="select-btn" type="button">
+                                    <span class="select-btn__value"></span>
+                                    <span class="select-btn__icon">
+                                        <svg>
+                                            <use href="#select-arrow"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="select-container">
+                                    <button class="select-item" type="button" data-value="1" data-select>
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Скрыть
+                                    </button>
+                                    <button class="select-item" type="button" data-value="2">
+                                        <svg>
+                                            <use href="#check-icon"></use>
+                                        </svg>
+                                        Показать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lkset-item lkset-item--btns">
+                        <div class="lkset-item__content lkset-item__content--btns">
+                            <div class="lk-settings__btns">
+                                <button class="btn-gray">Отмена</button>
+                                <button class="btn-red">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
