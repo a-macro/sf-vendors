@@ -336,3 +336,191 @@
     }
   }
 }
+
+.grades-gradebook {
+  width: 100%;
+
+  .grades-gradebook__inner {
+    width: 100%;
+    max-width: 96.2rem;
+  }
+
+  .grades-gradebook__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+
+    .grades__subtitle {
+      font-weight: 700;
+
+      margin-bottom: 0;
+    }
+  }
+  .grades-gradebook__header-btns {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .lk-table .lk__table_inner {
+    padding-bottom: 0;
+  }
+
+  .lk__table_row {
+    gap: 0;
+
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+    &:not(.head) {
+      border-bottom: none;
+    }
+
+    & > div {
+      &:nth-child(1) {
+        width: 60%;
+
+        font-weight: 600;
+      }
+      &:nth-child(2) {
+        width: 30%;
+
+        justify-content: center;
+        text-align: center;
+      }
+      &:nth-child(3) {
+        width: 15%;
+      }
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      &:hover {
+        fill: $red;
+      }
+    }
+  }
+
+  .lk__table_category {
+    padding: 2rem 0;
+
+    .lk__table_row {
+      padding: 0 3rem;
+    }
+
+    .lk__table_row + .lk__table_row {
+      margin-top: 2rem;
+    }
+  }
+
+  .lk__table_category + .lk__table_category {
+    padding-top: 3rem;
+
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .lk-settings__btns {
+    justify-content: flex-end;
+  }
+}
+
+.grades-gradebook_new {
+  &.lk__main {
+    padding-bottom: 0;
+  }
+
+  .grades__descr {
+    font-size: 1.8rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .lkset-item--textarea {
+    align-items: flex-start;
+    .lkset-item__content {
+      align-items: flex-start;
+    }
+    .lkset-item__tooltips,
+    .lkset-item__title {
+      margin-top: 1rem;
+    }
+  }
+
+  .lkset-item--xl {
+    input,
+    .select,
+    textarea {
+      width: 64rem;
+    }
+  }
+  .lkset-item--lg {
+    input,
+    .select {
+      width: 33.5rem;
+    }
+  }
+  .lkset-item--md {
+    input,
+    .select {
+      width: 14.3rem;
+    }
+  }
+
+  .lkset-item.lkset-item--btns {
+    margin-top: 6rem;
+  }
+
+  .lk-settings__category + .lk-settings__category {
+    margin-top: 6rem;
+  }
+
+  .lk-settings__category-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    margin-bottom: 2rem;
+  }
+
+  .lkset-item_id-val {
+    margin-top: 3rem;
+
+    font-size: 1.8rem;
+
+    h3 {
+      font-weight: 700;
+
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      display: grid;
+      gap: 1rem;
+
+      list-style: disc inside;
+
+      margin-bottom: 1rem;
+    }
+
+    .btn-red {
+      width: max-content;
+
+      margin-top: 1rem;
+    }
+  }
+}
+
+.sett-grade-cert {
+  .lkset-item__title {
+    width: 58.5rem;
+  }
+}
+
+.lkset-item--tips {
+  font-size: 1.8rem;
+
+  margin-top: 3rem;
+}
