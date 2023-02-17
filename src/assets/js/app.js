@@ -872,6 +872,57 @@ if (modalCreate.length) {
   })
 }
 
+const $fileInput = $(".file-input");
+const $droparea = $(".file-drop-area");
+const $fileButton = $(".file-button");
+let droppedFiles = null;
+
+$fileButton.on('click', () => {
+  if ($fileInput[0]) {
+    $fileInput[0].click()
+  }
+})
+// highlight drag area
+$fileInput.on("dragenter focus click", function () {
+  $droparea.addClass("is-active");
+});
+
+// back to normal state
+$fileInput.on("dragleave blur drop", function () {
+  $droparea.removeClass("is-active");
+});
+
+$fileInput.on("drop", function (e) {
+  droppedFiles = e.originalEvent.dataTransfer.files;
+  if (droppedFiles.length) {
+    $(this)[0].files = droppedFiles
+    changeFile.apply($(this)[0])
+  }
+});
+
+// change inner text
+$fileInput.on("change", changeFile);
+
+function changeFile () {
+  var filesCount = $(this)[0].files.length;
+  var $textContainer = $(this).prev();
+
+  if (filesCount === 1) {
+    // if single file is selected, show file name
+    var fileName = $(this).val().split("\\").pop();
+    $textContainer.text(fileName);
+    if ($fileButton[0]) {
+      $fileButton.text(fileName)
+    }
+  } else {
+    // otherwise show number of files
+    $textContainer.text(filesCount + " files selected");
+    if ($fileButton[0]) {
+      $fileButton.text(filesCount + " files selected")
+    }
+  }
+}
+
 });
 
 

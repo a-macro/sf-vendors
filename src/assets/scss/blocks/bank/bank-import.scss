@@ -1,0 +1,101 @@
+.bank-import-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.space-y-15 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.radio-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  & > * {
+    &:first-child {
+      width: 25.5rem;
+    }
+  }
+}
+
+.mt-3 {
+  margin-top: 0.3rem;
+}
+
+
+.pl-25 {
+  padding-left: 2.5rem;
+}
+.w-500 {
+  width: 50rem;
+}
+
+.file-drop-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 64.1rem;
+  height: 24.5rem;
+  padding: 25px;
+  border: 1px dashed #BDBDBD;
+  border-radius: 0.7rem;
+  transition: 0.2s;
+  &.is-active {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.fake-btn {
+  width: 3.8rem;
+  height: 3.6rem;
+  display: block;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  fill: transparent;
+}
+
+.file-msg {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  /* identical to box height */
+  
+  
+  color: #4F4F4F;
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.mt-10 {
+  margin-top: 1rem;
+}
+
+.text-gray {
+  color: #4F4F4F;
+}
+
+.text-start {
+  text-align: start;
+}
