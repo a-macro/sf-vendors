@@ -68,6 +68,9 @@
 .w-full {
   width: 100%;
 }
+.w-max {
+  width: max-content;
+}
 .w-200 {
   width: 20rem;
 }
@@ -251,3 +254,39 @@ input[type=number] {
   /* identical to box height */
 }
 
+.font-700 {
+  font-weight: 700;
+}
+.bank-category-title {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  text-decoration: none;
+  
+  /* 2 */
+  
+  color: #000000;
+}
+
+.bank-category-edit {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  
+  /* 1 */
+  
+  color: #C60B46;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #C60B46;
+  }
+}
