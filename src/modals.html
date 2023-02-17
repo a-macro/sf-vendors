@@ -1,0 +1,76 @@
+---
+layout: default
+title: страницы
+---
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+    ._progress {
+      height: 100vh;
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    ._progress__inner {
+      columns: 2;
+    }
+
+    ul {
+      margin-bottom: 10px;
+    }
+
+    ._progress__link {
+      display: block;
+      font-size: 1.5vmax;
+      margin-bottom: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #222222;
+      transition: opacity 0.3s;
+    }
+
+    @media(max-width: 1024px) {
+      ._progress__inner {
+        columns: 1;
+      }
+    }
+
+    @media (any-hover: hover) {
+      ._progress__link:hover {
+        opacity: 0.5;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="_progress">
+        <ol class="_progress__inner">
+            <a href="#" class="_progress__link" data-modal="#tagControl">Банк вопросов - Управление тэгами - модалка</a>
+            <a href="#" class="_progress__link" data-modal="#createQuestion">Банк вопросов - Создание вопроса - модалка</a>
+            <a href="#" class="_progress__link" data-modal="#deleteQuestionModal">Банк вопросов - Удаление вопроса - модалка</a>
+            <a href="#" class="_progress__link" data-modal="#addCommentModal">Банк вопросов - Добавить комментарий - модалка</a>
+            <a href="#" class="_progress__link" data-modal="#addCommentModal">Банк вопросов - Использование вопроса - модалка</a>
+        </ol>
+    </div>
+
+{{> tagControlModal}}
+
+
+{{> createQuestionModal}}
+
+{{> deleteQuestionModal}}
+
+{{> addCommentModal}}
+</body>
+</html>
+
+

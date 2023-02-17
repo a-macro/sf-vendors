@@ -390,13 +390,12 @@
 .checkbox__round {
   display: flex;
   align-items: center;
-  position: relative;
   cursor: pointer;
 
   .checkbox__round_check {
-    content: "";
-    width: 14px;
-    height: 14px;
+    width: 1.4rem;
+    height: 1.4rem;
+    position: relative;
     border-radius: 100%;
     border: 0.5px solid #bdbdbd;
     margin-right: 1rem;
@@ -404,8 +403,8 @@
 
   .checkbox__round_check::after {
     content: "";
-    width: 7px;
-    height: 7px;
+    width: 50%;
+    height: 50%;
     border-radius: 100%;
     background: #c60b46;
     position: absolute;
@@ -413,7 +412,7 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.3s;
-    left: 7px;
+    left: 50%;
   }
 
   &:hover {
