@@ -33,10 +33,12 @@ if (tableAllCheckbox) {
     if (tableAllCheckbox.checked) {
       lkTableRows.forEach((el) => {
         el.querySelector(".table-row__select-checkbox").checked = true;
+        el.classList.add("selected");
       });
     } else {
       lkTableRows.forEach((el) => {
         el.querySelector(".table-row__select-checkbox").checked = false;
+        el.classList.remove("selected");
       });
     }
   });
@@ -68,19 +70,19 @@ if (enableDateBtns.length) {
     let label = el.querySelector("label");
     let fields = el.parentElement.querySelector(".lkset-item__fields");
 
-    if (el.checked) {
-      fields.classList.add("disabled");
-    } else {
+    if (input.checked) {
       fields.classList.remove("disabled");
+    } else {
+      fields.classList.add("disabled");
     }
 
     input.addEventListener("change", function () {
       if (input.checked) {
-        label.innerText = "Включить";
-        fields.classList.add("disabled");
-      } else {
         label.innerText = "Выключить";
         fields.classList.remove("disabled");
+      } else {
+        label.innerText = "Включить";
+        fields.classList.add("disabled");
       }
     });
   });

@@ -213,12 +213,11 @@
     &:first-child {
       padding-bottom: 1.4rem;
     }
+  }
+  .alphabet-choice__row + .alphabet-choice__row {
+    padding-top: 1rem;
 
-    & + & {
-      padding-top: 1rem;
-
-      border-top: 0.5px solid #b4b4b3;
-    }
+    border-top: 0.5px solid #b4b4b3;
   }
   .alphabet-choice__row-title {
     width: 10%;
