@@ -486,6 +486,24 @@
   }
 }
 
+.btn-download {
+  display: flex;
+  gap: 1rem;
+  color: #828282;
+  svg {
+    fill: #828282;
+    width: 1.5rem;
+    height: 1.6rem;
+  }
+}
+
+.btn-block {
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 .lk__refrech_text {
   margin-top: 2rem;
   font-size: 1.8rem;
