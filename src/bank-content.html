@@ -118,31 +118,53 @@ title: Банк контента
     <div class="bank-inner">
       <div class="bank-edit-titleImport">
         <h2 class="lk__subtitle">Банк контента</h2>
-        <span class="tooltip tlp-info tlp-right"
-          data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
-          <button class="bank-item-description__info-btn">
-            <svg>
-              <use href="#info-icon"></use>
-            </svg>
-          </button>
-        </span>
       </div>
   
       <div class="flex-between">
         <input class="custom-input bank-edit-list-item__input w-300" type="text" placeholder="Найти">
 
         <div class="gap-x-20">
-          <button class="btn-red">Добавить</button>
-          <button class="btn-grey btn-download">
+          <div class="select select--red disabled">
+            <input class="select-value" type="text" placeholder="Готов">
+            <button class="select-btn" type="button">
+              <span class="select-btn__value"></span>
+              <span class="select-btn__icon">
+                <svg>
+                  <use href="#select-arrow"></use>
+                </svg>
+              </span>
+            </button>
+            <div class="select-container">
+              <button class="select-item" type="button" data-value="1" data-select>
+                <svg>
+                  <use href="#check-icon"></use>
+                </svg>
+                Добавить
+              </button>
+              <button class="select-item" type="button" data-value="2">
+                <svg>
+                  <use href="#check-icon"></use>
+                </svg>
+                Добавить 2
+              </button>
+              <button class="select-item" type="button" data-value="3">
+                <svg>
+                  <use href="#check-icon"></use>
+                </svg>
+                Добавить 3
+              </button>
+            </div>
+          </div>
+          <button class="btn-grey btn-download disabled">
             <svg><use href='#downIcon'></use></svg>
             Загрузить
           </button>
 
-          <button class="btn-grey btn-block">
+          <button class="btn-grey btn-block disabled">
             <svg><use href='#blockIcon'></use></svg>
           </button>
 
-          <button class="btn-grey btn-block">
+          <button class="btn-grey btn-block disabled">
             <svg><use href='#listIcon'></use></svg>
           </button>
         </div>

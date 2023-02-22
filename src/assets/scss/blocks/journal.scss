@@ -489,11 +489,15 @@
 .btn-download {
   display: flex;
   gap: 1rem;
-  color: #828282;
   svg {
-    fill: #828282;
     width: 1.5rem;
     height: 1.6rem;
+    transition: fill .3s;
+  }
+  &:hover {
+    svg {
+      fill: $white;
+    }
   }
 }
 
@@ -501,6 +505,12 @@
   svg {
     width: 2rem;
     height: 2rem;
+    transition: fill .3s;
+  }
+  &:hover {
+    svg {
+      fill: $white;
+    }
   }
 }
 
