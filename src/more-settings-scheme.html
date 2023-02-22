@@ -118,10 +118,10 @@ title: Отчеты
             <li>
                 <a href="#">1. Выбор сертификации</a>
             </li>
-            <li class="active">
+            <li>
                 <a href="#">2. Первоначальная настройка</a>
             </li>
-            <li>
+            <li class="active">
                 <a href="#">3. Настройка схемы</a>
             </li>
             <li>
@@ -135,124 +135,58 @@ title: Отчеты
             </li>
         </ul>
 
-        <div class="lk__main_wrapper">
-            <h2 class="lk__subtitle">Настройки импорта</h2>
+        <div class="lk__main_wrapper scheme-settings">
+            <h2 class="lk__subtitle">Включить:</h2>
 
             <div class="checkbox__wrapper">
                 <label class="checkbox__round">
                     <input class="visually-hidden" type="checkbox">
                     <span class="checkbox__round_check"></span>
-                    <span class="checkbox__round_text">Включить переопределения разрешений</span>
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включать элементы и ресурсы</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включать блоки</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включать файлы</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включать фильтры</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включать события календаря</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
+                    <span class="checkbox__round_text">Выбрать все</span>
                 </label>
 
                 <label class="checkbox__round">
                     <input class="visually-hidden" type="checkbox">
                     <span class="checkbox__round_check"></span>
-                    <span class="checkbox__round_text">Включать банк вопросов</span>
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включать группы и потоки</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включать компетенции</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включить пользовательские поля</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включить содержимое банка контента</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
-                </label>
-
-                <label class="checkbox">
-                    <div class="checkbox__icon">
-                      <svg>
-                        <use href="#check-icon"></use>
-                      </svg>
-                    </div>
-                    <span class="checkbox__text">Включить устаревшие файлы сертификации</span>
-                    <input class="checkbox__input" type="checkbox" checked="">
+                    <span class="checkbox__round_text">Выбрать тесты</span>
                 </label>
             </div>
+
+            <label class="checkbox">
+                <div class="checkbox__icon">
+                  <svg>
+                    <use href="#check-icon"></use>
+                  </svg>
+                </div>
+                <span class="checkbox__text">Общее</span>
+                <input class="checkbox__input" type="checkbox" checked="">
+            </label>
+
+            <div class="check-group">
+                <label class="checkbox__round lock-group">
+                    <input class="visually-hidden" type="checkbox">
+                    <span class="checkbox__round_check"></span>
+                    <span class="checkbox__round_text">Итоговая аттестация "Администрирование межсетевых экранов UserGate 6"</span>
+                </label>
+
+                <div class="check-disabled">
+                  <div>
+                    <input class="circle-checkbox" type="checkbox" id="scheme1" disabled>
+                    <label for="scheme1">Включать блоки</label>
+                  </div>
+
+                  <div>
+                    <input class="circle-checkbox" type="checkbox" id="scheme2" disabled>
+                    <label for="scheme2">Включать файлы</label>
+                  </div>
+
+                </div>
+            </div>
+
+
+
             <div class="btns-end__wrap">
-                <a href="#" class="btn-red">Переход к конечному этапу</a>
+                <a href="#" class="btn-red">Назад</a>
                 <a href="#" class="btn-grey">Отмена</a>
                 <a href="#" class="btn-red">Далее</a>
             </div>

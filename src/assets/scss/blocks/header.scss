@@ -242,11 +242,42 @@
 .header__select_block {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .3s;
+    transition: max-height 0.3s;
     position: absolute;
-    left: 0;
-    top: 0;
+    right: 0;
+    top: calc(100% + 1.1rem);
     background: white;
+    border: 0.5px solid #E0E0E0;
+    border-radius: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.31;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        color: #0E0D0D;
+        text-decoration: unset;
+        min-width: max-content;
+        display: block;
+        padding: 1.3rem 6rem 1.3rem 2rem;
+        border-bottom: 0.5px solid #E0E0E0;
+        transition: color .3s;
+
+        &:hover {
+            color: $red;
+        }
+
+        &:nth-child(1) {
+            margin-top: 1rem;
+        }
+        &:nth-last-child(1) {
+            margin-bottom: 1rem;
+            border-bottom: unset;
+        }
+    }
 }
 
 .header-bordered {

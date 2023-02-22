@@ -231,3 +231,52 @@
     align-items: center;
     gap: 2rem;
 }
+
+.checkbox__wrapper {
+    columns: 2;
+    padding-top: 3rem;
+
+    label {
+        justify-content: flex-start;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.btns-end__wrap  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    padding-top: 1.5rem;
+}
+
+.scheme-settings {
+    .checkbox__wrapper {
+        max-width: 37rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .checkbox {
+        justify-content: flex-start;
+    }
+}
+
+.check-group {
+    margin-top: 2rem;
+}
+
+.check-disabled {
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .circle-checkbox + label {
+        font-weight: 400;
+    }
+
+    .circle-checkbox + label::before {
+        margin-right: 1rem;
+    }
+}

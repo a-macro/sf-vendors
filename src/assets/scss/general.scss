@@ -399,6 +399,7 @@
     border-radius: 100%;
     border: 0.5px solid #bdbdbd;
     margin-right: 1rem;
+    background: white;
   }
 
   .checkbox__round_check::after {
@@ -424,6 +425,14 @@
   input:checked ~ .checkbox__round_check::after {
     opacity: 1;
   }
+}
+
+.checkbox__round_text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.125;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .btn-transparent {

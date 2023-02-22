@@ -546,6 +546,27 @@ if(changeNums && changeNums.length > 0) {
     });
   }
 
+  let lockGroupCheck = document.querySelectorAll(".lock-group input");
+  if(lockGroupCheck.length > 0) {
+    lockGroupCheck.forEach(el => {
+      let parent = el.closest(".lock-group");
+      let nextEl = parent.nextElementSibling;
+      let checks = nextEl.querySelectorAll(".circle-checkbox");
+      el.onchange = (e) => {
+        if(el.checked) {
+          checks.forEach(check => {
+            check.removeAttribute("disabled");
+          });
+        } else {
+          checks.forEach(check => {
+            check.setAttribute("disabled", "disabled");
+            check.checked = false;
+          });
+        }
+      }
+    });
+  }
+
 
   // SELECT
   class Select {
