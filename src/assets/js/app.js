@@ -871,7 +871,6 @@ const hideafterload = document.querySelectorAll('.hideafterload')
 
 if (hideafterload.length) {
   hideafterload.forEach(el => {
-    console.log(el)
     setTimeout(el.hidden = true)
   })
 }

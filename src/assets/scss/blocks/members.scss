@@ -832,6 +832,21 @@
     background: transparent;
     opacity: 0;
   }
+
+  .attachment-types {
+    max-width: 24.5rem;
+
+    margin-top: 1.5rem;
+  }
+  .attachment-types__title {
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    margin-bottom: 1rem;
+  }
+  .attachment-types__descr {
+    font-size: 1.4rem;
+  }
 }
 
 .memb-review {

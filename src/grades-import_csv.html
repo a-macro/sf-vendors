@@ -1,0 +1,386 @@
+---
+layout: entered
+title: Оценки - Импорт - CSV
+---
+
+<div class="lk__top">
+    <ul class="lk__nav">
+        <li>
+            <a href="#" class="lk__nav_item">Сертификация</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item">Настройки</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item">Участники</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item active">Оценки</a>
+        </li>
+        <li>
+            <a href="#" class="lk__nav_item">Отчеты</a>
+        </li>
+        <li class="nav__trigger">
+            <a href="#" class="lk__nav_item">Подробнее</a>
+            <ul class="nav__submenu">
+                <li>
+                    <a href="#" class="lk__nav_subitem">Переопределения</a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Локально назначенные роли
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Фильтры
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Права
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Резервное копирование
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lk__nav_subitem">
+                        Восстановить
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<section class="lk__inner lk__inner--grades">
+    <div class="grades-aside">
+        <nav class="bank-aside-nav">
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Отчет по оценкам
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    История оценок
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Обзорный отчет
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Одиночный вид
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Grade import
+                </a>
+            </div>
+            <div class="bank-aside-item">
+                <a href="#" class="bank-aside__link bank-aside__link_icon">
+                    Отчет по пользователю
+                </a>
+            </div>
+            <div class="bank-aside-item dropdown">
+                <button class="bank-aside__link dropdown-btn" type="button">
+                    Serup
+                    <svg>
+                        <use href="#select-arrow"></use>
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-content__link">Настройка журнала оценок</a>
+                    <a href="#" class="dropdown-content__link">Настройка оценок сертификации</a>
+                    <a href="#" class="dropdown-content__link">Настройки: Отчет по оценкам</a>
+                </div>
+            </div>
+            <div class="bank-aside-item dropdown _active _open" data-active>
+                <button class="bank-aside__link dropdown-btn" type="button">
+                    Подробнее
+                    <svg>
+                        <use href="#select-arrow"></use>
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-content__link">Шкалы</a>
+                    <a href="#" class="dropdown-content__link">Буквенные оценки</a>
+                    <a href="#" class="dropdown-content__link _active">Импорт</a>
+                    <a href="#" class="dropdown-content__link">Экспорт</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="lk__main grades-import">
+        <h1 class="main-title">UGATE001.Х Администрирование межсетевых экранов UserGate 6</h1>
+        <div class="grades-import__inner">
+            <div class="lk-settings__inner">
+                <div class="grades-import__header">
+                    <h2 class="grades__subtitle">Импорт</h2>
+                    <div class="select">
+                        <input class="select-value" type="text" placeholder="Выбирите">
+                        <button class="select-btn" type="button">
+                            <span class="select-btn__value"></span>
+                            <span class="select-btn__icon">
+                                <svg>
+                                    <use href="#select-arrow"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="select-container">
+                            <button class="select-item" type="button" data-value="1" data-select>
+                                <svg>
+                                    <use href="#check-icon"></use>
+                                </svg>
+                                Импортировать как: CSV
+                            </button>
+                            <button class="select-item" type="button" data-value="2">
+                                <svg>
+                                    <use href="#check-icon"></use>
+                                </svg>
+                                Импортировать как: Вставка из электронной таблицы
+                            </button>
+                            <button class="select-item" type="button" data-value="3">
+                                <svg>
+                                    <use href="#check-icon"></use>
+                                </svg>
+                                Импортировать как: XML
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grades-import__selected">
+                    <p>Импорт CSV</p>
+                    <span class="tooltip tlp-info tlp-right"
+                        data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                        <svg>
+                            <use href="#info-icon"></use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="lkset-item lkset-item--attachment">
+                    <p class="lkset-item__title">Файл</p>
+                    <div class="lkset-item__content">
+                        <div class="lkset-item__attachment">
+                            <div class="lkset-item__tooltips">
+                                <span class="tooltip tlp-info tlp-left"
+                                    data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                    <svg>
+                                        <use href="#info-circle"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <p>Максимальный размер для новых файлов: 10 Мбайт</p>
+                        </div>
+                        <div class="attachment-wrapper">
+                            <div class="attachment-area" id="attachment-area">
+                                <div class="attachment-area__content" style="display: block;">
+                                    <label class="attachment-area__label" for="files-attachment">
+                                        <svg>
+                                            <use href="#plus-square"></use>
+                                        </svg>
+                                    </label>
+                                    <p class="attachment-area__content-heading">Для загрузки файлов перетащите их сюда
+                                        или нажмите на кнопку
+                                </div>
+                                <div class="attachment-area__content-list"></div>
+                            </div>
+                            <input class="attachment" type="file" name="file[]" id="files-attachment" multiple="">
+                            <label class="files-attachment__label" for="files-attachment"
+                                style="display: none;">Выберите
+                                файлы</label>
+                            <div class="attachment-types">
+                                <p class="attachment-types__title">Поддерживаемые типы файлов:</p>
+                                <p class="attachment-types__descr">Значения, разделенные запятыми .csv Текстовый файл
+                                    .txt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lkset-item lkset-item--lg">
+                    <p class="lkset-item__title">Кодировка</p>
+                    <div class="lkset-item__content">
+                        <div class="lkset-item__tooltips">
+                            <span class="tooltip tlp-info tlp-left"
+                                data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                <svg>
+                                    <use href="#info-icon"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="select">
+                            <input class="select-value" type="text" placeholder="Значение">
+                            <button class="select-btn" type="button">
+                                <span class="select-btn__value"></span>
+                                <span class="select-btn__icon">
+                                    <svg>
+                                        <use href="#select-arrow"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="select-container">
+                                <button class="select-item" type="button" data-value="1" data-select>
+                                    <svg>
+                                        <use href="#check-icon"></use>
+                                    </svg>
+                                    UTF-8
+                                </button>
+                                <button class="select-item" type="button" data-value="2">
+                                    <svg>
+                                        <use href="#check-icon"></use>
+                                    </svg>
+                                    Не UTF-8
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lkset-item lkset-item--lg">
+                    <p class="lkset-item__title">Разделитель</p>
+                    <div class="lkset-item__content">
+                        <div class="lkset-item__tooltips"></div>
+                        <div class="lkset-item__checkboxes">
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="radio" name="delimiter">
+                                <span class="checkbox__text">Табуляция</span>
+                            </label>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="radio" name="delimiter">
+                                <span class="checkbox__text">Запятая</span>
+                            </label>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="radio" name="delimiter">
+                                <span class="checkbox__text">Двоеточие</span>
+                            </label>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="radio" name="delimiter">
+                                <span class="checkbox__text">Точка с запятой</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="lkset-item lkset-item--md">
+                    <p class="lkset-item__title">Многословные шкалы</p>
+                    <div class="lkset-item__content">
+                        <div class="lkset-item__tooltips">
+                            <span class="tooltip tlp-info tlp-left"
+                                data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                <svg>
+                                    <use href="#info-icon"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="select">
+                            <input class="select-value" type="text" placeholder="Значение">
+                            <button class="select-btn" type="button">
+                                <span class="select-btn__value"></span>
+                                <span class="select-btn__icon">
+                                    <svg>
+                                        <use href="#select-arrow"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="select-container">
+                                <button class="select-item" type="button" data-value="1" data-select>
+                                    <svg>
+                                        <use href="#check-icon"></use>
+                                    </svg>
+                                    Да
+                                </button>
+                                <button class="select-item" type="button" data-value="2">
+                                    <svg>
+                                        <use href="#check-icon"></use>
+                                    </svg>
+                                    Нет
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lkset-item lkset-item--md">
+                    <p class="lkset-item__title">Строк предпросмотра</p>
+                    <div class="lkset-item__content">
+                        <div class="lkset-item__tooltips">
+                            <span class="tooltip tlp-info tlp-left"
+                                data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                <svg>
+                                    <use href="#info-icon"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="select">
+                            <input class="select-value" type="text" placeholder="Значение">
+                            <button class="select-btn" type="button">
+                                <span class="select-btn__value"></span>
+                                <span class="select-btn__icon">
+                                    <svg>
+                                        <use href="#select-arrow"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="select-container">
+                                <button class="select-item" type="button" data-value="1" data-select>
+                                    <svg>
+                                        <use href="#check-icon"></use>
+                                    </svg>
+                                    10
+                                </button>
+                                <button class="select-item" type="button" data-value="2">
+                                    <svg>
+                                        <use href="#check-icon"></use>
+                                    </svg>
+                                    20
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lkset-item lkset-item--md">
+                    <p class="lkset-item__title"></p>
+                    <div class="lkset-item__content">
+                        <div class="lkset-item__tooltips"></div>
+                        <div class="lkset-item__checkbox">
+                            <label class="checkbox">
+                                <div class="checkbox__icon">
+                                    <svg>
+                                        <use href="#check-icon"></use>
+                                    </svg>
+                                </div>
+                                <span class="checkbox__text">Принудительный импорт</span>
+                                <input class="checkbox__input" type="checkbox">
+                            </label>
+                            <span class="tooltip tlp-info tlp-left"
+                                data-tooltip="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quasi.">
+                                <svg>
+                                    <use href="#info-icon"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lkset-item--tips">
+                    Обязательные для заполнения поля в этой форме помечены
+                    <span class="tooltip tlp-info tlp-left" data-tooltip="Обязательно для заполнения">
+                        <svg>
+                            <use href="#info-circle"></use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="lkset-item lkset-item--btns">
+                    <div class="lkset-item__content lkset-item__content--btns">
+                        <div class="lk-settings__btns">
+                            <button class="btn-gray">Отмена</button>
+                            <button class="btn-red">Сохранить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
