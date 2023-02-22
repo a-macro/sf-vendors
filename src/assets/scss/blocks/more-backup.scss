@@ -30,6 +30,9 @@
 }
 
 .more-backup {
+  .lk-settings__category + .lk-settings__category {
+    margin-top: 6rem;
+  }
   .lk-settings__category-title {
     font-weight: 700;
     font-size: 1.8rem;
@@ -117,5 +120,93 @@
     .checkbox__text {
       font-weight: 600;
     }
+  }
+
+  .lkset-item--lg {
+    .lkset-item__title {
+      width: 37rem;
+    }
+
+    .select,
+    input,
+    textarea {
+      width: 33.5rem;
+    }
+  }
+
+  .check-icon {
+    stroke: #3ade00;
+  }
+
+  .lkset-item {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p:first-child {
+      width: 100%;
+      max-width: 37rem;
+    }
+  }
+}
+
+.more-backup_completion {
+  font-size: 1.8rem;
+
+  .more-backup__success {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 51rem;
+
+    padding: 2rem;
+    margin-bottom: 3rem;
+
+    background: #d2ead9;
+    border-radius: 0.7rem;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:last-of-type {
+        margin-left: auto;
+      }
+    }
+
+    .check-icon {
+      stroke: #3ade00;
+    }
+    .cross-icon {
+      fill: #bdbdbd;
+
+      &:hover {
+        fill: $red;
+      }
+    }
+  }
+  .check-icon {
+  }
+  .cross-icon {
+  }
+
+  .tech-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    width: 100%;
+    max-width: 41.4rem;
+
+    line-height: 1.2;
   }
 }
