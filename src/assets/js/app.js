@@ -354,6 +354,9 @@ if(changeNums && changeNums.length > 0) {
         let parent = document.querySelector(".lk-settings__wrap");
         if(!parent) {
           parent = document.querySelector(".lk__main_wrapper");
+        } 
+        if(!parent) {
+          parent = document.querySelector(".calendar-wrap");
         }
         parent.appendChild(wrapper);
     
@@ -393,7 +396,10 @@ if(changeNums && changeNums.length > 0) {
                 let parent = document.querySelector(".lk-settings__wrap");
                 if(!parent) {
                   parent = document.querySelector(".lk__main_wrapper");
-                }        
+                } 
+                if(!parent) {
+                  parent = document.querySelector(".calendar-wrap");
+                }       
                 let clickableParent = document.querySelector(".active-calendar");
                 let parentDate = clickableParent.querySelector(".date-select");
                 let inpDate = parentDate.querySelector(".select-value");
@@ -507,6 +513,9 @@ if(changeNums && changeNums.length > 0) {
           if(!parent) {
             parent = document.querySelector(".lk__main_wrapper");
           }  
+          if(!parent) {
+            parent = document.querySelector(".calendar-wrap");
+          }
           parent.classList.add("calendar-show");
           let clickableParent = btn.closest(".lkset-item");
           clickableParent.classList.add("active-calendar");
@@ -519,6 +528,9 @@ if(changeNums && changeNums.length > 0) {
           if(!parent) {
             parent = document.querySelector(".lk__main_wrapper");
           }  
+          if(!parent) {
+            parent = document.querySelector(".calendar-wrap");
+          }
           let clickableParent = btn.closest(".lkset-item");
           clickableParent.classList.remove("active-calendar");
           setTimeout(() => {
