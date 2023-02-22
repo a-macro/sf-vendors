@@ -169,6 +169,26 @@
   }
 }
 
+.select--red {
+  .select-btn {
+    background-color: #c60b46;
+    border-color: #c60b46;
+    .select-btn__value {
+      color: #FFFFFF;
+    }
+    .select-btn__icon {
+      svg {
+        fill: #FFFFFF;
+      }
+    }
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: .4;
+}
+
 .checkbox {
   display: flex;
   align-items: center;
