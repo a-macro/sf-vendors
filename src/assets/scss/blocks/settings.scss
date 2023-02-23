@@ -206,3 +206,39 @@
     line-height: 1;
   }
 }
+
+.calendar-wrap1 {
+  .calendar-table {
+    right: unset;
+    left: calc(100% + 3rem);
+    top: 27rem;
+  }
+}
+
+.calendar-wrap2 {
+  .calendar-table {
+    right: 5rem;
+    top: 60rem;
+  }
+}
+
+.calendar-wrap3 {
+  .calendar-table {
+    right: unset;
+    top: 3rem;
+    left: calc(100% + 4rem);
+  }
+}
+
+.grades-gradebook_new {
+  .calendar-wrap2 .calendar-table {
+    right: -35rem;
+  }
+}
+
+.active-calendar {
+  .calendar-icon {
+    fill: $red;
+  }
+}
+
