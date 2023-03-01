@@ -250,18 +250,18 @@ document.addEventListener("DOMContentLoaded", () => {
         if(entry.isIntersecting) {
             let i = 1,
             num = attr,
-            step = 2500 / num,
+            step = num / 100,
         
             int = setInterval(function() {
               if (i <= num) {
-                el.innerHTML = `${i}`;
+                el.innerHTML = `${Math.floor(i)}`;
               } else {
                 el.innerHTML = num;
                 clearInterval(int);
                 el.classList.add("end");
               }
-              i+=5;
-            }, step);
+              i+=step;
+            }, 20);
         }
     });
 }, {threshold: 1.0});
