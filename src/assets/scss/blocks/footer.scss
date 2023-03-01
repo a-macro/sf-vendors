@@ -3,6 +3,21 @@
     padding: 8rem 4rem 0;
 }
 
+.footer-holder.anim {
+    overflow: hidden;
+    .footer {
+        transform: translateY(100%);
+        transition: 0.5s .3s;
+    }
+}
+
+.footer-holder.active {
+    .footer {
+        transform: translateY(0%);
+    }
+}
+
+
 .footer__top {
     display: flex;
     align-items: center;
@@ -138,8 +153,18 @@
     justify-content: flex-start;
     gap: 4rem;
 
+    a:hover {
+        .colored  {
+            fill: $red;
+        }
+    }
+
     svg {
         width: 4rem;
+
+        path {
+            transition: .3s;
+        }
     }
 }
 

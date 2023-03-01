@@ -10,6 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.style.setProperty('--h', height + "px");
   document.documentElement.style.setProperty('--w', width + "px");
   document.documentElement.style.setProperty('--headerH', header.getBoundingClientRect().height + "px");
+  setTimeout(() => {
+    let preloader = document.querySelector(".preloader");
+    if(preloader) {
+      preloader.style.opacity = 0;
+      setTimeout(() => {
+        preloader.style.display = "none";
+        let intro = document.querySelector(".intro");
+        intro.classList.add("ready");
+      }, 500);
+    }
+  }, 1500);
 
   let categories = document.querySelectorAll(".categories__block");
   if (categories.length > 0) {
@@ -197,6 +208,35 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         block.style.maxHeight = block.scrollHeight + "px";
       }
+    }
+  }
+
+  let headerSearch = document.querySelector(".header__search");
+  let searchBlock = document.querySelector(".search-block");
+  if(headerSearch) {
+    headerSearch.onclick = (e) => {
+      e.preventDefault();
+      searchBlock.classList.add("show");
+    }
+  }
+
+  window.onscroll = (e) => {
+    let openedSearch = document.querySelector(".search-block.show");
+    if(openedSearch) {
+      openedSearch.classList.remove("show");
+    }
+  }
+
+  window.onclick = (e) => {
+    let targ = e.target;
+    console.log(!targ.classList.contains("search-block"), !targ.closest(".search-block"), searchBlock.classList.contains("show"), !targ.classList.contains("header__search"));
+    if(!targ.classList.contains("search-block") 
+      && !targ.closest(".search-block") 
+      && searchBlock.classList.contains("show") 
+      && !targ.classList.contains("header__search") 
+      && !targ.closest(".header__search")) {
+      e.preventDefault();
+      searchBlock.classList.remove("show");
     }
   }
 
@@ -619,6 +659,22 @@ if(changeNums && changeNums.length > 0) {
         }
       }
     });
+  }
+
+  function onEntry(entry) {
+    entry.forEach(change => {
+        if (change.isIntersecting && !change.target.classList.contains("active")) {
+            change.target.classList.add('active');
+        }
+    });
+}
+  let options = { threshold: [0.5] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.anim');
+  if(elements && elements.length > 0) {
+      for (let elm of elements) {
+          observer.observe(elm);
+      }
   }
 
 
