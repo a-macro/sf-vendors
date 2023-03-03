@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 1500);
 
+  window.onresize = (e) => {
+    height = window.innerHeight;
+    width = window.innerWidth;
+    header = document.querySelector(".header");
+    document.documentElement.style.setProperty('--h', height + "px");
+    document.documentElement.style.setProperty('--w', width + "px");
+    document.documentElement.style.setProperty('--headerH', header.getBoundingClientRect().height + "px");
+
+  }
+
   let categories = document.querySelectorAll(".categories__block");
   if (categories.length > 0) {
     for (let i = 0; i < categories.length; i++) {
