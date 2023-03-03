@@ -1,6 +1,7 @@
 main {
   padding-bottom: 20rem;
   flex-grow: 1;
+  z-index: 1;
 }
 
 main.enter {
@@ -1665,3 +1666,10 @@ main.enter {
     cursor: pointer;
 }
 
+.img-fixed {
+    display: block;
+    width: var(--w);
+    height: var(--h);
+    position: fixed;
+    z-index: 0;
+}
