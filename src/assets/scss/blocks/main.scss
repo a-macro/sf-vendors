@@ -5,7 +5,7 @@ main {
 }
 
 main.enter {
-  background-color: #F3F2F0;
+  //background-color: #F3F2F0;
   padding-bottom: 6rem;
 }
 
@@ -1673,4 +1673,8 @@ main.enter {
     position: fixed;
     z-index: 0;
     object-fit: cover;
+}
+
+.img-fixed.enter {
+    opacity: .85;
 }
